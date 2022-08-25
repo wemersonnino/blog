@@ -1,0 +1,2790 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Master Popups\n"
+"POT-Creation-Date: 2019-09-16 21:39-0500\n"
+"PO-Revision-Date: 2022-02-17 02:44-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: master-popups.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: libs\n"
+
+#: includes/class-ajax.php:191
+msgid "Not icons found"
+msgstr "No se encontraron íconos"
+
+#: includes/class-ajax.php:211
+msgid "Service connected successfully, please save changes."
+msgstr "Servicio conectado exitosamente, por favor guardar cambios."
+
+#: includes/class-ajax.php:212
+msgid "Invalid access data, please try again."
+msgstr "Datos de acceso no válidos, inténtelo de nuevo."
+
+#: includes/class-ajax.php:219 includes/class-ajax.php:264
+msgid "Data is missing to authenticate service"
+msgstr "Faltan datos para conectar el servicio"
+
+#: includes/class-ajax.php:256
+msgid "Successful process, the previous custom fields have been found."
+msgstr ""
+"Proceso exitoso, se han encontrado los campos personalizados anteriores."
+
+#: includes/class-ajax.php:257
+msgid "No custom fields found, perhaps this service not have custom fields."
+msgstr ""
+"No se han encontrado campos personalizados, tal vez este servicio no tiene "
+"campos personalizados."
+
+#: includes/class-ajax.php:292 includes/class-ajax.php:453
+#: includes/class-ajax.php:505
+msgid "Impossible to connect with the service, please try again."
+msgstr "Imposible conectar con el servicio, intente de nuevo."
+
+#: includes/class-ajax.php:314
+msgid "Data is missing to get lists"
+msgstr "Faltan datos para obtener las listas"
+
+#: includes/class-ajax.php:327 includes/class-ajax.php:434
+#: includes/class-ajax.php:485
+msgid "There are no services connected."
+msgstr "No hay servicios conectados."
+
+#: includes/class-ajax.php:344
+msgid "Successful process, the following lists have been found:"
+msgstr "Proceso exitoso, se han encontrado las siguientes listas:"
+
+#: includes/class-ajax.php:346
+msgid ""
+"Could not find lists, maybe this service does not have lists or does not "
+"allow to obtain them through its API. Please get your list id on the website "
+"of the service."
+msgstr ""
+"No se pudo encontrar listas, tal vez este servicio no tiene listas o no "
+"permite obtenerlas a través de su API. Por favor, busque su id de lista en "
+"el sitio web del servicio."
+
+#: includes/class-ajax.php:352
+msgid ""
+"Unable to get the lists because we could not connect with the service, "
+"please try again."
+msgstr ""
+"No se pueden obtener las listas porque no hemos podido conectarnos con el "
+"servicio. Vuelve a intentarlo."
+
+#: includes/class-ajax.php:519
+msgid "Error: Unable to delete subscriber."
+msgstr "Error: No se puede eliminar el suscriptor."
+
+#: includes/class-ajax.php:538
+msgid "Subscriber successfully deleted."
+msgstr "Suscriptor eliminado exitosamente."
+
+#: includes/class-assets-loader.php:177
+msgid "Saving changes"
+msgstr "Guardando cambios"
+
+#: includes/class-assets-loader.php:178
+msgid "Please wait a moment"
+msgstr "Por favor espere un momento"
+
+#: includes/class-assets-loader.php:179
+msgid "Replacing Styles"
+msgstr "Reemplazando estilos"
+
+#: includes/class-assets-loader.php:180
+msgid "Styles copied successfully"
+msgstr "Estilos copiados exitosamente"
+
+#: includes/class-assets-loader.php:181
+msgid "Object Library"
+msgstr "Biblioteca de objetos"
+
+#: includes/class-assets-loader.php:183 includes/class-assets-loader.php:190
+msgid "Connected"
+msgstr "Conectado"
+
+#: includes/class-assets-loader.php:184 includes/class-assets-loader.php:191
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:58
+msgid "Disconnected"
+msgstr "Desconectado"
+
+#: includes/class-assets-loader.php:187
+msgid "Please connect with the service"
+msgstr "Por favor, conéctese con el servicio"
+
+#: includes/class-assets-loader.php:188 includes/class-options-manager.php:450
+msgid "Integrated"
+msgstr "Integrado"
+
+#: includes/class-assets-loader.php:189 includes/class-options-manager.php:452
+msgid "Integrate"
+msgstr "Integrar"
+
+#: includes/class-assets-loader.php:192
+msgid "Disconnect Service"
+msgstr "Desconectar servicio"
+
+#: includes/class-assets-loader.php:193
+msgid ""
+"Are you sure you want to disconnect account? If you disconnect, your "
+"previous campaigns syncing will be disconnected as well."
+msgstr ""
+"¿Seguro que quieres desconectar la cuenta? Si se desconecta, la "
+"sincronización de las campañas anteriores también se desconectarán."
+
+#: includes/class-assets-loader.php:194
+msgctxt "On search service lists"
+msgid "Lists"
+msgstr "Listas"
+
+#: includes/class-contact-form.php:34
+msgid "The recipient email has not been established."
+msgstr "El correo electrónico del destinatario no se ha establecido."
+
+#: includes/class-element.php:324
+msgid "Video not found"
+msgstr "Video no encontrado"
+
+#: includes/class-element.php:361
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: includes/class-form-submission.php:35
+msgid "This action cannot be performed."
+msgstr "Esta acción no se puede realizar."
+
+#: includes/class-form-submission.php:55 includes/class-form-submission.php:160
+msgid "Data is missing"
+msgstr "Faltan datos"
+
+#: includes/class-form-submission.php:166
+msgid "The popup no longer exists."
+msgstr "El popup no existe"
+
+#: includes/class-form-submission.php:217
+msgid "Data is missing."
+msgstr "Faltan datos."
+
+#: includes/class-form-submission.php:218
+msgid "The email field is missing."
+msgstr "Falta el email"
+
+#: includes/class-form-submission.php:225
+msgid "Invalid email address."
+msgstr "Dirección de correo electrónico no válida."
+
+#: includes/class-form-submission.php:303
+msgid "Invalid parameter FROM."
+msgstr ""
+
+#: includes/class-functions.php:480
+#, php-format
+msgid "No oEmbed results found for %s. See"
+msgstr "No se han encontrado resultados de oEmbed para %s. Ver"
+
+#: includes/class-lista.php:26
+msgid "- Select your list -"
+msgstr "- Elige tu lista -"
+
+#: includes/class-lista.php:48
+#, php-format
+msgid "%s Subscriber"
+msgid_plural "%s Subscribers"
+msgstr[0] "%s Suscriptor"
+msgstr[1] "%s Suscriptores"
+
+#: includes/class-lista.php:58
+msgid "First name"
+msgstr "Nombre"
+
+#: includes/class-lista.php:59 includes/class-types.php:519
+msgid "Last name"
+msgstr "Apellido"
+
+#: includes/class-lista.php:60
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:134
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:137
+msgid "Custom fields"
+msgstr "Campos personalizados"
+
+#: includes/class-lista.php:61
+msgid "Registration date"
+msgstr "Fecha de registro"
+
+#: includes/class-master-popups.php:186 includes/class-master-popups.php:190
+#: includes/class-master-popups.php:253
+#, php-format
+msgid "New %s"
+msgstr ""
+
+#: includes/class-master-popups.php:189
+#, php-format
+msgid "Add %s"
+msgstr ""
+
+#: includes/class-master-popups.php:191
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: includes/class-master-popups.php:192
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: includes/class-master-popups.php:193 includes/class-master-popups.php:194
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: includes/class-master-popups.php:195
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: includes/class-master-popups.php:196
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: includes/class-master-popups.php:197
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: includes/class-master-popups.php:252 includes/class-master-popups.php:308
+msgid "List"
+msgstr ""
+
+#: includes/class-master-popups.php:281
+msgid "Popup"
+msgstr ""
+
+#: includes/class-master-popups.php:282
+msgid "Popups"
+msgstr ""
+
+#: includes/class-master-popups.php:283 includes/class-master-popups.php:310
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: includes/class-master-popups.php:309
+msgid "Lists"
+msgstr ""
+
+#: includes/class-master-popups.php:338
+msgid "All Popups"
+msgstr "Todos los popups"
+
+#: includes/class-master-popups.php:342
+msgid "New Popup"
+msgstr "Nuevo popup"
+
+#: includes/class-master-popups.php:346
+msgid "All Lists"
+msgstr "Todas las listas"
+
+#: includes/class-master-popups.php:350
+msgid "New List"
+msgstr "Nueva lista"
+
+#: includes/class-master-popups.php:354 includes/class-options-manager.php:98
+#: includes/class-options-manager.php:99
+msgid "General Settings"
+msgstr "Ajustes Generales"
+
+#: includes/class-master-popups.php:358
+msgid "Documentation"
+msgstr "Documentación"
+
+#: includes/class-master-popups.php:371 includes/class-settings.php:117
+msgid "License activation required."
+msgstr "Se requiere activación de licencia."
+
+#: includes/class-master-popups.php:372 includes/class-settings.php:118
+#, php-format
+msgid "Please activate your license from %shere%s. Tab \"Plugin Activation\""
+msgstr ""
+"Por favor active su licencia desde %saquí%s. Tab \"Activación de Plugin\""
+
+#: includes/class-master-popups.php:448 includes/class-master-popups.php:478
+msgid "Popup not found"
+msgstr "El popup no existe"
+
+#: includes/class-master-popups.php:513 includes/class-master-popups.php:615
+msgid "Title"
+msgstr "Título"
+
+#: includes/class-master-popups.php:514
+#: includes/options/general-settings/activation/activation.php:20
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:56
+#: includes/options/popup-editor/popup-editor.php:174
+#: includes/options/popup-editor/triggers/close-triggers.php:13
+#: includes/options/popup-editor/triggers/close-triggers.php:36
+#: includes/options/popup-editor/triggers/close-triggers.php:59
+#: includes/options/popup-editor/triggers/close-triggers.php:96
+#: includes/options/popup-editor/triggers/close-triggers.php:134
+#: includes/options/popup-editor/triggers/open-triggers.php:83
+#: includes/options/popup-editor/triggers/open-triggers.php:163
+#: includes/options/popup-editor/triggers/open-triggers.php:228
+#: includes/options/popup-editor/triggers/open-triggers.php:307
+msgid "Status"
+msgstr "Estado"
+
+#: includes/class-master-popups.php:517
+msgid "Impressions"
+msgstr "Impresiones"
+
+#: includes/class-master-popups.php:518
+msgid "Submits"
+msgstr "Envíos"
+
+#: includes/class-master-popups.php:519
+msgid "Conversion (CTR)"
+msgstr "Conversión (CTR)"
+
+#: includes/class-master-popups.php:532
+msgid "Duplicate Popup"
+msgstr "Duplicar popup"
+
+#: includes/class-master-popups.php:534
+msgid "Change Status"
+msgstr "Cambiar estado"
+
+#: includes/class-master-popups.php:556
+msgid "Please, publish popup"
+msgstr "Por favor, publicar el popup"
+
+#: includes/class-master-popups.php:562
+msgid "On"
+msgstr "Activado"
+
+#: includes/class-master-popups.php:563
+msgid "Off"
+msgstr "Desactivado"
+
+#: includes/class-master-popups.php:616
+msgid "Service"
+msgstr "Servicio"
+
+#: includes/class-master-popups.php:617
+msgid "Total Subscribers"
+msgstr "Total de suscriptores"
+
+#: includes/class-master-popups.php:644
+msgid "Service not defined"
+msgstr "Servicio no definido"
+
+#: includes/class-mc-editor.php:165
+msgid "Move Element"
+msgstr "Mover elemento"
+
+#: includes/class-mc-editor.php:171
+msgid "Duplicate Element"
+msgstr "Duplicar elemento"
+
+#: includes/class-mc-editor.php:177
+msgid "Remove Element"
+msgstr "Eliminar  elemento"
+
+#: includes/class-mc-editor.php:199
+msgid "Distribute vertically"
+msgstr "Distribuir verticalmente"
+
+#: includes/class-mc-editor.php:200
+msgid "Distribute horizontally"
+msgstr "Distribuir horizontalmente"
+
+#: includes/class-mc-editor.php:204
+msgid "Align left"
+msgstr "Alinear a la izquierda"
+
+#: includes/class-mc-editor.php:205
+msgid "Align center X"
+msgstr "Alinear al centro en X"
+
+#: includes/class-mc-editor.php:206
+msgid "Align right"
+msgstr "Alinear a la derecha"
+
+#: includes/class-mc-editor.php:211
+msgid "Align top"
+msgstr "Alinear la parte superior"
+
+#: includes/class-mc-editor.php:212
+msgid "Align center Y"
+msgstr "Alinear al centro en Y"
+
+#: includes/class-mc-editor.php:213
+msgid "Align bottom"
+msgstr "Alinear la parte inferior"
+
+#: includes/class-mc-editor.php:217
+msgid "Use max width"
+msgstr "Usar ancho máximo"
+
+#: includes/class-mc-editor.php:218
+msgid "Use max height"
+msgstr "Usar altura máxima"
+
+#: includes/class-mc-editor.php:222
+msgid "Position left"
+msgstr "Posición a la izquierda"
+
+#: includes/class-mc-editor.php:223
+msgid "Position right"
+msgstr "Posición a la derecha"
+
+#: includes/class-mc-editor.php:224
+msgid "Position top"
+msgstr "Posición arriba"
+
+#: includes/class-mc-editor.php:225
+msgid "Position bottom"
+msgstr "Posición abajo"
+
+#: includes/class-mc-editor.php:226
+msgid "Position center X"
+msgstr "Posición al centro en X"
+
+#: includes/class-mc-editor.php:227
+msgid "Position center Y"
+msgstr "Posición al centro en Y"
+
+#: includes/class-mc-editor.php:231
+msgid "Full width"
+msgstr "Ancho completo"
+
+#: includes/class-mc-editor.php:232
+msgid "Full height"
+msgstr "Altura completa"
+
+#: includes/class-mc-editor.php:235
+msgid "Undo"
+msgstr "Deshacer"
+
+#: includes/class-mc-editor.php:267
+msgid "Browser"
+msgstr "Navegador"
+
+#: includes/class-mc-editor.php:374
+msgid "Duplicate"
+msgstr "Duplicar"
+
+#: includes/class-mc-editor.php:375
+msgid "Remove"
+msgstr "Eliminar"
+
+#: includes/class-mc-editor.php:376
+msgid "Copy style"
+msgstr "Copiar estilo"
+
+#: includes/class-mc-editor.php:377
+msgid "Paste style"
+msgstr "Pegar estilo"
+
+#: includes/class-options-manager.php:123
+#: includes/class-options-manager.php:184
+msgid "Publish"
+msgstr "Publicar"
+
+#: includes/class-options-manager.php:126
+#: includes/class-options-manager.php:187
+msgid "Update"
+msgstr "Actualizar"
+
+#: includes/class-options-manager.php:130
+msgid "Preview"
+msgstr "Vista previa"
+
+#: includes/class-options-manager.php:162
+#: includes/class-options-manager.php:209
+msgid "Reset to Defaults"
+msgstr "Restablecer  a los valores predeterminados"
+
+#: includes/class-options-manager.php:199
+msgid "This interface allows you to create a list to store your subscribers."
+msgstr ""
+"Esta interfaz le permite crear una lista para almacenar sus suscriptores."
+
+#: includes/class-options-manager.php:353
+#: includes/options/popup-editor/elements/content.php:186
+msgid "Button styles"
+msgstr "Estilos de botones"
+
+#: includes/class-options-manager.php:353
+msgid ""
+"Click on any button to choose styles. Any previously defined style will be "
+"replaced."
+msgstr ""
+"Haga clic en cualquier botón para elegir los estilos. Cualquier estilo "
+"previamente definido será reemplazado."
+
+#: includes/class-services.php:124
+msgid "Service not supported"
+msgstr "Servicio no admitido"
+
+#: includes/class-subscription.php:45
+msgid "\"Audience List\" is empty or has been deleted."
+msgstr "\"Audience List\" está vacío o se ha eliminado"
+
+#: includes/class-subscription.php:119
+msgid "The service is not yet connected."
+msgstr "El servicio aún no está conectado."
+
+#: includes/class-subscription.php:134
+msgid "We could not connect with the service. Try again."
+msgstr "No pudimos conectar con el servicio. Inténtalo de nuevo."
+
+#: includes/class-subscription.php:143
+msgid "The list no longer exists in the chosen service."
+msgstr "La lista ya no existe en el servicio elegido."
+
+#: includes/class-types.php:88
+msgid "Custom text"
+msgstr "Texto personalizado"
+
+#: includes/class-types.php:242
+msgid "Download"
+msgstr "Descargar"
+
+#: includes/class-types.php:492
+msgid "Name"
+msgstr "Nombre"
+
+#: includes/class-types.php:577
+msgid "Phone"
+msgstr "Teléfono"
+
+#: includes/class-types.php:604
+msgid "Message"
+msgstr "Mensaje"
+
+#: includes/class-types.php:635
+msgid "Subscribe"
+msgstr "Suscribir"
+
+#: includes/class-types.php:654
+msgid "Custom field"
+msgstr "Campo personalizado"
+
+#: includes/class-types.php:770
+msgid "Select option"
+msgstr "Elegir opción"
+
+#: includes/options/audience/general/general.php:5
+msgid "Subscribers storage"
+msgstr "Almacenamiento de suscriptores"
+
+#: includes/options/audience/general/general.php:12
+#, php-format
+msgid ""
+"Choose where to save your subscribers. If you want to save your subscribers "
+"to third party services such as Milchimp, GetResponse, etc. Please first you "
+"must add it from %shere%s. Tab \"Service Integration\"."
+msgstr ""
+"Elija dónde guardar sus suscriptores. Si desea guardar sus suscriptores en "
+"servicios de terceros como Milchimp, GetResponse, etc. Por favor primero "
+"debe agregarlo desde %saquí%s. Pestaña \"Integración de Servicios\"."
+
+#: includes/options/audience/general/general.php:31
+msgid "Warning"
+msgstr "Advertencia"
+
+#: includes/options/audience/general/general.php:32
+msgid ""
+"It seems that your list no longer exists or the List ID entered is "
+"incorrect. Skip this message if you are sure that the list ID is correct or "
+"the list is not needed."
+msgstr ""
+"Parece que su lista ya no existe o el ID de lista ingresado es incorrecto. "
+"Omita este mensaje si estás seguro de que el ID de la lista es correcto o de "
+"que la lista no es necesaria."
+
+#: includes/options/audience/general/general.php:39
+msgid "Account ID"
+msgstr ""
+
+#: includes/options/audience/general/general.php:52
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:146
+msgid "List ID"
+msgstr "ID de Lista"
+
+#: includes/options/audience/general/general.php:58
+msgid ""
+"Enter the third party List ID. You can use the following button to try to "
+"get the lists."
+msgstr ""
+"Introduzca el ID de lista de terceros. Puede utilizar el siguiente botón "
+"para intentar obtener las listas."
+
+#: includes/options/audience/general/general.php:59
+msgid "Get Lists"
+msgstr "Obtener Listas"
+
+#: includes/options/audience/general/general.php:65
+msgid "Segment ID"
+msgstr ""
+
+#: includes/options/audience/general/general.php:75
+msgid "Get segments"
+msgstr ""
+
+#: includes/options/audience/general/general.php:81
+msgid ""
+"Activate this option if email confirmation is required before subscribing. "
+"Only supporting for some CRM Services."
+msgstr ""
+
+#: includes/options/audience/general/general.php:91
+msgid "Overwrite user data"
+msgstr "Sobreescribir datos"
+
+#: includes/options/audience/general/general.php:92
+msgid ""
+"Enable to allow updating user data if the email already exists in the list."
+msgstr ""
+"Habilite esta opción para permitir la actualización de los datos del usuario "
+"si el correo electrónico ya existe en la lista."
+
+#: includes/options/audience/subscribers/subscribers.php:5
+msgid "Subscribers list"
+msgstr "Lista de suscriptores"
+
+#: includes/options/audience/subscribers/subscribers.php:17
+msgid "Only subscribers stored in MasterPopups will be displayed in the table."
+msgstr ""
+"Sólo los suscriptores almacenados en MasterPopups se mostrarán en la tabla."
+
+#: includes/options/general-settings/activation/activation.php:5
+#: includes/options/general-settings/general-settings.php:9
+msgid "Plugin Activation"
+msgstr "Activación de Plugin"
+
+#: includes/options/general-settings/activation/activation.php:22
+msgid "Not Activated"
+msgstr "No Activado"
+
+#: includes/options/general-settings/activation/activation.php:26
+msgid "Envato Username"
+msgstr "Usuario de Envato"
+
+#: includes/options/general-settings/activation/activation.php:50
+msgid "Purchase Code"
+msgstr "Código de Compra"
+
+#: includes/options/general-settings/activation/activation.php:53
+#, php-format
+msgid "Click %shere%s for more information"
+msgstr "Click %saquí%s para más información."
+
+#: includes/options/general-settings/activation/activation.php:62
+msgid "Your email"
+msgstr "Tu email"
+
+#: includes/options/general-settings/activation/activation.php:65
+msgid "To get in touch when you need help"
+msgstr "Para ponerse en contacto cuando necesite ayuda"
+
+#: includes/options/general-settings/activation/activation.php:78
+msgid "Activation type"
+msgstr "Tipo de Activación"
+
+#: includes/options/general-settings/activation/activation.php:82
+msgid "Activation"
+msgstr "Activación"
+
+#: includes/options/general-settings/activation/activation.php:83
+msgid "Deactivation"
+msgstr "Desactivación"
+
+#: includes/options/general-settings/activation/activation.php:93
+msgid "Domain"
+msgstr "Dominio"
+
+#: includes/options/general-settings/activation/activation.php:96
+msgid "Enter the domain in which you want to deactivate the plugin"
+msgstr "Ingrese el dominio en el que desea desactivar el plugin"
+
+#: includes/options/general-settings/activation/activation.php:112
+msgid "Validate Purchase"
+msgstr "Validar Compra"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:5
+msgid "Available Services"
+msgstr "Servicios disponibles"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:6
+msgid ""
+"From here you can integrate to MasterPopups your favorite email marketing "
+"software."
+msgstr ""
+"Desde aquí puedes integrar a MasterPopups tu software favorito de marketing "
+"por correo electrónico."
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:19
+msgid "Integrated services"
+msgstr "Servicios integrados"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:20
+msgid ""
+"Once the service is integrated, you have to connect with your account to "
+"start creating campaigns."
+msgstr ""
+"Una vez que el servicio está integrado, debe conectarse con su cuenta para "
+"comenzar a crear campañas."
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:24
+msgid "Services"
+msgstr "Servicios"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:45
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:123
+msgid "Connect service"
+msgstr "Conectar servicio"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:46
+msgid ""
+"Use the following options to connect to the service. all access data is "
+"required."
+msgstr ""
+"Utilice las siguientes opciones para conectarse al servicio. Se requieren "
+"todos los datos de acceso."
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:58
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:62
+msgid "Access data"
+msgstr "Datos de acceso"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:68
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:78
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:88
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:98
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:111
+#, php-format
+msgid "Where do I find this? %sGo here%s"
+msgstr "¿Dónde lo encuentro? %sIr aquí%s"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:86
+msgid "Email account or username"
+msgstr "Email o nombre de usuario"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:96
+msgid "Password"
+msgstr "Contraseña"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:129
+msgid "Explore custom fields"
+msgstr "Explorar campos personalizados"
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:130
+msgid ""
+"The next option will allow you to obtain all the custom fields that this "
+"service has."
+msgstr ""
+"La siguiente opción le permitirá obtener todos los campos personalizados que "
+"tiene este servicio."
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:149
+#, php-format
+msgid ""
+"Some services like %s require a list id to get the custom fields. Leave "
+"empty if you are not sure."
+msgstr ""
+"Algunos servicios como %s requieren un id de lista para obtener los campos "
+"personalizados. Dejar en blanco si no estás seguro."
+
+#: includes/options/general-settings/crm-integrations/crm-integrations.php:157
+msgid "Get custom fields"
+msgstr "Obtener campos personalizados"
+
+#: includes/options/general-settings/custom-css/custom-css.php:5
+#: includes/options/general-settings/custom-css/custom-css.php:10
+#: includes/options/general-settings/general-settings.php:10
+#: includes/options/popup-editor/advanced/advanced.php:20
+msgid "Custom CSS"
+msgstr "CSS Personalizado"
+
+#: includes/options/general-settings/custom-css/custom-css.php:6
+msgid "Enter your custom css here."
+msgstr "Introduzca su CSS personalizado aquí."
+
+#: includes/options/general-settings/custom-js/custom-js.php:5
+#: includes/options/general-settings/custom-js/custom-js.php:10
+#: includes/options/general-settings/general-settings.php:11
+#: includes/options/popup-editor/advanced/advanced.php:36
+msgid "Custom JS"
+msgstr "JS Personalizado"
+
+#: includes/options/general-settings/custom-js/custom-js.php:6
+msgid "Enter your custom js here."
+msgstr "Introduzca su JS personalizado aquí."
+
+#: includes/options/general-settings/defaults.php:11
+msgid "I want to subscribe"
+msgstr ""
+
+#: includes/options/general-settings/defaults.php:32
+#: includes/options/general-settings/general/general.php:116
+msgid "This field is required"
+msgstr ""
+
+#: includes/options/general-settings/defaults.php:33
+#: includes/options/general-settings/general/general.php:123
+msgid "Invalid email address"
+msgstr ""
+
+#: includes/options/general-settings/defaults.php:34
+#: includes/options/general-settings/general/general.php:130
+msgid "This field is required, please check"
+msgstr ""
+
+#: includes/options/general-settings/defaults.php:35
+#: includes/options/general-settings/general/general.php:137
+msgid "This field is required. Please select an option"
+msgstr ""
+
+#: includes/options/general-settings/defaults.php:36
+#: includes/options/general-settings/general/general.php:149
+#: includes/options/general-settings/general/general.php:151
+msgid "Back to form"
+msgstr "Regresar al formulario"
+
+#: includes/options/general-settings/defaults.php:37
+#: includes/options/general-settings/general/general.php:156
+#: includes/options/general-settings/general/general.php:158
+msgid "Close"
+msgstr "Cerrar"
+
+#: includes/options/general-settings/general-settings.php:6
+msgid "Email Marketing Integrations"
+msgstr ""
+
+#: includes/options/general-settings/general-settings.php:7
+#: includes/options/general-settings/syncs/syncs.php:6
+msgid "Synchronizations"
+msgstr "Sincronizaciones"
+
+#: includes/options/general-settings/general/general.php:6
+msgid "Disable popup management for"
+msgstr "Desactivar la gestión de popups para"
+
+#: includes/options/general-settings/general/general.php:14
+msgid "Enable popups queue"
+msgstr "Habilitar cola de popups"
+
+#: includes/options/general-settings/general/general.php:15
+msgid ""
+"By default the popups are displayed one at a time, if you want to show "
+"multiple popups at time disable this option."
+msgstr ""
+"Por defecto, las ventanas emergentes se muestran una a la vez, si desea "
+"mostrar varias ventanas emergentes al mismo tiempo, desactive esta opción"
+
+#: includes/options/general-settings/general/general.php:22
+msgid "Show link to edit the Popup"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:29
+msgid "MX Record Email Validation"
+msgstr "Validación Email por \"MX Record\""
+
+#: includes/options/general-settings/general/general.php:36
+msgid "Attach internal errors after form failed"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:37
+msgid ""
+"Activate this option to show internal errors when the form submission fails. "
+"Allows you to configure the form correctly."
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:44
+msgid "Show Popup on Custom Post Types"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:45
+#, php-format
+msgid "Default value for \"%s\" option in the Popup Editor."
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:52
+msgid "Add HTML5 Video Support"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:59
+msgid "Load Google Fonts"
+msgstr "Cargar Fuentes de Google"
+
+#: includes/options/general-settings/general/general.php:66
+msgid "Load Font Awesome"
+msgstr "Cargar FontAwesome"
+
+#: includes/options/general-settings/general/general.php:80
+msgid "Z-Index for Popups"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:95
+msgid "Z-Index for Sticky"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:109
+msgid "Form validation messages"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:144
+msgid "Min length:"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:163
+msgid "Debug"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:168
+msgid "Debug mode"
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:169
+msgid ""
+"This option is only for developers, allows to see processes and errors in "
+"the console."
+msgstr ""
+
+#: includes/options/general-settings/general/general.php:178
+msgid "IP for debug mode"
+msgstr ""
+
+#: includes/options/general-settings/promote.php:10
+msgid "Link Powered by"
+msgstr ""
+
+#: includes/options/general-settings/promote.php:16
+msgid "Envato username"
+msgstr ""
+
+#: includes/options/general-settings/syncs/wp-comments.php:8
+msgid "Enable synchronization"
+msgstr "Activar sincronización"
+
+#: includes/options/general-settings/syncs/wp-comments.php:10
+msgid "Activate this option to start saving user data."
+msgstr "Active esta opción para empezar a guardar datos de los usuarios"
+
+#: includes/options/general-settings/syncs/wp-comments.php:16
+msgid "Only approved comments"
+msgstr ""
+
+#: includes/options/general-settings/syncs/wp-comments.php:18
+msgid "Synchronize only when comments are approved."
+msgstr ""
+
+#: includes/options/general-settings/syncs/wp-comments.php:28
+msgid "Choose the list where the new users will be stored."
+msgstr "Elija la lista donde se almacenarán los datos de los usuarios"
+
+#: includes/options/general-settings/syncs/wp-comments.php:33
+msgid "Checkbox"
+msgstr "Casillka"
+
+#: includes/options/general-settings/syncs/wp-comments.php:34
+msgid "Shows a checkbox at the end of the form."
+msgstr "Muestra una casilla de verificación al final del formulario"
+
+#: includes/options/general-settings/syncs/wp-comments.php:38
+msgid "Display Checkbox"
+msgstr "Mostrar casilla de verificación"
+
+#: includes/options/general-settings/syncs/wp-comments.php:45
+msgid "Checkbox text"
+msgstr "Texto de la casilla de verificación"
+
+#: includes/options/popup-editor/advanced/advanced.php:17
+msgid ""
+"Please enter valid javascript code. You can use jQuery or $. Important: Do "
+"not enter anything before or after the function."
+msgstr ""
+"Ingrese un código javascript válido. Puede utilizar jQuery o $. Importante: "
+"No introduzca nada antes o después de la función."
+
+#: includes/options/popup-editor/advanced/advanced.php:54
+msgid "You can use these functions to run your own code."
+msgstr "Puede utilizar estas funciones para ejecutar su propio código."
+
+#: includes/options/popup-editor/advanced/advanced.php:58
+msgid "Before Open Popup"
+msgstr ""
+
+#: includes/options/popup-editor/advanced/advanced.php:72
+msgid "After Open Popup"
+msgstr "Después de abrir el Popup"
+
+#: includes/options/popup-editor/advanced/advanced.php:100
+msgid "After Close Popup"
+msgstr "Después de cerrar el Popup"
+
+#: includes/options/popup-editor/advanced/advanced.php:115
+msgid "After Form Submission"
+msgstr "Después de enviar el formulario"
+
+#: includes/options/popup-editor/cookies/cookies.php:4
+msgid "Set Custom Cookie on Close Popup"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:5
+msgid ""
+"Enter the cookie name you want to add when closing the popup. First you must "
+"create it here below in \"Custom cookies\"."
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:15
+msgid "Custom Cookies"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:34
+msgid "Cookie name"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:42
+msgid "Cookie settings"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:43
+msgid "This cookie must be enabled for it to work."
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:47
+#: includes/options/popup-editor/elements/animation.php:7
+#: includes/options/popup-editor/elements/background.php:110
+#: includes/options/popup-editor/elements/border.php:95
+#: includes/options/popup-editor/elements/border.php:124
+#: includes/options/popup-editor/elements/font.php:135
+#: includes/options/popup-editor/form-submission/actions-form.php:22
+#: includes/options/popup-editor/form-submission/actions-form.php:76
+#: includes/options/popup-editor/general/additional.php:127
+#: includes/options/popup-editor/general/popup.php:155
+#: includes/options/popup-editor/general/sticky.php:8
+#: includes/options/popup-editor/triggers/close-triggers.php:16
+#: includes/options/popup-editor/triggers/close-triggers.php:39
+#: includes/options/popup-editor/triggers/close-triggers.php:62
+#: includes/options/popup-editor/triggers/close-triggers.php:99
+#: includes/options/popup-editor/triggers/close-triggers.php:137
+#: includes/options/popup-editor/triggers/open-triggers.php:86
+#: includes/options/popup-editor/triggers/open-triggers.php:116
+#: includes/options/popup-editor/triggers/open-triggers.php:166
+#: includes/options/popup-editor/triggers/open-triggers.php:182
+#: includes/options/popup-editor/triggers/open-triggers.php:231
+#: includes/options/popup-editor/triggers/open-triggers.php:261
+#: includes/options/popup-editor/triggers/open-triggers.php:310
+#: includes/options/popup-editor/triggers/open-triggers.php:362
+msgid "Enable"
+msgstr "Activar"
+
+#: includes/options/popup-editor/cookies/cookies.php:57
+#: includes/options/popup-editor/form-submission/actions-form.php:32
+#: includes/options/popup-editor/triggers/open-triggers.php:126
+#: includes/options/popup-editor/triggers/open-triggers.php:192
+#: includes/options/popup-editor/triggers/open-triggers.php:271
+#: includes/options/popup-editor/triggers/open-triggers.php:372
+msgid "Cookie duration"
+msgstr "Duración de la cookie"
+
+#: includes/options/popup-editor/cookies/cookies.php:61
+#: includes/options/popup-editor/form-submission/actions-form.php:36
+#: includes/options/popup-editor/triggers/open-triggers.php:130
+#: includes/options/popup-editor/triggers/open-triggers.php:196
+#: includes/options/popup-editor/triggers/open-triggers.php:275
+#: includes/options/popup-editor/triggers/open-triggers.php:376
+msgid "Current session"
+msgstr "Sesión actual"
+
+#: includes/options/popup-editor/cookies/cookies.php:62
+#: includes/options/popup-editor/form-submission/actions-form.php:37
+#: includes/options/popup-editor/triggers/open-triggers.php:131
+#: includes/options/popup-editor/triggers/open-triggers.php:197
+#: includes/options/popup-editor/triggers/open-triggers.php:276
+#: includes/options/popup-editor/triggers/open-triggers.php:377
+msgid "Define days"
+msgstr "Definir días"
+
+#: includes/options/popup-editor/cookies/cookies.php:67
+#: includes/options/popup-editor/form-submission/actions-form.php:42
+#: includes/options/popup-editor/triggers/open-triggers.php:136
+#: includes/options/popup-editor/triggers/open-triggers.php:202
+#: includes/options/popup-editor/triggers/open-triggers.php:281
+#: includes/options/popup-editor/triggers/open-triggers.php:382
+msgid "Days"
+msgstr "Días"
+
+#: includes/options/popup-editor/cookies/cookies.php:84
+msgid "Cookie behavior"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:87
+msgid "When the cookie exists in the user browser, what do you want to do?"
+msgstr ""
+
+#: includes/options/popup-editor/cookies/cookies.php:89
+msgid "Not show popup"
+msgstr ""
+
+#: includes/options/popup-editor/elements/actions.php:3
+msgid "On Click Actions"
+msgstr ""
+
+#: includes/options/popup-editor/elements/actions.php:6
+msgid "Action"
+msgstr "Acción"
+
+#: includes/options/popup-editor/elements/actions.php:10
+msgid "Default"
+msgstr "Por defecto"
+
+#: includes/options/popup-editor/elements/actions.php:11
+#: includes/options/popup-editor/form-submission/actions-form.php:73
+msgid "Close popup"
+msgstr "Cerrar popup"
+
+#: includes/options/popup-editor/elements/actions.php:12
+#: includes/options/popup-editor/form-submission/actions-form.php:97
+msgid "Close popup and Open another popup"
+msgstr "Cerrar popup y abrir otro popup"
+
+#: includes/options/popup-editor/elements/actions.php:13
+msgid "Open another popup"
+msgstr ""
+
+#: includes/options/popup-editor/elements/actions.php:14
+#: includes/options/popup-editor/form-submission/actions-form.php:151
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:61
+msgid "Redirect to URL"
+msgstr "Redirigir a URL"
+
+#: includes/options/popup-editor/elements/actions.php:22
+msgid "Popup id"
+msgstr "ID del Popup"
+
+#: includes/options/popup-editor/elements/actions.php:24
+#: includes/options/popup-editor/form-submission/actions-form.php:99
+msgid "Enter the popup id. E.g: 20"
+msgstr "Ingrese el ID del popup. Por ejemplo: 20"
+
+#: includes/options/popup-editor/elements/actions.php:32
+msgid "Enter URL"
+msgstr "Ingrese una URL"
+
+#: includes/options/popup-editor/elements/actions.php:34
+msgid "Enter a valid url with http/https. e.g: http://google.com"
+msgstr ""
+"Introduzca una url válida con http/https. Por ejemplo: http://google.com"
+
+#: includes/options/popup-editor/elements/actions.php:46
+msgid "Same Window"
+msgstr "Misma ventana"
+
+#: includes/options/popup-editor/elements/actions.php:47
+msgid "New Window"
+msgstr "Nueva ventana"
+
+#: includes/options/popup-editor/elements/actions.php:55
+msgid "Set Cookie Name"
+msgstr ""
+
+#: includes/options/popup-editor/elements/advanced.php:18
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: includes/options/popup-editor/elements/advanced.php:49
+msgid "Valid Characters"
+msgstr ""
+
+#: includes/options/popup-editor/elements/advanced.php:66
+msgid "Min Characters"
+msgstr ""
+
+#: includes/options/popup-editor/elements/animation.php:4
+#: includes/options/popup-editor/general/animations.php:4
+msgid "Entry animation"
+msgstr "Animación de entrada"
+
+#: includes/options/popup-editor/elements/animation.php:13
+#: includes/options/popup-editor/general/animations.php:7
+#: includes/options/popup-editor/general/animations.php:31
+msgid "Animation effect"
+msgstr "Efecto de la animación"
+
+#: includes/options/popup-editor/elements/animation.php:23
+#: includes/options/popup-editor/general/animations.php:14
+#: includes/options/popup-editor/general/animations.php:38
+msgid "Animation duration"
+msgstr "Duración de la animación"
+
+#: includes/options/popup-editor/elements/animation.php:38
+msgid "Animation delay"
+msgstr "Retardo de la animación"
+
+#: includes/options/popup-editor/elements/attributes.php:8
+msgid "E.g. custom-id"
+msgstr "Ejemplo: custom-id"
+
+#: includes/options/popup-editor/elements/attributes.php:12
+msgid "Class"
+msgstr "Clase"
+
+#: includes/options/popup-editor/elements/attributes.php:16
+msgid "E.g: custom-class"
+msgstr "Ejemplo: custom-class"
+
+#: includes/options/popup-editor/elements/attributes.php:24
+msgid "E.g: Custom title"
+msgstr "Ejemplo: Título personalizado"
+
+#: includes/options/popup-editor/elements/background.php:71
+msgid "Enable gradient"
+msgstr "Habilitar gradiente"
+
+#: includes/options/popup-editor/elements/background.php:88
+msgid "Angle"
+msgstr "Ángulo"
+
+#: includes/options/popup-editor/elements/border.php:5
+msgid "Border top width"
+msgstr "Ancho del borde superior"
+
+#: includes/options/popup-editor/elements/border.php:17
+msgid "Border right width"
+msgstr "Ancho del borde derecho"
+
+#: includes/options/popup-editor/elements/border.php:29
+msgid "Border bottom width"
+msgstr "Ancho del borde inferior"
+
+#: includes/options/popup-editor/elements/border.php:41
+msgid "Border left width"
+msgstr "Ancho del borde izquierdo"
+
+#: includes/options/popup-editor/elements/border.php:53
+#: includes/options/popup-editor/elements/border.php:101
+#: includes/options/popup-editor/elements/border.php:130
+msgid "Border color"
+msgstr "Color del borde"
+
+#: includes/options/popup-editor/elements/border.php:63
+msgid "Border style"
+msgstr "Estilo del borde"
+
+#: includes/options/popup-editor/elements/border.php:72
+#: includes/options/popup-editor/general/additional.php:20
+msgid "Border radius"
+msgstr "Radio del borde"
+
+#: includes/options/popup-editor/elements/content.php:6
+msgid "Text/HTML"
+msgstr "Texto/HTML"
+
+#: includes/options/popup-editor/elements/content.php:13
+msgid "Insert icon"
+msgstr "Insertar ícono"
+
+#: includes/options/popup-editor/elements/content.php:21
+#, php-format
+msgid ""
+"Please enter only %s. Not html. We recommend going to Advanced tab and in "
+"the \"Overflow\" option choose \"Auto\""
+msgstr ""
+"Ingrese sólo %s. No html. Recomendamos ir a la pestaña Avanzado y en la "
+"opción \"Overflow\" elegir \"Auto\""
+
+#: includes/options/popup-editor/elements/content.php:44
+msgid "Choose object"
+msgstr "Elegir objeto"
+
+#: includes/options/popup-editor/elements/content.php:59
+msgid "Image URL"
+msgstr "URL de la imagen"
+
+#: includes/options/popup-editor/elements/content.php:73
+msgid "Iframe URL"
+msgstr "URL del Iframe"
+
+#: includes/options/popup-editor/elements/content.php:83
+msgid "Choose video type"
+msgstr "Elige el tipo de video"
+
+#: includes/options/popup-editor/elements/content.php:94
+msgid "Video URL"
+msgstr "URL del video"
+
+#: includes/options/popup-editor/elements/content.php:97
+msgid "Example:"
+msgstr "Ejemplo:"
+
+#: includes/options/popup-editor/elements/content.php:106
+msgid "HTML5 Video URL"
+msgstr "URL del video HTML5"
+
+#: includes/options/popup-editor/elements/content.php:117
+msgid "Video thumbnail"
+msgstr "Imagen del video"
+
+#: includes/options/popup-editor/elements/content.php:119
+msgid "Load"
+msgstr "Cargar"
+
+#: includes/options/popup-editor/elements/content.php:127
+msgid "From custom url"
+msgstr "Desde URL personalizada"
+
+#: includes/options/popup-editor/elements/content.php:142
+msgid "Play icon"
+msgstr "Icono play"
+
+#: includes/options/popup-editor/elements/content.php:158
+msgid "Autoplay"
+msgstr "Auto reproducción"
+
+#: includes/options/popup-editor/elements/content.php:164
+#: includes/options/popup-editor/elements/content.php:174
+msgid "Parameters"
+msgstr "Parámetros"
+
+#: includes/options/popup-editor/elements/content.php:204
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:34
+msgid "Field name"
+msgstr "Nombre del campo"
+
+#: includes/options/popup-editor/elements/content.php:207
+msgid "Attribute \"name\" of the field."
+msgstr "Atributo 'name' del campo"
+
+#: includes/options/popup-editor/elements/content.php:214
+#, php-format
+msgid ""
+"If you wish you can also enter the name of the custom field of your service. "
+"Go to %s and Explore your custom fields."
+msgstr ""
+"Si lo desea, también puede introducir el nombre del campo personalizado de "
+"su servicio. Vaya a %s y Explore sus campos personalizados."
+
+#: includes/options/popup-editor/elements/content.php:214
+msgid "Service Integration"
+msgstr "Integración de Servicios"
+
+#: includes/options/popup-editor/elements/content.php:218
+msgid "Default value"
+msgstr "Valor por defecto"
+
+#: includes/options/popup-editor/elements/content.php:224
+msgid "Required field"
+msgstr "Campo obligatorio"
+
+#: includes/options/popup-editor/elements/content.php:226
+msgid "Enable to make this field mandatory when submitting the form."
+msgstr ""
+"Habilite para que este campo sea obligatorio cuando envíe el formulario."
+
+#: includes/options/popup-editor/elements/content.php:230
+msgid "Checked"
+msgstr "Activado"
+
+#: includes/options/popup-editor/elements/content.php:233
+msgid "Checked by default"
+msgstr "Activado por defecto"
+
+#: includes/options/popup-editor/elements/content.php:239
+#: includes/options/popup-editor/general/wp-editor.php:158
+msgid "Color"
+msgstr "Color"
+
+#: includes/options/popup-editor/elements/content.php:242
+msgid "The color when it is activated."
+msgstr "El color cuando está activado."
+
+#: includes/options/popup-editor/elements/content.php:251
+msgid "Options"
+msgstr "Opciones"
+
+#: includes/options/popup-editor/elements/content.php:254
+msgid ""
+"Please enter the list of options, one option for each line. It is also "
+"possible to add: value|Display"
+msgstr ""
+"Por favor ingrese la lista de opciones, una opción para cada línea. También "
+"es posible añadir: valor|Display"
+
+#: includes/options/popup-editor/elements/content.php:261
+msgid "Input type"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:273
+msgid "Date & Time"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:276
+#: includes/options/popup-editor/publish/publish.php:33
+#: includes/options/popup-editor/publish/publish.php:78
+msgid "Date"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:283
+#: includes/options/popup-editor/publish/publish.php:40
+#: includes/options/popup-editor/publish/publish.php:85
+msgid "Time"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:294
+msgid "Time labels"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:331
+msgid "Digits"
+msgstr ""
+
+#: includes/options/popup-editor/elements/content.php:334
+#: includes/options/popup-editor/elements/size-position.php:35
+#: includes/options/popup-editor/general/popup.php:30
+#: includes/options/popup-editor/general/sticky.php:39
+msgid "Width"
+msgstr "Ancho"
+
+#: includes/options/popup-editor/elements/content.php:346
+#: includes/options/popup-editor/elements/size-position.php:50
+#: includes/options/popup-editor/general/popup.php:43
+#: includes/options/popup-editor/general/sticky.php:51
+msgid "Height"
+msgstr "Altura"
+
+#: includes/options/popup-editor/elements/content.php:361
+msgid "Show a message on timer end"
+msgstr ""
+
+#: includes/options/popup-editor/elements/size-position.php:3
+#: includes/options/popup-editor/general/popup.php:5
+msgid "Position"
+msgstr "Posición"
+
+#: includes/options/popup-editor/elements/size-position.php:6
+msgid "Top"
+msgstr "Arriba"
+
+#: includes/options/popup-editor/elements/size-position.php:16
+msgid "Left"
+msgstr "Izquierda"
+
+#: includes/options/popup-editor/elements/size-position.php:26
+msgid "On top right of the page"
+msgstr "En la parte superior derecha de la página"
+
+#: includes/options/popup-editor/elements/size-position.php:32
+#: includes/options/popup-editor/general/wp-editor.php:145
+msgid "Size"
+msgstr "Tamaño"
+
+#: includes/options/popup-editor/elements/size-position.php:38
+msgid "Element width, add only numbers or \"auto\""
+msgstr "Ancho del elemento, agregue sólo números o \"auto\""
+
+#: includes/options/popup-editor/elements/size-position.php:53
+msgid "Element height, add only numbers or \"auto\""
+msgstr "Altura del elemento, agregue sólo números o \"auto\""
+
+#: includes/options/popup-editor/elements/size-position.php:65
+#: includes/options/popup-editor/general/popup.php:56
+msgid "Full screen"
+msgstr "Pantalla completa"
+
+#: includes/options/popup-editor/elements/size-position.php:68
+msgid "This element will cover the entire screen area"
+msgstr "Este elemento cubrirá toda el área de la pantalla"
+
+#: includes/options/popup-editor/elements/size-position.php:76
+#: includes/options/popup-editor/general/wp-editor.php:57
+msgid "Padding"
+msgstr "Espaciado"
+
+#: includes/options/popup-editor/elements/size-position.php:79
+msgid "Padding top"
+msgstr "Espaciado superior"
+
+#: includes/options/popup-editor/elements/size-position.php:92
+msgid "Padding right"
+msgstr "Espaciado derecho"
+
+#: includes/options/popup-editor/elements/size-position.php:105
+msgid "Padding bottom"
+msgstr "Espaciado inferior"
+
+#: includes/options/popup-editor/elements/size-position.php:118
+msgid "Padding left"
+msgstr "Espaciado izquierdo"
+
+#: includes/options/popup-editor/export/export.php:4
+#: includes/options/popup-editor/popup-editor.php:15
+msgid "Export your popup"
+msgstr "Exportar su popup"
+
+#: includes/options/popup-editor/export/export.php:5
+msgid ""
+"Save your popup template and use it on another website. Save the data in ."
+"json format"
+msgstr ""
+"Guarde su plantilla de popup y úsela en otro sitio web. Guarde los datos en "
+"formato .json"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:7
+msgid "Successful form submission"
+msgstr "Envío exitoso del formulario"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:8
+msgid "What would you like to do when the form was successfully submitted?"
+msgstr "¿Qué le gustaría hacer cuando el formulario fue enviado correctamente?"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:17
+msgid "Set cookie after conversion"
+msgstr "Establecer cookie después de la conversión"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:18
+msgid ""
+"Enable this option to not display again the popup after successful form "
+"submission."
+msgstr ""
+"Habilite esta opción para no mostrar de nuevo la ventana emergente después "
+"de enviar el formulario correctamente."
+
+#: includes/options/popup-editor/form-submission/actions-form.php:43
+#: includes/options/popup-editor/triggers/open-triggers.php:137
+#: includes/options/popup-editor/triggers/open-triggers.php:203
+#: includes/options/popup-editor/triggers/open-triggers.php:282
+#: includes/options/popup-editor/triggers/open-triggers.php:383
+msgid "The popup will be displayed once every \"X\" days."
+msgstr "El popup se mostrará una vez cada \"X\" días."
+
+#: includes/options/popup-editor/form-submission/actions-form.php:58
+msgid "Message after conversion"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/actions-form.php:59
+msgid "This message will allow to show the popup even after the conversion."
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/actions-form.php:82
+msgid "Close popup after"
+msgstr "Cerrar el popup después"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:114
+msgid "Download file"
+msgstr "Descargar archivo"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:125
+msgid "File to download"
+msgstr "Archivo a descargar"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:128
+msgid ""
+"Enter the url of the file that the user will download after sending the "
+"form. Add http/https. e.g: http://google.com"
+msgstr ""
+"Introduzca la url del archivo que el usuario descargará después de enviar el "
+"formulario. Agregue http/https. Por ejemplo: http://google.com"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:140
+msgid "Redirect user"
+msgstr "Redirigir usuario"
+
+#: includes/options/popup-editor/form-submission/actions-form.php:154
+msgid ""
+"Enter the url where you would like to redirect the user after sending the "
+"form. Add http/https. e.g: http://google.com"
+msgstr ""
+"Introduzca la url en la que desea redirigir al usuario después de enviar el "
+"formulario. Agregue http/https. Por ejemplo: http://google.com"
+
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:4
+msgid "Advanced redirections"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:9
+msgid "Redirections"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:40
+msgid "Condition"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/advanced-redirect.php:55
+msgid "Field value"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/contact-form.php:6
+#: includes/options/popup-editor/form-submission/subscription-form.php:16
+msgid "Message after success"
+msgstr "Mensaje después del envío exitoso"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:8
+msgid "Thank you. We will contact you as soon as possible."
+msgstr ""
+"Gracias. Nos pondremos en contacto con usted tan pronto como sea posible."
+
+#: includes/options/popup-editor/form-submission/contact-form.php:16
+#: includes/options/popup-editor/form-submission/subscription-form.php:25
+msgid "Message after failed"
+msgstr "Mensaje después de un error"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:18
+msgid "There was an error trying to send your message. Please try again later."
+msgstr ""
+"Se ha producido un error al intentar enviar tu mensaje. Por favor, inténtelo "
+"de nuevo más tarde."
+
+#: includes/options/popup-editor/form-submission/contact-form.php:26
+msgid "Mail"
+msgstr "Mail"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:30
+#: includes/options/popup-editor/form-submission/subscription-form.php:49
+#: includes/options/popup-editor/form-submission/subscription-form.php:115
+msgid "Send Notification"
+msgstr "Enviar notificación"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:33
+#: includes/options/popup-editor/form-submission/subscription-form.php:52
+msgid "Enable to send an email notification to the website administrator."
+msgstr ""
+"Habilitar para enviar una notificación por correo electrónico al "
+"administrador del sitio web."
+
+#: includes/options/popup-editor/form-submission/contact-form.php:37
+#: includes/options/popup-editor/form-submission/subscription-form.php:56
+#: includes/options/popup-editor/form-submission/subscription-form.php:122
+msgid "From"
+msgstr "De"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:41
+#: includes/options/popup-editor/form-submission/subscription-form.php:60
+msgid "Tip: You can use mail tags."
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/contact-form.php:45
+#: includes/options/popup-editor/form-submission/subscription-form.php:64
+msgid "To"
+msgstr "Para"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:48
+msgid ""
+"Enter the email address that will receive the message. e.g: admin@gmail.com, "
+"editor@gmail.com"
+msgstr ""
+"Introduzca la dirección de correo electrónico que recibirá el mensaje. Por "
+"ejemplo: admin@gmail.com, editor@gmail.com"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:52
+#: includes/options/popup-editor/form-submission/subscription-form.php:71
+#: includes/options/popup-editor/form-submission/subscription-form.php:130
+msgid "Subject"
+msgstr "Asunto"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:54
+msgid "New contact form submission"
+msgstr "Nuevo envío de formulario de contacto"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:55
+#: includes/options/popup-editor/form-submission/subscription-form.php:74
+#: includes/options/popup-editor/form-submission/subscription-form.php:133
+msgid "This value is subject field of the message."
+msgstr "Este valor es el campo \"Asunto\" del mensaje."
+
+#: includes/options/popup-editor/form-submission/contact-form.php:59
+#: includes/options/popup-editor/form-submission/subscription-form.php:78
+#: includes/options/popup-editor/form-submission/subscription-form.php:137
+msgid "Message body"
+msgstr "Cuerpo del mensaje"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:61
+#: includes/options/popup-editor/form-submission/subscription-form.php:80
+#: includes/options/popup-editor/form-submission/subscription-form.php:139
+#, php-format
+msgid "Tip: {render=%s} e.g: %s"
+msgstr "Sugerencia: {render=%s} Ejemplo: %s"
+
+#: includes/options/popup-editor/form-submission/contact-form.php:61
+#: includes/options/popup-editor/form-submission/subscription-form.php:80
+#: includes/options/popup-editor/form-submission/subscription-form.php:139
+msgid "This value is exactly the \"field name\" you want to render"
+msgstr "Este valor es exactamente el \"nombre del campo\" que desea procesar"
+
+#: includes/options/popup-editor/form-submission/customize-form.php:113
+msgid "Show \"Back to form/Close\" buttons"
+msgstr ""
+
+#: includes/options/popup-editor/form-submission/form-submission.php:5
+msgid "Form Type"
+msgstr "Tipo de formulario"
+
+#: includes/options/popup-editor/form-submission/form-submission.php:8
+msgid "None"
+msgstr "Ninguno"
+
+#: includes/options/popup-editor/form-submission/form-submission.php:9
+#: includes/options/popup-editor/form-submission/form-submission.php:26
+msgid "Subscription Form"
+msgstr "Formulario de suscripción"
+
+#: includes/options/popup-editor/form-submission/form-submission.php:10
+#: includes/options/popup-editor/form-submission/form-submission.php:27
+msgid "Contact Form"
+msgstr "Formulario de contacto"
+
+#: includes/options/popup-editor/form-submission/form-submission.php:28
+msgid "Actions After Form Submit"
+msgstr "Acciones después de enviar el formulario"
+
+#: includes/options/popup-editor/form-submission/form-submission.php:29
+msgid "Customize"
+msgstr "Personalizar"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:11
+#, php-format
+msgid ""
+"Choose the list where subscribed users will be stored. You can create a new "
+"list from %shere%s."
+msgstr ""
+"Elija la lista en la que se almacenarán los usuarios suscritos. Puede crear "
+"una nueva lista desde %saquí%s."
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:18
+msgid "Thank you for subscribing!"
+msgstr "¡Gracias por suscribirse!"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:30
+msgid ""
+"Sorry, it's not possible to subscribe, you may have already subscribed to "
+"our list or there are problems connecting to the service."
+msgstr ""
+"Lo sentimos, no es posible suscribirse, es posible que ya se haya suscrito a "
+"nuestra lista o que haya problemas para conectarse al servicio."
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:42
+msgid "Email Notification to Admin"
+msgstr "Notificación de correo electrónico al administrador"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:67
+msgid ""
+"Enter the email address that will receive the notification message. e.g: "
+"admin@gmail.com, editor@gmail.com"
+msgstr ""
+"Introduzca la dirección de correo electrónico que recibirá el mensaje de "
+"notificación. Por ejemplo: admin@gmail.com, editor@gmail.com"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:73
+msgid "New user subscription"
+msgstr "Nueva suscripción de usuario"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:80
+#, php-format
+msgid ""
+"This message will be sent to an administrator after a new subscription. %s"
+msgstr ""
+"Este mensaje se enviará a un administrador después de una nueva suscripción. "
+"%s"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:107
+msgid "Email Notification to New Subscriber"
+msgstr "Notificación de correo electrónico al nuevo suscriptor"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:108
+msgid ""
+"Use this option to send welcome messages, discount coupons, download links, "
+"etc."
+msgstr ""
+"Utilice esta opción para enviar mensajes de bienvenida, cupones de "
+"descuento, enlaces de descarga, etc."
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:118
+msgid "Enable to send an email notification to the new subscriber."
+msgstr ""
+"Habilitar para enviar una notificación por correo electrónico al nuevo "
+"suscriptor."
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:132
+msgid "Thank you for subscribing. This is your discount coupon"
+msgstr "Gracias por suscribirse. Este es su cupón de descuento"
+
+#: includes/options/popup-editor/form-submission/subscription-form.php:139
+#, php-format
+msgid "This message will be sent to the new subscriber. %s"
+msgstr "Este mensaje se enviará al nuevo suscriptor. %s"
+
+#: includes/options/popup-editor/general/additional.php:33
+msgid "Margin top"
+msgstr "Margen superior"
+
+#: includes/options/popup-editor/general/additional.php:40
+msgid "Margin right"
+msgstr "Margen derecho"
+
+#: includes/options/popup-editor/general/additional.php:47
+msgid "Margin bottom"
+msgstr "Margen inferior"
+
+#: includes/options/popup-editor/general/additional.php:54
+msgid "Margin left"
+msgstr "Margen izquierdo"
+
+#: includes/options/popup-editor/general/additional.php:77
+msgid "Disable page scroll"
+msgstr "Deshabilitar desplazamiento de página"
+
+#: includes/options/popup-editor/general/additional.php:80
+msgid "Disable scrolling while the popup is open"
+msgstr "Deshabilitar el desplazamiento mientras el popup está abierto"
+
+#: includes/options/popup-editor/general/additional.php:88
+msgid "Enable Disclaimer Features"
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:89
+msgid "For disclaimer messages, age verification popups, etc."
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:98
+msgid "Ratio for Small Devices"
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:99
+msgid "Enter the value 0.9 if you want the slightly smaller popup."
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:115
+msgid "Use theme links color"
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:116
+msgid ""
+"If enabled, all links within the popup will have the color set in the "
+"current WordPress theme."
+msgstr ""
+
+#: includes/options/popup-editor/general/additional.php:124
+msgid "Play Notification Sound"
+msgstr "Reproducir sonido de notificación"
+
+#: includes/options/popup-editor/general/additional.php:133
+msgid "Play delay"
+msgstr "Demora de reproducción"
+
+#: includes/options/popup-editor/general/additional.php:148
+msgid "Audio"
+msgstr "Audio"
+
+#: includes/options/popup-editor/general/animations.php:28
+msgid "Exit animation"
+msgstr "Animación de salida"
+
+#: includes/options/popup-editor/general/general.php:6
+msgid "Animations"
+msgstr "Animaciones"
+
+#: includes/options/popup-editor/general/general.php:10
+msgid "Additional Settings"
+msgstr "Ajustes adicionales"
+
+#: includes/options/popup-editor/general/overlay.php:4
+msgid "Show overlay"
+msgstr "Mostrar Overlay"
+
+#: includes/options/popup-editor/general/overlay.php:5
+msgid ""
+"Disable this option if you do not want to display an overlay background. "
+"Overlay will never show for \"Notification Bar\""
+msgstr ""
+"Desactive esta opción si no desea mostrar un fondo de superposición. La "
+"superposición nunca se mostrará en \"Notification Bar\""
+
+#: includes/options/popup-editor/general/overlay.php:9
+msgid "Overlay background"
+msgstr "Fondo del Overlay"
+
+#: includes/options/popup-editor/general/overlay.php:67
+msgid "Overlay opacity"
+msgstr "Opacidad del Overlay"
+
+#: includes/options/popup-editor/general/popup.php:27
+msgid "Popup size"
+msgstr "Tamaño del popup"
+
+#: includes/options/popup-editor/general/popup.php:59
+msgid ""
+"The popup will cover the entire screen area. This option will overwrite the "
+"previous size options."
+msgstr ""
+"El popup cubrirá toda el área de la pantalla. Esta opción sobrescribirá las "
+"opciones de tamaño anteriores."
+
+#: includes/options/popup-editor/general/popup.php:79
+msgid "Browser Height"
+msgstr "Altura del navegador"
+
+#: includes/options/popup-editor/general/popup.php:85
+msgid "Popup background"
+msgstr "Fondo del popup"
+
+#: includes/options/popup-editor/general/popup.php:150
+msgid "Custom design for mobile"
+msgstr "Diseño personalizado para móviles"
+
+#: includes/options/popup-editor/general/popup.php:151
+msgid ""
+"Enable this option to design a specific popup for mobile devices. Use the "
+"mobile icon below to switch between devices. *Not available for inline "
+"popups."
+msgstr ""
+"Active esta opción para diseñar un popup específico para dispositivos "
+"móviles. Utilice el icono de móvil que se muestra a continuación para "
+"cambiar entre dispositivos. *No disponible para popups en línea."
+
+#: includes/options/popup-editor/general/popup.php:174
+msgid "Popup width for mobile"
+msgstr "Ancho del popup para móviles"
+
+#: includes/options/popup-editor/general/popup.php:187
+msgid "Popup height for mobile"
+msgstr "Altura del popup para móviles"
+
+#: includes/options/popup-editor/general/preloader.php:10
+msgid "Show preloader"
+msgstr "Mostrar preloader"
+
+#: includes/options/popup-editor/general/preloader.php:16
+msgid "Preloader duration"
+msgstr "Duración del preloader"
+
+#: includes/options/popup-editor/general/preloader.php:32
+msgid "Preloader color 1"
+msgstr "Color 1 del preloader"
+
+#: includes/options/popup-editor/general/preloader.php:43
+msgid "Preloader color 2"
+msgstr "Color 2 del preloader"
+
+#: includes/options/popup-editor/general/sticky.php:5
+msgid "Sticky control"
+msgstr "Control Sticky"
+
+#: includes/options/popup-editor/general/sticky.php:14
+msgid "Initial mode"
+msgstr "Modo inicial"
+
+#: includes/options/popup-editor/general/sticky.php:15
+msgid "Display only sticky control on initial open"
+msgstr "Mostrar sólo el control Sticky en la apertura inicial"
+
+#: includes/options/popup-editor/general/sticky.php:25
+msgid "Vertically"
+msgstr "Verticalmente"
+
+#: includes/options/popup-editor/general/sticky.php:26
+msgid "Show the sticky control vertically."
+msgstr "Muestre el control Sticky  verticalmente."
+
+#: includes/options/popup-editor/general/sticky.php:36
+msgid "Sticky size"
+msgstr "Tamaño del Control Sticky"
+
+#: includes/options/popup-editor/general/sticky.php:63
+msgid "Padding left/right"
+msgstr "Espaciado izquierdo/derecho"
+
+#: includes/options/popup-editor/general/sticky.php:75
+msgid "Sticky font"
+msgstr "Fuente del Control Sticky"
+
+#: includes/options/popup-editor/general/sticky.php:114
+msgid "Sticky content"
+msgstr "Contenido del Control Sticky"
+
+#: includes/options/popup-editor/general/sticky.php:117
+msgid "Text"
+msgstr "Texto"
+
+#: includes/options/popup-editor/general/sticky.php:119
+msgid "Open popup"
+msgstr "Abrir popup"
+
+#: includes/options/popup-editor/general/sticky.php:127
+msgid "Show icon"
+msgstr "Mostrar ícono"
+
+#: includes/options/popup-editor/general/sticky.php:133
+msgid "Icon background color"
+msgstr "Color de fondo del ícono"
+
+#: includes/options/popup-editor/general/sticky.php:144
+msgid "Icon"
+msgstr "Icono"
+
+#: includes/options/popup-editor/general/sticky.php:159
+msgid "Sticky background"
+msgstr "Fondo del Control Sticky"
+
+#: includes/options/popup-editor/general/wp-editor.php:6
+msgid "Use Custom Embed Content"
+msgstr "Utilizar Contenido Incrustado Personalizado"
+
+#: includes/options/popup-editor/general/wp-editor.php:7
+msgid ""
+"Enable this option to add the content inside the Wordpress Editor or in HTML "
+"Code field. (This will replace the Visual Editor)."
+msgstr ""
+"Active esta opción para agregar el contenido dentro del Editor de Wordpress "
+"o en el campo Código HTML. (Esto reemplazará al Editor Visual)."
+
+#: includes/options/popup-editor/general/wp-editor.php:22
+msgid "Custom Embed Content"
+msgstr "Contenido Incrustado Personalizado"
+
+#: includes/options/popup-editor/general/wp-editor.php:23
+msgid ""
+"Insert the html code of your form in the \"HTML Code\" field. Use the "
+"WordPress Editor to add another type of content."
+msgstr ""
+"Inserte el código html de su formulario en el campo \"Código HTML\". Utilice "
+"el Editor de WordPress para agregar otro tipo de contenido."
+
+#: includes/options/popup-editor/general/wp-editor.php:27
+msgid "HTML Code"
+msgstr "Código HTML"
+
+#: includes/options/popup-editor/general/wp-editor.php:34
+msgid ""
+"Add here the HTML code of your form provided by your CRM Software like "
+"Mailchimp"
+msgstr ""
+"Añada aquí el código HTML de su formulario proporcionado por su software de "
+"CRM como Mailchimp."
+
+#: includes/options/popup-editor/general/wp-editor.php:38
+msgid "WordPress Editor"
+msgstr "Editor de WordPress"
+
+#: includes/options/popup-editor/general/wp-editor.php:47
+msgid "Auto height"
+msgstr "Altura automática"
+
+#: includes/options/popup-editor/general/wp-editor.php:48
+msgid "The height of the popup will automatically adjust to the content"
+msgstr "La altura del popup se ajustará automáticamente al contenido"
+
+#: includes/options/popup-editor/general/wp-editor.php:113
+msgid "Close button"
+msgstr "Botón cerrar"
+
+#: includes/options/popup-editor/general/wp-editor.php:120
+msgid "Show close button?"
+msgstr "¿Mostrar botón cerrar?"
+
+#: includes/options/popup-editor/general/wp-editor.php:168
+msgid "Color on hover"
+msgstr "Color en hover"
+
+#: includes/options/popup-editor/inline/inline.php:4
+msgid "Should close popup on Inline Mode"
+msgstr "Debe cerrar el popup en el modo en línea"
+
+#: includes/options/popup-editor/inline/inline.php:5
+msgid ""
+"If is disabled, any element or action to close the popup will be deleted or "
+"disabled."
+msgstr ""
+"Si está deshabilitado, cualquier elemento o acción para cerrar el popup se "
+"eliminará o desactivará."
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:4
+msgid "Remains fixed"
+msgstr "Permanecer fijo"
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:7
+msgid "The notification bar remains fixed on top/bottom."
+msgstr "La barra de notificación permanece fija en la parte superior/inferior."
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:11
+msgid "Push page down"
+msgstr "Empujar la página hacia abajo"
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:14
+msgid "Activate to push the page down when open the top notification bar."
+msgstr ""
+"Activar para empujar la página hacia abajo cuando abra la barra de "
+"notificación superior."
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:18
+msgid "Fixed Header. Enter ID or Class"
+msgstr "Header fijo. Ingresar ID o Clase"
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:19
+msgid "E.g: #header or .custom-header"
+msgstr "Ejemplo: #header o .custom-header"
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:27
+msgid "Container of your page. Enter ID or Class."
+msgstr "Contenedor de su página. Ingrese ID o Clase."
+
+#: includes/options/popup-editor/notification-bar/notification-bar.php:29
+msgid "If you leave it blank, the \"body\" tag is used as container."
+msgstr "Si lo deja en blanco, la etiqueta \"body\" se utiliza como contenedor."
+
+#: includes/options/popup-editor/popup-editor-functions.php:13
+msgid "Elements"
+msgstr "Elementos"
+
+#: includes/options/popup-editor/popup-editor-functions.php:37
+msgid "Content"
+msgstr "Contenido"
+
+#: includes/options/popup-editor/popup-editor-functions.php:38
+msgid "Size & Position"
+msgstr "Tamaño y Posición"
+
+#: includes/options/popup-editor/popup-editor-functions.php:39
+msgid "Font"
+msgstr "Fuente"
+
+#: includes/options/popup-editor/popup-editor-functions.php:40
+msgid "Background"
+msgstr "Fondo"
+
+#: includes/options/popup-editor/popup-editor-functions.php:41
+msgid "Border"
+msgstr "Borde"
+
+#: includes/options/popup-editor/popup-editor-functions.php:42
+msgid "Animation"
+msgstr "Animación"
+
+#: includes/options/popup-editor/popup-editor-functions.php:43
+#: includes/options/popup-editor/popup-editor.php:13
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: includes/options/popup-editor/popup-editor-functions.php:44
+msgid "Actions"
+msgstr "Acciones"
+
+#: includes/options/popup-editor/popup-editor-functions.php:45
+msgid "Attributes"
+msgstr "Atributos"
+
+#: includes/options/popup-editor/popup-editor.php:7
+msgid "When to display"
+msgstr "Cuándo mostrar"
+
+#: includes/options/popup-editor/popup-editor.php:8
+msgid "Where to display"
+msgstr "Dónde mostrar"
+
+#: includes/options/popup-editor/popup-editor.php:14
+#: includes/options/popup-editor/templates/templates.php:24
+msgid "Popup templates"
+msgstr "Plantillas de popup"
+
+#: includes/options/popup-editor/popup-editor.php:120
+msgid "Device width"
+msgstr ""
+
+#: includes/options/popup-editor/popup-editor.php:166
+msgid "Popup status"
+msgstr "Estado del popup"
+
+#: includes/options/popup-editor/popup-editor.php:167
+msgid "If it is off, the popup will stop showing on your website."
+msgstr ""
+"Si está desactivado, la ventana emergente dejará de mostrarse en su sitio "
+"web."
+
+#: includes/options/popup-editor/publish/publish.php:9
+msgid "When do you want to publish the popup?"
+msgstr "¿Cuándo quieres publicar el popup?"
+
+#: includes/options/popup-editor/publish/publish.php:16
+msgid "Immediately"
+msgstr "Inmediatamente"
+
+#: includes/options/popup-editor/publish/publish.php:17
+#: includes/options/popup-editor/publish/publish.php:62
+msgid "Set date"
+msgstr "Establecer fecha"
+
+#: includes/options/popup-editor/publish/publish.php:25
+msgid "Publish date"
+msgstr "Fecha de publicación"
+
+#: includes/options/popup-editor/publish/publish.php:26
+#: includes/options/popup-editor/publish/publish.php:71
+msgid "The \"Time Zone\" of the WordPress settings is used."
+msgstr ""
+
+#: includes/options/popup-editor/publish/publish.php:53
+msgid "When you would like to stop showing the popup?"
+msgstr "¿Cuándo te gustaría dejar de mostrar el popup?"
+
+#: includes/options/popup-editor/publish/publish.php:61
+msgid "Never"
+msgstr "Nunca"
+
+#: includes/options/popup-editor/publish/publish.php:70
+msgid "Stop date"
+msgstr "Fecha de finalización"
+
+#: includes/options/popup-editor/target/display-conditions.php:5
+msgid "Display popup on these devices"
+msgstr "Mostrar popup en estos dispositivos"
+
+#: includes/options/popup-editor/target/display-conditions.php:17
+msgid "Display popup for these users"
+msgstr "Mostrar popup para estos usuarios"
+
+#: includes/options/popup-editor/target/display-conditions.php:21
+msgid "Logged-In Users"
+msgstr "Usuarios conectados"
+
+#: includes/options/popup-editor/target/display-conditions.php:22
+msgid "Not Logged-In Users"
+msgstr "Usuarios no conectados"
+
+#: includes/options/popup-editor/target/display-target.php:6
+msgid "Display on All Site"
+msgstr "Mostrar en todo el sitio"
+
+#: includes/options/popup-editor/target/display-target.php:12
+msgid "Display on Homepage"
+msgstr "Mostrar en la página de inicio"
+
+#: includes/options/popup-editor/target/display-target.php:18
+msgid "Display on Archives"
+msgstr "Mostrar en Archivos"
+
+#: includes/options/popup-editor/target/display-target.php:34
+#: includes/options/popup-editor/target/display-target.php:90
+#: includes/options/popup-editor/target/display-target.php:170
+#, php-format
+msgid "Display on %s"
+msgstr "Mostrar en %s"
+
+#: includes/options/popup-editor/target/display-target.php:46
+#: includes/options/popup-editor/target/display-target.php:182
+msgid "Include IDs"
+msgstr "IDs a Incluir"
+
+#: includes/options/popup-editor/target/display-target.php:48
+#: includes/options/popup-editor/target/display-target.php:184
+msgid "Enter the IDs where you want to display the popup. e.g: 7, 18"
+msgstr ""
+"Introduzca los ID en los que desee mostrar el popup. Por ejemplo: 7, 18"
+
+#: includes/options/popup-editor/target/display-target.php:59
+#: includes/options/popup-editor/target/display-target.php:195
+msgid "Exclude IDs"
+msgstr "IDs a excluir"
+
+#: includes/options/popup-editor/target/display-target.php:61
+#: includes/options/popup-editor/target/display-target.php:197
+msgid "Enter the IDs where you do not want to display the popup. e.g: 5, 9, 23"
+msgstr ""
+"Introduzca los ID en los que no deseas mostrar el popup. Por ejemplo: 5, 9, "
+"23"
+
+#: includes/options/popup-editor/target/display-target.php:117
+msgid "Display on Specific URLs"
+msgstr "Mostrar en direcciones URL específicas"
+
+#: includes/options/popup-editor/target/display-target.php:122
+msgid "Show in URLs"
+msgstr "Mostrar en URLs"
+
+#: includes/options/popup-editor/target/display-target.php:134
+msgid "Not show in URLs"
+msgstr "No mostrar en URLs"
+
+#: includes/options/popup-editor/target/display-target.php:151
+msgid "Display Popup on Custom Post Types"
+msgstr "Mostrar popup en los Tipos de Post Personalizados"
+
+#: includes/options/popup-editor/target/display-target.php:159
+msgid "Not custom post types found"
+msgstr "No se han encontrado Tipos de Post Personalizados"
+
+#: includes/options/popup-editor/target/target.php:6
+msgid "Pages"
+msgstr "Páginas"
+
+#: includes/options/popup-editor/target/target.php:7
+msgid "Conditions"
+msgstr "Condiciones"
+
+#: includes/options/popup-editor/templates/templates.php:5
+msgid "How do you want to import your popup?"
+msgstr "¿Cómo quieres importar tu popup?"
+
+#: includes/options/popup-editor/templates/templates.php:12
+msgid "From popup template"
+msgstr "Desde una plantilla de popup"
+
+#: includes/options/popup-editor/templates/templates.php:25
+msgid "Choose a popup template, and then click on the import button."
+msgstr ""
+"Elija una plantilla de popup, y a continuación, haga clic en el botón "
+"\"Import\""
+
+#: includes/options/popup-editor/triggers/close-triggers.php:11
+msgid "Close the popup by clicking on overlay"
+msgstr "Cerrar el popup haciendo clic en la superposición"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:34
+msgid "Close the popup by pressing the ESC Key"
+msgstr "Cerrar el popup pulsando la tecla ESC"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:57
+msgid "Close the popup automatically after X seconds"
+msgstr "Cerrar el popup automáticamente después de X segundos"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:72
+#: includes/options/popup-editor/triggers/open-triggers.php:96
+msgid "Time delay"
+msgstr "Tiempo de retardo"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:94
+msgid "Close the popup after scrolling down X amount"
+msgstr "Cerrar el popup después de desplazarse hacia abajo X cantidad"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:109
+#: includes/options/popup-editor/triggers/close-triggers.php:147
+#: includes/options/popup-editor/triggers/open-triggers.php:320
+msgid "Scroll amount"
+msgstr "Cantidad de desplazamiento"
+
+#: includes/options/popup-editor/triggers/close-triggers.php:132
+msgid "Close the popup after scrolling up X amount"
+msgstr "Cerrar el popup después de hacer scroll X cantidad"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:13
+msgid "Display the popup by clicking on certain element"
+msgstr "Mostrar el popup haciendo clic en cierto elemento"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:18
+msgid "Event"
+msgstr "Evento"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:30
+msgid "Use this class to execute your popup:"
+msgstr "Utilice esta clase para ejecutar su popup:"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:35
+msgid "Usage examples:"
+msgstr "Ejemplos de uso:"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:54
+msgid "Enter your custom class"
+msgstr "Introduzca su clase personalizada"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:64
+msgid "Prevent Default Event"
+msgstr "Prevenir el evento predeterminado"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:67
+msgid "Enable to avoid the default event when clicking"
+msgstr "Habilite para evitar el evento predeterminado al hacer click"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:81
+msgid "Display the popup automatically after X seconds"
+msgstr "Mostrar el popup automáticamente después de X segundos"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:111
+#: includes/options/popup-editor/triggers/open-triggers.php:177
+#: includes/options/popup-editor/triggers/open-triggers.php:256
+#: includes/options/popup-editor/triggers/open-triggers.php:357
+msgid "Set cookie"
+msgstr "Establecer cookie"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:112
+#: includes/options/popup-editor/triggers/open-triggers.php:178
+#: includes/options/popup-editor/triggers/open-triggers.php:257
+#: includes/options/popup-editor/triggers/open-triggers.php:358
+msgid "Enable this option to display the popup only once."
+msgstr "Active esta opción para mostrar el popup sólo una vez."
+
+#: includes/options/popup-editor/triggers/open-triggers.php:161
+msgid "Display the popup when the user tries to leave your website"
+msgstr "Mostrar el popup cuando el usuario intenta salir de su sitio web"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:226
+msgid "Display the popup after X seconds of user inactivity"
+msgstr "Mostrar el popup después de X segundos de inactividad del usuario"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:241
+msgid "Inactivity time"
+msgstr "Tiempo de inactividad"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:305
+msgid ""
+"Display the popup after scrolling down X amount, after post content or after "
+"certain element"
+msgstr ""
+"Mostrar el popup después de X cantidad de desplazamiento hacia abajo, "
+"después del contenido del post o después de cierto elemento"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:335
+msgid "After post content"
+msgstr "Después del contenido del post"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:345
+msgid "Scroll to certain element (ID/Class)"
+msgstr "Desplazamiento hasta cierto elemento (ID / Class)"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:346
+msgid "Enter the ID name or Class name like #footer or .widget-title"
+msgstr "Introduzca el ID o el nombre de la clase como #footer o .widget-title"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:407
+msgid "Embed the popup before or after post/page content"
+msgstr "Insertar el popup antes o después del contenido del post/página"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:411
+msgid "Embed automatically in"
+msgstr "Insertar automáticamente en"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:415
+msgid "Before Post"
+msgstr "Antes del post"
+
+#: includes/options/popup-editor/triggers/open-triggers.php:416
+msgid "After Post"
+msgstr "Después del post"
+
+#: includes/options/popup-editor/triggers/triggers.php:6
+msgid "When to show Popup"
+msgstr "Cuándo mostrar el Popup"
+
+#: includes/options/popup-editor/triggers/triggers.php:7
+msgid "When to close Popup"
+msgstr "Cuándo cerrar el popup"
+
+#: includes/service-integration/class-mailpoet-integration.php:41
+#, php-format
+msgid "Please install and activate the %sMailpoet%s plugin."
+msgstr "Por favor instale y active el plugin %sMailpoet%s."
+
+#: includes/service-integration/class-mailster-integration.php:24
+#, php-format
+msgid "Please install and activate the %sMailster%s plugin."
+msgstr "Por favor instale y active el plugin %sMailster%s."
+
+#. Plugin Name of the plugin/theme
+msgid "Master Popups"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://masterpopups.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Multi-Purpose Popup Plugin for WordPress with Powerful and Easy Email "
+"Marketing Integration"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "CodexHelp"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://codecanyon.net/user/codexhelp"
+msgstr ""
+
+#~ msgid ""
+#~ "By default the popups are displayed one at a time, if you want to show "
+#~ "multiple  popups at time activate this option."
+#~ msgstr ""
+#~ "De forma predeterminada, las ventanas emergentes se muestran de una en "
+#~ "una, si desea mostrar varias ventanas emergentes a la vez, active esta "
+#~ "opción."
+
+#~ msgid "Audience Lists"
+#~ msgstr "Listas de Audiencia"
+
+#~ msgid "Add New Popup"
+#~ msgstr "Agregar nuevo popup"
+
+#~ msgid "Edit Popup"
+#~ msgstr "Editar popup"
+
+#~ msgid "Update Popup"
+#~ msgstr "Actualizar popup"
+
+#~ msgid "View Popup"
+#~ msgstr "Ver popup"
+
+#~ msgid "View Popups"
+#~ msgstr "Ver popups"
+
+#~ msgid "Search Popup"
+#~ msgstr "Buscar popup"
+
+#~ msgid "Popups by %s"
+#~ msgstr "Popups por %s"
+
+#~ msgid "Audience"
+#~ msgstr "Audiencia"
+
+#~ msgid "Add New List"
+#~ msgstr "Agregar nueva lista"
+
+#~ msgid "Edit List"
+#~ msgstr "Editar lista"
+
+#~ msgid "Update List"
+#~ msgstr "Actualizar lista"
+
+#~ msgid "View List"
+#~ msgstr "Ver lista"
+
+#~ msgid "View Lists"
+#~ msgstr "Ver listas"
+
+#~ msgid "Search Lists"
+#~ msgstr "Buscar listas"
+
+#~ msgid "Audience by %s"
+#~ msgstr "Audiencia por %s"
+
+#~ msgid "Align center"
+#~ msgstr "Alinear al centro horizontal"
+
+#~ msgid "Align middle"
+#~ msgstr "Alinear al centro vertical"
+
+#~ msgid "Previous width"
+#~ msgstr "Ancho anterior"
+
+#~ msgid "Previous height"
+#~ msgstr "Altura anterior"
+
+#~ msgid "Get lists"
+#~ msgstr "Obtener listas"
+
+#~ msgid "Envato Api Key"
+#~ msgstr "Api Key de Envato"
+
+#~ msgid "OnClick actions"
+#~ msgstr "Acciones onClick"
+
+#~ msgid "Show text \"Back to form/Close\" on success"
+#~ msgstr "Mostrar texto \"Back to form/Close\" en caso de éxito"
+
+#~ msgid "Actions after submission"
+#~ msgstr "Acciones después del envío"
+
+#~ msgid ""
+#~ "Sender name and email. Please enter a valid format. E.g: User %s or %s"
+#~ msgstr ""
+#~ "Nombre y correo electrónico del remitente. Ingrese un formato válido. Por "
+#~ "ejemplo: Usuario%s o %s"
+
+#~ msgid "Browser Width"
+#~ msgstr "Ancho del navegador"
+
+#~ msgid "Browser width on mobile"
+#~ msgstr "Ancho del navegador en el móvil"
+
+#~ msgid "Use font color"
+#~ msgstr "Utilizar color de fuente"
+
+#~ msgid "Audio Source"
+#~ msgstr "Origen de audio"
+
+#~ msgid "You can learn how to find your api key %shere%s"
+#~ msgstr "Puedes aprender cómo encontrar tu api key %saquí%s"
+
+#~ msgid "You can learn how to find your purchase key %shere%s"
+#~ msgstr "Puedes aprender cómo encontrar tu api key% shere% s"
+
+#~ msgid "Popup status is off"
+#~ msgstr "El estado del popup está desactivado"
+
+#~ msgid ""
+#~ "Some services like Mailchimp, Benchmark require a list id to get the "
+#~ "custom fields. Leave empty if you are not sure."
+#~ msgstr ""
+#~ "Algunos servicios como Mailchimp, Benchmark requieren un ID de lista para "
+#~ "obtener los campos personalizados. Deje en blanco si no está seguro."
+
+#~ msgid "General settings"
+#~ msgstr "Ajustes generales"
+
+#~ msgid "This action cannot be performed. "
+#~ msgstr "Esta acción no se puede realizar."
+
+#~ msgid "Where do I find the API key? Go %shere%s"
+#~ msgstr "¿Dónde encuentro mi API Key? Ir %sAquí%s"
+
+#~ msgid "Where do I find the Access token? Go %shere%s"
+#~ msgstr "¿Dónde encuentro mi Access token? Ir %sAquí%s"
+
+#~ msgid "Where do I find the Url? %shere%s"
+#~ msgstr "¿Dónde encuentro mi URL? Ir %sAquí%s."
+
+#~ msgid "Display on all site"
+#~ msgstr "Mostrar en todo el sitio web"
+
+#~ msgid "Close Icon for Custom Embed Content"
+#~ msgstr "Icono cerrar para contenido incrustado personalizado"
+
+#~ msgid "Show close icon?"
+#~ msgstr "¿Mostrar el ícono cerrar?"
+
+#~ msgid "Save your popup template and use it on another website."
+#~ msgstr "Guarde su plantilla y úsela en otro sitio web."
+
+#~ msgid "Where do I find the API key? Go %shere%s."
+#~ msgstr "¿Dónde encuentro mi API Key? Ir %sAquí%s."
+
+#~ msgid "Where do I find the Access token? Go %shere%s."
+#~ msgstr "¿Dónde encuentro mi Access token? Ir %sAquí%s."
+
+#~ msgid "The popup will be displayed on enabled devices."
+#~ msgstr "El popupse mostrará en los dispositivos habilitados."
+
+#~ msgid "WP Editor"
+#~ msgstr "WP Editor"
+
+#~ msgid "Add here the html code of your CRM software form like Mailchimp."
+#~ msgstr "Añada aquí el código html de su formulario CRM como Mailchimp."
+
+#~ msgid "Enable to set auto height to your popup"
+#~ msgstr "Habilitar para establecer la altura automática a su popup"
+
+#~ msgid "Browser width reference"
+#~ msgstr "Ancho de referencia"
+
+#~ msgid ""
+#~ "Sender name and email. Please enter a valid format: e.g: User %s or %s"
+#~ msgstr ""
+#~ "Nombre y correo electrónico del remitente. Ingrese un formato válido: por "
+#~ "ejemplo: Usuario% s o% s"
+
+#~ msgid "Tip: {render=%s}, e.g: %s"
+#~ msgstr "Sugerencia: {render=%s}, Ejemplo: %s"
+
+#~ msgid "Border width"
+#~ msgstr "Ancho del borde"
+
+#~ msgid ""
+#~ "Tip: {render=This value is exactly the \"field name\" you want to "
+#~ "render}, e.g: {render=field_email}, {render=popup_title}, {render=ip}, "
+#~ "{render=origin_url}"
+#~ msgstr ""
+#~ "Sugerencia: {render=Este valor es exactamente el \"field name\" que "
+#~ "quieres renderizar}, Ejemplo: {render=field_email}, {render=popup_title}, "
+#~ "{render=ip}, {render=origin_url}"
+
+#~ msgid ""
+#~ "Enable this option to not display again the popup after successful "
+#~ "subscription form submission."
+#~ msgstr ""
+#~ "Habilitar esta opción para no mostrar de nuevo el popup después de la "
+#~ "presentación del formulario de suscripción con éxito."
+
+#~ msgid ""
+#~ "Enable this option to not display the popup after successful subscription "
+#~ "form submission."
+#~ msgstr ""
+#~ "Habilite esta opción para no mostrar el mensaje emergente después de la "
+#~ "presentación con éxito del formulario de suscripción."
+
+#~ msgid "Checked color"
+#~ msgstr "Color activado"
+
+#~ msgid ""
+#~ "If you wish you can also enter the name of the custom field of your email "
+#~ "service. Go to %s and Explore your custom fields."
+#~ msgstr ""
+#~ "Si lo desea, también puede introducir el nombre del campo personalizado "
+#~ "de su servicio de correo electrónico. Vaya a% s y Explore sus campos "
+#~ "personalizados."
+
+#~ msgid "Close icon"
+#~ msgstr "Elegir ícono"
+
+#~ msgid ""
+#~ "Please enter only %s. Not html. We recommend going to Advanced tab and in "
+#~ "the Overflow option choose \"Auto\""
+#~ msgstr ""
+#~ "Ingrese sólo %s. No html. Recomendamos ir a la pestaña Avanzado y en la "
+#~ "opción Overflow elegir \"Auto\""
+
+#~ msgid ""
+#~ "Please enter only [Shortcode]. Not html. We recommend going to Advanced "
+#~ "tab and in the Overflow option choose \"Auto\""
+#~ msgstr ""
+#~ "Introduzca sólo [Shortcode]. No html. Recomendamos ir a la pestaña "
+#~ "Avanzado y en la opción Desbordamiento elegir \"Auto\""
+
+#~ msgid "List id"
+#~ msgstr "ID de Lista"
+
+#~ msgid "Custom Fields"
+#~ msgstr "Campos personalizados"
+
+#~ msgid "Date Added"
+#~ msgstr "Fecha "
+
+#~ msgid ""
+#~ "Use the following options to connect to the service, all access data is "
+#~ "required."
+#~ msgstr ""
+#~ "Utilice las siguientes opciones para conectarse al servicio. Se requieren "
+#~ "todos los datos de acceso."
+
+#~ msgid "Custom Styles"
+#~ msgstr "Estilos personalizados"
+
+#~ msgid ""
+#~ "It seems that your list no longer exists or the %sList ID%s entered is "
+#~ "incorrect. Skip this message if you are sure that the list ID is correct "
+#~ "or the list is not needed."
+#~ msgstr ""
+#~ "Parece que su lista ya no existe o el %sID de Lista%s ingresado es "
+#~ "incorrecto. Omita este mensaje si está seguro de que el ID de la lista es "
+#~ "correcto o de que la lista no es necesaria."
+
+#~ msgid "Audience List"
+#~ msgstr "Audience List"
+
+#~ msgid "Popup Attributes"
+#~ msgstr "Atributos de Popups"
+
+#~ msgid "Parent Popup:"
+#~ msgstr "Popup padre"
+
+#~ msgid "Not found"
+#~ msgstr "Ningún resultado"
+
+#~ msgid "Not found in Trash"
+#~ msgstr "No hay resultados en la papelera"
+
+#~ msgid "Popup Archives"
+#~ msgstr "Archivos de Popups"

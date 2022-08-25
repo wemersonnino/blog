@@ -1,0 +1,34 @@
+.mts-items-sort {
+  padding: 20px;
+  overflow: hidden;
+  clear: both;
+  display: table; }
+  .mts-items-sort > div {
+    margin: 10px 5px; }
+  .mts-items-sort .mts-item-sort {
+    position: relative;
+    width: 260px;
+    height: 60px;
+    float: left;
+    padding: 10px;
+    vertical-align: middle;
+    cursor: move; }
+    .mts-items-sort .mts-item-sort .mts-item-sort-img {
+      max-width: 40px;
+      margin-right: 12px;
+      vertical-align: middle;
+      float: left; }
+    .mts-items-sort .mts-item-sort .mts-item-sort-name {
+      font-size: 13px;
+      font-weight: 600; }
+    .mts-items-sort .mts-item-sort .mts-item-sort-number {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      color: black;
+      font-size: 11px;
+      padding: 0 5px; }
+    .mts-items-sort .mts-item-sort.ui-sortable-helper {
+      background: white; }
+  .mts-items-sort .mts-sortable-placeholder {
+    float: left; }

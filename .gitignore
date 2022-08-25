@@ -1,4 +1,12 @@
-wp-content/uploads/
-wp-content/plugins/
-wp-content
-readme.html
+#ignore everything in the root folder except wp-content
+/*
+/*/
+!wp-content/
+
+#ignore everything in the wp-content directory with excepts
+wp-content/*
+!wp-content/plugins
+!wp-content/themes
+
+#ignore twenty
+wp-content/themes/twenty*/

@@ -1,0 +1,3 @@
+Aug 24 2022 17:29:35
+{"type":8,"message":"Constant WP_DEBUG already defined","file":"\/var\/www\/site\/blog\/wp-content\/themes\/meutudoblog\/functions.php","line":2}
+
