@@ -1,5 +1,8 @@
 <?php
 define( "WP_DEBUG", true );
+
+include (get_theme_file_path('/includes/widgets.php'));
+
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -50,6 +53,7 @@ function custom_widgets_init() {
   // ));
 }
 add_action('widgets_init', 'custom_widgets_init');
+add_action('widgets_init', 'meutudoblog_widgets');
 
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
