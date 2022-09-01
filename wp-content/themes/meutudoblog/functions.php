@@ -1,7 +1,6 @@
 <?php
-define( "WP_DEBUG", true );
 
-include (get_theme_file_path('/includes/widgets.php'));
+include (get_theme_file_path('/widgets.php'));
 
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
