@@ -2,6 +2,8 @@
 
 namespace WebpConverter\Conversion;
 
+use WebpConverter\Conversion\Format\AvifFormat;
+use WebpConverter\Conversion\Format\WebpFormat;
 use WebpConverter\Conversion\Method\RemoteMethod;
 use WebpConverter\PluginData;
 use WebpConverter\Repository\TokenRepository;
@@ -68,7 +70,8 @@ class PathsFinder {
 		$paths       = $this->get_paths( $skip_converted, $allowed_output_formats );
 		$paths_count = count( $paths );
 
-		$this->stats_manager->set_regeneration_images_count( $paths_count );
+		$this->stats_manager->set_regeneration_images( $paths_count );
+
 		return array_chunk( $paths, $this->get_paths_chunk_size( $paths_count ) );
 	}
 
@@ -99,17 +102,26 @@ class PathsFinder {
 		$paths  = $this->find_source_paths( true );
 		$values = [];
 		foreach ( $allowed_output_formats as $output_format ) {
-			$values[ $output_format ] = 0;
+			$values[ $output_format ]          = 0;
+			$values[ 'all_' . $output_format ] = 0;
 			foreach ( $paths as $path ) {
 				$output_path = $this->output_path->get_path( $path, false, $output_format );
+				if ( $output_path === null ) {
+					continue;
+				}
 
-				if ( $output_path && $this->is_converted_file( $output_path ) ) {
+				$values[ 'all_' . $output_format ]++;
+				if ( ! $this->is_converted_file( $output_path ) ) {
 					$values[ $output_format ]++;
 				}
 			}
 		}
 
-		$this->stats_manager->set_calculation_images_count( count( $paths ) );
+		$this->stats_manager->set_images_webp_all( $values[ 'all_' . WebpFormat::FORMAT_EXTENSION ] ?? 0 );
+		$this->stats_manager->set_images_webp_unconverted( $values[ WebpFormat::FORMAT_EXTENSION ] ?? 0 );
+		$this->stats_manager->set_images_avif_all( $values[ 'all_' . AvifFormat::FORMAT_EXTENSION ] ?? 0 );
+		$this->stats_manager->set_images_avif_unconverted( $values[ AvifFormat::FORMAT_EXTENSION ] ?? 0 );
+
 		return $values;
 	}
 
@@ -128,7 +140,7 @@ class PathsFinder {
 			foreach ( $allowed_output_formats as $output_format ) {
 				$output_path = $this->output_path->get_path( $path, false, $output_format );
 
-				if ( $output_path && $this->is_converted_file( $output_path ) ) {
+				if ( $output_path && ! $this->is_converted_file( $output_path ) ) {
 					$is_converted = false;
 					break;
 				}
@@ -170,9 +182,9 @@ class PathsFinder {
 	}
 
 	private function is_converted_file( string $output_path ): bool {
-		return ( ! file_exists( $output_path )
-			&& ! file_exists( $output_path . '.' . SkipLarger::DELETED_FILE_EXTENSION )
-			&& ! file_exists( $output_path . '.' . SkipCrashed::CRASHED_FILE_EXTENSION )
+		return ( file_exists( $output_path )
+			|| file_exists( $output_path . '.' . SkipLarger::DELETED_FILE_EXTENSION )
+			|| file_exists( $output_path . '.' . SkipCrashed::CRASHED_FILE_EXTENSION )
 		);
 	}
 

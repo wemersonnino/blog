@@ -6,7 +6,6 @@ use WebpConverter\Error\Notice\LibsNotInstalledNotice;
 use WebpConverter\Error\Notice\LibsWithoutWebpSupportNotice;
 use WebpConverter\PluginData;
 use WebpConverter\PluginInfo;
-use WebpConverter\Settings\Option\AccessTokenOption;
 use WebpConverter\Settings\Page\PageIntegration;
 use WebpConverterVendor\MattPlugins\DeactivationModal;
 
@@ -144,13 +143,7 @@ class DeactivationModalGenerator {
 					new DeactivationModal\Model\FormValue(
 						'request_plugin_settings',
 						function () {
-							$plugin_settings = $this->plugin_data->get_plugin_settings();
-							$access_token    = $plugin_settings[ AccessTokenOption::OPTION_NAME ] ?? '';
-							if ( $access_token ) {
-								$plugin_settings[ AccessTokenOption::OPTION_NAME ] = substr( $access_token, 0, 32 ) . str_repeat( '*', 32 );
-							}
-
-							$settings_json = json_encode( $plugin_settings );
+							$settings_json = json_encode( $this->plugin_data->get_public_settings() );
 							return base64_encode( $settings_json ?: '' ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions
 						}
 					)
@@ -162,8 +155,11 @@ class DeactivationModalGenerator {
 							$stats_data = [
 								'usage_time'          => $this->stats_manager->get_plugin_usage_time(),
 								'first_version'       => $this->stats_manager->get_plugin_first_version(),
-								'regeneration_images' => $this->stats_manager->get_regeneration_images_count(),
-								'calculation_images'  => $this->stats_manager->get_calculation_images_count(),
+								'regeneration_images' => $this->stats_manager->get_regeneration_images(),
+								'webp_all'            => $this->stats_manager->get_images_webp_all(),
+								'webp_unconverted'    => $this->stats_manager->get_images_webp_unconverted(),
+								'avif_all'            => $this->stats_manager->get_images_avif_all(),
+								'avif_unconverted'    => $this->stats_manager->get_images_avif_unconverted(),
 							];
 
 							$stats_json = json_encode( $stats_data );

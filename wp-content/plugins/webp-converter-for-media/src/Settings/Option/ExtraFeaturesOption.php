@@ -18,15 +18,15 @@ class ExtraFeaturesOption extends OptionAbstract {
 	/**
 	 * {@inheritdoc}
 	 */
-	public function get_priority(): int {
-		return 90;
+	public function get_name(): string {
+		return self::OPTION_NAME;
 	}
 
 	/**
 	 * {@inheritdoc}
 	 */
-	public function get_name(): string {
-		return self::OPTION_NAME;
+	public function get_form_name(): string {
+		return OptionAbstract::FORM_TYPE_ADVANCED;
 	}
 
 	/**
@@ -55,7 +55,7 @@ class ExtraFeaturesOption extends OptionAbstract {
 	 *
 	 * @return string[]
 	 */
-	public function get_values( array $settings ): array {
+	public function get_available_values( array $settings ): array {
 		return [
 			self::OPTION_VALUE_ONLY_SMALLER  => __(
 				'Automatic removal of files in output formats larger than original',
@@ -83,10 +83,25 @@ class ExtraFeaturesOption extends OptionAbstract {
 	 */
 	public function get_disabled_values( array $settings ): array {
 		$values = [];
-		if ( ( $settings[ ConversionMethodOption::OPTION_NAME ] ?? '' ) === GdMethod::METHOD_NAME ) {
+		if ( ( $settings[ ConversionMethodOption::OPTION_NAME ] ?? GdMethod::METHOD_NAME ) === GdMethod::METHOD_NAME ) {
 			$values[] = self::OPTION_VALUE_KEEP_METADATA;
 		}
 		return $values;
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function get_valid_value( $current_value, array $available_values = null, array $disabled_values = null ) {
+		$valid_values = [];
+		foreach ( $current_value as $option_value ) {
+			if ( array_key_exists( $option_value, $available_values ?: [] )
+				&& ! in_array( $option_value, $disabled_values ?: [] ) ) {
+				$valid_values[] = $option_value;
+			}
+		}
+
+		return $valid_values;
 	}
 
 	/**
@@ -97,7 +112,6 @@ class ExtraFeaturesOption extends OptionAbstract {
 	public function get_default_value( array $settings = null ): array {
 		return [
 			self::OPTION_VALUE_ONLY_SMALLER,
-			self::OPTION_VALUE_DEBUG_ENABLED,
 		];
 	}
 }

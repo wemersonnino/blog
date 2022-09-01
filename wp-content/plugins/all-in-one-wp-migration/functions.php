@@ -40,7 +40,7 @@ function ai1wm_storage_path( $params ) {
 
 	// Validate storage path
 	if ( ai1wm_validate_file( $params['storage'] ) !== 0 ) {
-		throw new Ai1wm_Storage_Exception( __( 'Invalid storage path. <a href="https://help.servmask.com/knowledgebase/invalid-storage-path/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
+		throw new Ai1wm_Storage_Exception( __( 'Your storage directory name contains invalid characters. It cannot contain: < > : " | ? * \0. <a href="https://help.servmask.com/knowledgebase/invalid-storage-name/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
 	}
 
 	// Get storage path
@@ -65,7 +65,7 @@ function ai1wm_backup_path( $params ) {
 
 	// Validate archive path
 	if ( ai1wm_validate_file( $params['archive'] ) !== 0 ) {
-		throw new Ai1wm_Archive_Exception( __( 'Invalid archive path. <a href="https://help.servmask.com/knowledgebase/invalid-archive-path/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
+		throw new Ai1wm_Archive_Exception( __( 'Your archive file name contains invalid characters. It cannot contain: < > : " | ? * \0. <a href="https://help.servmask.com/knowledgebase/invalid-archive-name/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
 	}
 
 	return AI1WM_BACKUPS_PATH . DIRECTORY_SEPARATOR . $params['archive'];
@@ -84,7 +84,7 @@ function ai1wm_validate_file( $file, $allowed_files = array() ) {
 	// Validates special characters that are illegal in filenames on certain
 	// operating systems and special characters requiring special escaping
 	// to manipulate at the command line
-	$invalid_chars = array( '?', '[', ']', '=', '<', '>', ':', ';', ',', "'", '"', '&', '$', '#', '*', '(', ')', '|', '~', '`', '!', '{', '}', '%', '+', '’', '«', '»', '”', '“', chr( 0 ) );
+	$invalid_chars = array( '<', '>', ':', '"', '|', '?', '*', chr( 0 ) );
 	foreach ( $invalid_chars as $char ) {
 		if ( strpos( $file, $char ) !== false ) {
 			return 1;
@@ -107,7 +107,7 @@ function ai1wm_archive_path( $params ) {
 
 	// Validate archive path
 	if ( ai1wm_validate_file( $params['archive'] ) !== 0 ) {
-		throw new Ai1wm_Archive_Exception( __( 'Invalid archive path. <a href="https://help.servmask.com/knowledgebase/invalid-archive-path/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
+		throw new Ai1wm_Archive_Exception( __( 'Your archive file name contains invalid characters. It cannot contain: < > : " | ? * \0. <a href="https://help.servmask.com/knowledgebase/invalid-archive-name/" target="_blank">Technical details</a>', AI1WM_PLUGIN_NAME ) );
 	}
 
 	// Get archive path
@@ -2088,10 +2088,10 @@ function ai1wm_is_decryption_password_valid( $encrypted_signature, $password ) {
  * @param int $depth
  * @return void
  */
-function ai1wm_json_response( $data, $options = 0, $depth = 512 ) {
+function ai1wm_json_response( $data, $options = 0 ) {
 	if ( ! headers_sent() ) {
 		header( 'Content-Type: application/json; charset=' . get_option( 'blog_charset', 'utf-8' ) );
 	}
 
-	echo json_encode( $data, $options, $depth );
+	echo json_encode( $data, $options );
 }

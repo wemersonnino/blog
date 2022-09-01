@@ -56,11 +56,11 @@ If you would like to appreciate it, you can try [the PRO version](https://mattpl
 
 == Installation ==
 
-1. Upload the plugin files to `/wp-content/plugins/webp-converter-for-media` directory, or install plugin through the WordPress plugins screen directly.
-2. Activate plugin through `Plugins` screen in WordPress Admin Panel.
+1. Upload the plugin files to `/wp-content/plugins/webp-converter-for-media` directory, or install the plugin through the WordPress plugins screen directly.
+2. Activate the plugin through `Plugins` screen in WordPress Admin Panel.
 3. Use `Settings -> Settings -> Converter for Media` screen to configure the plugin.
-4. Click on the button `Regenerate All`.
-5. Check if everything works fine.
+4. Click on the button `Start Bulk Optimization` and wait.
+5. Check if everything works fine using [this tutorial](https://wordpress.org/support/topic/how-can-i-check-if-the-plugin-is-working-properly/).
 
 That's all! Your website is already loading faster!
 
@@ -68,25 +68,23 @@ That's all! Your website is already loading faster!
 
 = How to get technical support? (before you ask for help) =
 
-Please always adding your thread, **read all other questions in the FAQ of plugin and other threads in support forum first**. Perhaps someone had a similar problem and it has been resolved.
+Before you add a new thread, **read all other questions in this FAQ and other threads in [the support forum](https://wordpress.org/support/plugin/webp-converter-for-media/) first**. Perhaps someone had a similar problem and it has been resolved.
 
 When adding a thread, follow these steps and reply to each of them:
 
-**1.** Do you have any error on the plugin settings page? Please read [this thread](https://wordpress.org/support/topic/server-configuration-error-what-to-do/) if you have any errors.
+**1.** Do you have any errors on the plugin settings page? Please read [this thread](https://wordpress.org/support/topic/server-configuration-error-what-to-do/) if you have any errors.
 
 **2.** URL of your website.
 
-**3.** Configuration of your server *(link to it can be found on the settings page of plugin in the section **"We are waiting for your message"**)* - please take a screenshot of the ENTIRE page and send it to me.
+**3.** Screenshot of the Help Center tab on the plugin settings screen - please take a screenshot of the ENTIRE page.
 
-**4.** Settings of plugin - please take a screenshot of the ENTIRE page and send it to me.
+**4.** Please do the test, which is described in the FAQ in the question "How to check if the plugin works?". Please send a screenshot of Devtools with the test results.
 
-**5.** Please do the test, which is described in the FAQ in question `How to check if plugin works?`. Please send a screenshot of Devtools with test results.
-
-Please remember to include the answers for all questions by adding a thread. It is much easier and accelerate the solution of your problem.
+Please remember to include the answers to all questions by adding a thread. It is much easier and accelerates the solution of your problem.
 
 = Error on plugin settings screen? =
 
-If you have an error on the plugin settings screen, first of all please read it carefully. They are displayed when there is a problem with the configuration of your server or website.
+If you have an error on the plugin settings screen, first of all, please read it carefully. They are displayed when there is a problem with the configuration of your server or website.
 
 The messages are designed to reduce the number of support requests that are repeated. It saves your and our time. Please read [this thread](https://wordpress.org/support/topic/server-configuration-error-what-to-do/) for more information.
 
@@ -98,33 +96,29 @@ If you get an error: `File "%s" does not exist. Please check file path.` means t
 
 If you get an error: `File "%s" is unreadable. Please check file permissions.` means that the [is_readable()](https://www.php.net/manual/en/function.is-readable.php) function in PHP returned `false` using the file path given in the error message. Check the permissions for the file and the directory in which the file is located.
 
-If you get an error: `"%s" is not a valid image file.` means that the file is damaged in some way. Download the file to disk, save it again using any graphics program and add again to the page. If the error applies to individual images then you can ignore it - just the original images will load, not WebP.
+If you get an error: `"%s" is not a valid image file.` means that the file is damaged in some way. Download the file to disk, save it again using any graphics program and add it again to the page. If the error applies to individual images then you can ignore it - just the original images will load, not WebP.
 
 If you get an error: `Image "%s" converted to .webp is larger than original and converted .webp file has been deleted.` means the original image weighed less than WebP. This happens when images have been compressed before. Disable the *"Automatic removal of files in output formats larger than original"* option in plugin settings to force always using WebP.
 
-In the case of the above problems, **contacting the support forum will be useless**. Unfortunately, we are unable to help you if your files are damaged. You have to fix it yourself. If you have previously used other tools that changed the original files and damaged them, you will do nothing more.
-
-Remember that it happens that other plugins can cause problems with accessing files or the REST API. Please try to disable all other plugins and set the default theme to make sure that it is not one of them that causes these types of problems.
-
 = What are requirements of plugin? =
 
-Practically every hosting meets these requirements. You must use PHP at least 7.0 and have the `GD` or `Imagick` extension installed. **The extension must support `WebP format`.** If you have an error saying that the GD or Imagick library are not installed, but you have it installed then they are probably incorrectly configured and do not have WebP support.
+Practically every hosting meets these requirements. You must use PHP at least 7.0 and have the `GD` or `Imagick` extension installed. **The extension must support `WebP format`.** If you have an error saying that the GD or Imagick library is not installed, but you have it installed then they are probably incorrectly configured and do not have WebP support.
 
 They are required native PHP extensions, used among others by WordPress to generate thumbnails. Your server must also have the modules `mod_mime`, `mod_rewrite` and `mod_expires` enabled.
 
-An example of the correct server configuration can be found [here](https://mattplugins.com/files/webp-server-config.png). Link to your current configuration can be found in the administration panel, on the management plugin page in the section **"We are waiting for your message"** *(or using the URL path: `/wp-admin/options-general.php?page=webpc_admin_page&action=server`)*.
+An example of the correct server configuration can be found [here](https://mattplugins.com/files/webp-server-config.png). The link to your current configuration can be found in the Help Center tab on plugin settings screen.
 
 **Note the items marked in red.** If the values marked in red do not appear in your case, it means that your server does not meet the technical requirements. Pay attention to the **WebP Support** value for the GD library and **WEBP in the list of supported extensions** for the Imagick library.
 
 In a situation where your server does not meet the technical requirements, please contact your server Administrator. We are not able to help you. Please do not contact us about this matter, because this is a server configuration problem, not a plugin.
 
-Also REST API must be enabled and work without additional restrictions. If you have a problem with it, please contact the Developer who created your website. He should easily find the issue with the REST API not working.
+Also, REST API must be enabled and work without additional restrictions. If you have a problem with it, please contact the Developer who created your website. He should easily find the issue with the REST API not working.
 
-= How to check if plugin works? =
+= How to check if the plugin works? =
 
 You can find more information on how the plugin works in [our manual](https://wordpress.org/support/topic/how-can-i-check-if-the-plugin-is-working-properly/).
 
-= How to change path to uploads? =
+= How to change the path to uploads? =
 
 This is possible using the following types of filters to change default paths. It is a solution for advanced users. If you are not, please skip this question.
 
@@ -178,6 +172,9 @@ Use the following filters:
 `add_filter( 'webpc_site_root', function( $path ) {
 	return 'C:/WAMP/www/project/web'; // your valid path to root
 } );
+add_filter( 'webpc_htaccess_rewrite_path', function( $prefix ) {
+	return '/';
+} );
 add_filter( 'webpc_dir_name', function( $path, $directory ) {
 	if ( $directory !== 'uploads' ) {
 		return $path;
@@ -190,9 +187,6 @@ add_filter( 'webpc_dir_name', function( $path, $directory ) {
 	}
 	return 'app/uploads-webpc';
 }, 10, 2 );`
-`add_filter( 'webpc_htaccess_rewrite_path', function( $prefix ) {
-	return '/';
-} );`
 
 After setting the filters go to `Settings -> Converter for Media` in the admin panel and click the `Save Changes` button. `.htaccess` files with appropriate rules should be created in the directories `/uploads` and `/uploads-webpc`.
 
@@ -224,7 +218,7 @@ Filters run before images are converted - they no longer support converted image
 
 = How to run manually conversion? =
 
-By default, all images are converted when you click on the `Regenerate All` button. In addition, conversion is automatic when you add new files to your Media Library.
+By default, all images are converted when you click on the `Start Bulk Optimization	` button. In addition, conversion is automatic when you add new files to your Media Library.
 
 Remember that our plugin takes into account images generated by WordPress. There are many plugins that generate, for example, images of a different size or in a different version.
 
@@ -286,7 +280,7 @@ Find the configuration file in one of the paths *(remember to select configurati
 
 and add this code *(add these lines at the beginning of the `server { ... }` block)* - **remember to add these rules before any other `location {}` rules**:
 
-`# BEGIN WebP Converter for Media`
+`# BEGIN Converter for Media`
 `set $ext_avif ".avif";`
 `if ($http_accept !~* "image/avif") {`
 `	set $ext_avif "";`
@@ -305,7 +299,7 @@ and add this code *(add these lines at the beginning of the `server { ... }` blo
 `		/wp-content/uploads-webpc/$path.$ext$ext_webp`
 `		$uri =404;`
 `}`
-`# END WebP Converter for Media`
+`# END Converter for Media`
 
 **Then add support for the required MIME types**, if they are not supported. Edit the configuration file:
 - `/etc/nginx/mime.types`
@@ -323,28 +317,34 @@ In case of problems, please contact us in [the support forum](https://wordpress.
 
 == Screenshots ==
 
-1. Screenshot of the options panel
-2. Screenshot when regenerating images
+1. General tab of the plugin settings
+2. Advanced tab of the plugin settings
+3. Bulk optimization of images
+4. Optimization statistics of Media Library
 
 == Changelog ==
 
-= 4.5.1 (2022-07-22) =
-* `[Removed]` Notification asking to clear cache for Cloudways
-* `[Changed]` Error message for bypassing_apache error in server configuration
+= 5.1.0 (2022-08-28) =
+* `[Fixed]` Exclusion of converted files from backup generated by UpdraftPlus plugin
+* `[Added]` Optimization statistics in Media Library
 
-= 4.5.0 (2022-07-15) =
-* `[Changed]` Plugin name from "WebP Converter to Media" to "Converter for Media"
-* `[Removed]` "Browser Caching for files in output formats" option in plugin settings (will be active always)
-* `[Removed]` "Force redirections to output formats for all domains" option in plugin settings (will be active always)
-* `[Fixed]` Error handling about unreadable source or output path
-* `[Changed]` Error message for bypassing_apache error in server configuration
-* `[Changed]` Error message for rewrites_not_executed error in server configuration
-* `[Added]` Limit of 3 attempts to image regeneration to avoid infinity loops
-* `[Added]` Debug information about saved plugin data
-* `[Added]` Notification asking to clear cache for Cloudways
-* `[Added]` Action `webpc_after_conversion` to operation on output path after image conversion
-* `[Added]` Filter `webpc_htaccess_mod_rewrite_inherit` to disable mod_rewrite inheritance
-* `[Added]` Filter `webpc_htaccess_mod_rewrite_referer` to disable redirections to output formats for other domains
+= 5.0.1 (2022-08-26) =
+* `[Removed]` Filter `webpc_uploads_prefix`
+* `[Fixed]` Calculating number of images to convert in WP-CLI
+* `[Fixed]` Converting files that contain plus sign in filename
+* `[Changed]` Notification asking to clear cache for LiteSpeed
+* `[Added]` Exclusion of converted files from backup generated by All-in-One WP Migration plugin
+* `[Added]` Exclusion of converted files from backup generated by UpdraftPlus plugin
+* `[Added]` Exclusion of converted files from backup generated by BackWPup plugin
+
+= 5.0.0 (2022-08-20) =
+* `[Changed]` Information about plugin operation and technical support on plugin settings page
+* `[Changed]` Labels of options in plugin settings
+* `[Changed]` Option field for configuration of quality level
+* `[Changed]` Widget for conversion process
+* `[Added]` Filter `webpc_htaccess_cache_control_private` to disable Cache-Control as private
+* `[Added]` Statistics on number of converted images
+* `[Added]` Tabs for plugin settings
 
 See [changelog.txt](https://plugins.svn.wordpress.org/webp-converter-for-media/trunk/changelog.txt) for previous versions.
 
