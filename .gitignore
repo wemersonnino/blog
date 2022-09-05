@@ -10,3 +10,4 @@ wp-content/*
 
 #ignore twenty
 wp-content/themes/twenty*/
+.htaccess
