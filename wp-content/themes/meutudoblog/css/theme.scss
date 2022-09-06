@@ -2373,3 +2373,351 @@ body.single-post {
     padding-top: 0;
   }
 }
+
+
+/* ==========================================================================
+   Parameter's custom styles Calculator
+   ========================================================================== */
+:root{
+  /*fonts*/
+  --Montserrat: 'Montserrat', sans-serif;
+
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver:#F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+#header{
+  position: absolute;
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  max-height: 130px;
+  background-color: var(--color-white);
+  box-shadow: 0px 7px 20px 0px var(--color-black-50);
+  left: 0px;
+  top: 0px;
+
+}
+#logo{
+  position: absolute;
+  width: auto;
+  max-width: 30%;
+  height: auto;
+  margin: 1rem auto 1rem auto;
+}
+#btn-Cadastra{
+  background: #D80073;
+  border-radius: 65px;
+  float: right;
+  color: var(--color-white);
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-12);
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin: 1rem auto 1rem auto;
+}
+#menu > ul > li.nav-link{
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-15);
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+#main-container{
+  margin: 0 auto;
+  max-width: 100vw;
+  max-height: 100%;
+}
+.breadcrumb-item > a{
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-15);;
+  font-weight: 400;
+  line-height: var(--font-18);
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+}
+.breadcrumb-item>a:not(.active){
+  color: var(--color-pink);
+  /*background: linear-gradient(0deg, #525252, #525252),*/
+  /*linear-gradient(0deg, #D80073, #D80073);*/
+}
+.category-listagem{
+  width: 100%;
+  padding: 80px 0;
+}
+
+.titulo{
+  display: block;
+  width: 100%;
+  font-size: var(--font-40);
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--color-black);
+  margin: 0 0 50px;
+}
+section.category-listagem .titulo span {
+  color: var(--color-pink);
+}
+section.category-listagem .posts .post-card {
+  margin-bottom: 70px;
+}
+.post-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 0px;
+  padding: 0;
+  text-decoration: none !important;
+  color: var(--color-black) !important;
+}
+.post-card .imagem {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 0 15px;
+  border-radius: 20px;
+  transition: box-shadow 0.3s;
+}
+.post-card .categoria {
+  display: block;
+  margin: 0 0 10px;
+  color: var(--color-pink);
+  font-size: var(--font-18);
+  font-weight: 500;
+}
+.post-card .nome {
+  display: block;
+  font-size: var(--font-24);
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--color-black);
+  transition: color 0.3s;
+}
+.post-card .ler-mais {
+  display: block;
+  font-size: var(--font-20);
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+section.post-conteudo {
+  display: block;
+  max-width: 100%;
+  padding: 0 0 50px;
+}
+
+section .post-conteudo .nome {
+  display: flex;
+  margin: 0 0 30px;
+  color: var(--color-black);
+  font-weight: 700;
+  line-height: 120%;
+  font-size: var(--font-64);
+}
+section .post-conteudo h1 .title-nome{
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-55);
+  font-weight: 500;
+  line-height: 67px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-black);
+}
+.conteudo-wysiwyg{
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+}
+.conteudo-wysiwyg p {
+  font-size: var(--font-22);
+  line-height: 150%;
+}
+#box-calculadora #titulo-calculadora{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 88px;
+  background: var(--color-black);
+  border-radius: 32px 4px 0px 0px;
+  color: var(--color-white);
+  padding: 1.5rem;
+  margin: 0 auto;
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-20);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+#box-calculadora > main{
+  max-width: 100%;
+  max-height: 100%;
+  background: var(--bg-silver);
+  padding: 1.5rem;
+}
+#boxbeneficioSalatio{
+  padding: 1rem;
+}
+#box-calculadora > main .form-label {
+  width: 100%;
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-14);
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: justify;
+
+}
+#box-calculadora > main .form-label > span #beneficioSalatio-infor {
+  margin-right: 2rem;
+  float: right;
+}
+section#box-calculadora #footer-input-calc{
+  max-width: 100%;
+  max-height: 100%;
+  padding: 1.5rem;
+  background-color: #D22688;
+  border-radius: 0px 0px 32px 4px;
+  color: var(--color-silver-50);
+}
+section#box-calculadora #footer-input-calc header h4{
+  font-family: var(--Montserrat), sans-serif;
+  font-size: var(--font-20);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+section#box-calculadora #footer-input-calc main h3{
+  font-family: var(--Montserrat);
+  font-size: var(--font-20);
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+section#box-calculadora #footer-input-calc main div p{
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: justify;
+
+}
+section#box-simuladores #box-simuladores-topo{
+  width: 100%;
+  height: auto;
+  background-color: var(--bg_black);
+  border-radius: 16px 4px 0px 0px;
+  padding: 1rem;
+  color: var(--color-white);
+}
+section#box-simuladores #box-simuladores-topo h2{
+  font-family: var(--Montserrat);
+  font-size: var(--font-20);
+  font-weight: 600;
+  line-height: 0.938em;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-white);
+}
+section#box-simuladores main#box-simuladores-main table thead{
+  background-color: var(--bg-white);
+}
+section#box-simuladores main#box-simuladores-main table thead tr th{
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+}
+section#box-simuladores main#box-simuladores-main table tbody tr th,td{
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+}
+section#box-simuladores main#box-simuladores-main table tbody tr td{
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+  line-height: 2;
+  letter-spacing: 0em;
+}
+section#box-simuladores main#box-simuladores-main table tbody tr td p a{
+  color: var(--color-black);
+  font-size: var(--font-18);
+  font-weight: 300;
+}
+section#box-simuladores main#box-simuladores-main table tbody tr td button{
+  font-family: var(--Montserrat);
+  font-size: var(--font-18);
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+  position: relative;
+  /* MeuRosa */
+  background-color: var(--bg-pink);
+  border-radius: 5em;
+  padding: 1rem;
+  color: var(--color-white);
+  line-height: 0;
+}
+.conteudo-wysiwyg-questions{
+  max-width: 100%;
+  padding: 1rem;
+  margin: 0 auto;
+  max-height: 100%;
+}
+.conteudo-wysiwyg-questions p{
+  font-family: var(--Montserrat);
+  font-size: var(--font-18);
+  text-align: justify;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+}
+/* ==========================================================================
+   End Parameter's custom styles Calculator
+   ========================================================================== */
