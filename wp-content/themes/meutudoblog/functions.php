@@ -1,5 +1,8 @@
 <?php
 
+use Yoast\WP\SEO\Integrations\Breadcrumbs_Integration;
+use YoastSEO_Vendor\GuzzleHttp\Psr7\Request;
+
 include (get_theme_file_path('/widgets.php'));
 
 add_theme_support('post-thumbnails');
@@ -185,7 +188,8 @@ add_filter('wpseo_canonical', 'prefix_filter_canonical_web_story');
 
 // Breadcrumb do Yoast Customizado
 // https://fellowtuts.com/wordpress/custom-breadcrumb-navigation-yoast-seo/
-function get_yoast_breadcrumb_array(){
+function get_yoast_breadcrumb_array(): array
+{
 	$crumb = array();
 	
 	// Get all preceding links before the current page
@@ -194,12 +198,14 @@ function get_yoast_breadcrumb_array(){
 	$items = $dom->getElementsByTagName('a');
 	
 	foreach ($items as $tag)
-		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));			
+		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));
 	
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
 	$dom = $items->query('//*[contains(@class, "breadcrumb_last")]');
-	$crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp->request)));
+    $wp = Request::class;
+
+    $crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(string: home_url($wp)));
 	
 	return $crumb;
 }
