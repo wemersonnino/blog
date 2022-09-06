@@ -3,7 +3,6 @@
 use Yoast\WP\SEO\Integrations\Breadcrumbs_Integration;
 use YoastSEO_Vendor\GuzzleHttp\Psr7\Request;
 
-include (get_theme_file_path('/widgets.php'));
 
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
@@ -44,18 +43,17 @@ function register_menus() {
 }
 add_action('init', 'register_menus');
 
-function custom_widgets_init() {
-  // register_sidebar(array(
-  //   'name' => 'Post',
-  //   'id'  => 'single-post',
-  //   'before_widget' => '<div class="widget %2$s">',
-  //   'after_widget' => '</div>',
-  //   'before_title' => '<h3>',
-  //   'after_title' => '</h3>',
-  // ));
-}
-add_action('widgets_init', 'custom_widgets_init');
-add_action('widgets_init', 'meutudoblog_widgets');
+//function custom_widgets_init() {
+//   register_sidebar(array(
+//     'name' => 'Post',
+//     'id'  => 'single-post',
+//     'before_widget' => '<div class="widget %2$s">',
+//     'after_widget' => '</div>',
+//     'before_title' => '<h3>',
+//     'after_title' => '</h3>',
+//   ));
+//}
+//add_action('widgets_init', 'custom_widgets_init');
 
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
