@@ -16,7 +16,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: git pull
+          script: |
+            cd ~/
+            git pull
 
   # slackNotification:
   #   name: Slack Notification
