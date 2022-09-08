@@ -203,7 +203,7 @@ function get_yoast_breadcrumb_array(): array
 	$dom = $items->query('//*[contains(@class, "breadcrumb_last")]');
     $wp = Request::class;
 
-    $crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(string: home_url($wp)));
+    $crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp)));
 	
 	return $crumb;
 }
