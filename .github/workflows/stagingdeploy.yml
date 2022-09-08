@@ -1,4 +1,4 @@
-name: CI/CD Staging 
+name: CI/CD Staging BLOG
 on:
   push:
     branches:
@@ -8,17 +8,6 @@ jobs:
   build:
     name: ci/cd blog stage
     runs-on: ubuntu-latest
-    # steps:
-    #   - name: executing remote ssh commands using ssh key
-    #     uses: fifsky/ssh-action@master
-    #     with:
-    #       command: |
-    #         cd /home/ubuntu/tudo-tableau/
-    #         ${{ secrets.SCRIPT }}
-    #       host: ${{ secrets.HOST }}
-    #       user: root
-    #       key: ${{ secrets.KEY }}
-    #       port: ${{ secrets.PORT }}
     steps:
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
@@ -28,7 +17,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: git pull
-          
+
   # slackNotification:
   #   name: Slack Notification
   #   runs-on: ubuntu-latest
