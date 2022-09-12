@@ -192,9 +192,12 @@
                         </div>
                     </div>
                 </section><!--\content post-->
-                <aside class="col-md-2 col-lg-2 col-xl-2">
-                    Sidebar
-                </aside>
+                <?php if (is_active_sidebar('calculadora_sidebar')): ?>
+<!--                <aside class="col-md-2 col-lg-2 col-xl-2">-->
+<!--                    Sidebar-->
+<!--                </aside>-->
+                    <?php dynamic_sidebar('calculadora_sidebar'); ?>
+                <?php endif; ?>
             </article>
         </section>
     </main>

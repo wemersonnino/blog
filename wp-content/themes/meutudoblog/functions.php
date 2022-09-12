@@ -55,6 +55,18 @@ add_action('init', 'register_menus');
 //}
 //add_action('widgets_init', 'custom_widgets_init');
 
+function calculadora_sidebar(){
+    register_sidebar([
+        'name' => 'Sidebar Paginas Calculadora MEUTUDO',
+        'id'    => 'meutudo-calculadora-sidebar',
+        'description'   => 'Sidebar que será exibida somente nas paginas de calculadora',
+        'before_widget' => '<aside id="%1$s" class="col-md-2 col-lg-2 col-xl-2 widget %2$s widget-wrapper">',
+        'after_widget'  => '</aside>',
+        'before_title'  => '<h4 class="widget-title"'
+    ]);
+}
+add_action('widgets_init', 'calculadora_sidebar');
+
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
 //   $api['key'] = '';

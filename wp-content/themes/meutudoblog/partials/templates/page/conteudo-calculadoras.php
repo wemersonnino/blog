@@ -2,11 +2,12 @@
 $term = get_queried_object();
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 $posts = new WP_Query(array(
-    'post_type' => 'post',
+    'post_type' => 'page',
     'orderby' => 'date',
     'order' => 'DESC',
     'posts_per_page' => 3,
-    'category_name' => 'calculadoras'
+    'category_name' => 'Calculadoras',
+    'post_parent' => 36637
 ));
 ?>
 <?php if($posts->have_posts()) : ?>
