@@ -2,6 +2,7 @@
 /*
 /*/
 !wp-content/
+!.github/
 
 #ignore everything in the wp-content directory with excepts
 wp-content/*
