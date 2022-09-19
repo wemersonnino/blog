@@ -8,15 +8,6 @@
 <main id="main-container">
     <section class="container">
         <article class="row justify-content-start">
-            <div class="col breadcrumb">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Início</a></li>
-                        <li class="breadcrumb-item"><a href="index.html">Calculadoras</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Calculadora de margem consignável</li>
-                    </ol>
-                </nav>
-            </div><!--\breadcrumb-->
             <div class="w-100"></div><br><br>
             <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8">
                 <div class="row align-items-center">
