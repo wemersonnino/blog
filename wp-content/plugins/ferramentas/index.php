@@ -65,7 +65,8 @@ function ferramentas_page(){
     require_once dirname(__FILE__) . "/build/frontend.asset.php";
 }
 function calculadoras_page(){
-    echo '<h1>Calculadora</h1>';
+    //echo '<h1>Calculadora</h1>';
+    require_once dirname(__FILE__). "/pages/calculadoras/index.php";
 }
 
 function ferramentas_admin_menu(){
