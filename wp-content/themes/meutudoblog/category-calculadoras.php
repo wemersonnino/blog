@@ -8,7 +8,7 @@
 
 <?php get_template_part('partials/blocos/newsletter'); ?>
 
-<?php get_template_part('partials/blocos/postagens-sugeridas'); ?>
+<?php //get_template_part('partials/blocos/postagens-sugeridas'); ?>
 
 <?php get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
 
