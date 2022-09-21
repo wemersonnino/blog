@@ -9,7 +9,7 @@
     <section class="container">
         <article class="row justify-content-start">
             <div class="w-100"></div><br><br>
-            <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8">
+            <section id="content-post" class="post-conteudo col-md-9 col-lg-9 col-xl-9 w-100">
                 <div class="row align-items-center">
                     <h1 class="title-nome nome">
                         <?php echo the_title()?>

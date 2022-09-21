@@ -1,9 +1,4 @@
 <?php
-
-use Yoast\WP\SEO\Integrations\Breadcrumbs_Integration;
-use YoastSEO_Vendor\GuzzleHttp\Psr7\Request;
-
-
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -44,28 +39,27 @@ function register_menus() {
 add_action('init', 'register_menus');
 
 //function custom_widgets_init() {
-//   register_sidebar(array(
-//     'name' => 'Post',
-//     'id'  => 'single-post',
-//     'before_widget' => '<div class="widget %2$s">',
-//     'after_widget' => '</div>',
-//     'before_title' => '<h3>',
-//     'after_title' => '</h3>',
-//   ));
+  // register_sidebar(array(
+  //   'name' => 'Post',
+  //   'id'  => 'single-post',
+  //   'before_widget' => '<div class="widget %2$s">',
+  //   'after_widget' => '</div>',
+  //   'before_title' => '<h3>',
+  //   'after_title' => '</h3>',
+  // ));
 //}
 //add_action('widgets_init', 'custom_widgets_init');
 
 function calculadora_sidebar(){
     register_sidebar([
-        'name' => 'Sidebar Paginas Calculadora MEUTUDO',
-        'id'    => 'meutudo-calculadora-sidebar',
-        'description'   => 'Sidebar que será exibida somente nas paginas de calculadora',
-        'before_widget' => '<aside id="%1$s" class="col-md-2 col-lg-2 col-xl-2 widget %2$s widget-wrapper">',
-        'after_widget'  => '</aside>',
-        'before_title'  => '<h4 class="widget-title"'
+        'name'          => 'Calculadora Front Sidebar',
+        'id'            => 'calculadora-meutudo-sidebar',
+        'description'   => 'Sidebar das paginas de calculadora',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
     ]);
 }
-add_action('widgets_init', 'calculadora_sidebar');
+add_action('widgets_init','calculadora_sidebar');
 
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
@@ -198,8 +192,7 @@ add_filter('wpseo_canonical', 'prefix_filter_canonical_web_story');
 
 // Breadcrumb do Yoast Customizado
 // https://fellowtuts.com/wordpress/custom-breadcrumb-navigation-yoast-seo/
-function get_yoast_breadcrumb_array(): array
-{
+function get_yoast_breadcrumb_array(){
 	$crumb = array();
 	
 	// Get all preceding links before the current page
@@ -208,13 +201,12 @@ function get_yoast_breadcrumb_array(): array
 	$items = $dom->getElementsByTagName('a');
 	
 	foreach ($items as $tag)
-		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));
+		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));			
 	
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
 	$dom = $items->query('//*[contains(@class, "breadcrumb_last")]');
-    $wp = Request::class;
-
+    $wp = \GuzzleHttp\Psr7\Request::class;
     $crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp)));
 	
 	return $crumb;
@@ -280,3 +272,13 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
+
+function calculadora_form_content($content){
+    if (is_single()){
+        ob_start();
+        get_template_part('partial/blocos/calculadora-form');
+        $content .= ob_get_clean();
+    }
+    return $content;
+}
+add_filter('the_content','calculadora_form_content');

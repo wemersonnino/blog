@@ -13,9 +13,11 @@ while (have_posts() ): the_post();
 </div>
 </div>
 </section><!--\content post-->
-<aside class="col-md-2 col-lg-2 col-xl-2">
-    <?php get_sidebar('calculadora_sidebar'); ?>
+<?php if (is_active_sidebar('calculadora-meutudo-sidebar')):?>
+<aside class="col-md-3 col-lg-3 col-xl-3 h-100 w-100">
+    <?php dynamic_sidebar('calculadora-meutudo-sidebar') ?>
 </aside>
+<?php endif; ?>
 </article>
 </section>
 </main>
