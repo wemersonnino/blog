@@ -1,14 +1,16 @@
 
 <?php
 
+global $post;
 
+$postPai = $post->ID;
 
 $posts = new WP_Query(array(
     'post_type' => ['post','page'],
     'orderby' => 'date',
     'order' => 'DESC',
     'posts_per_page' => 3,
-    'post_parent__in' => [36780]
+    'post_parent__in' => [$postPai],
 ));
 
 ?>
