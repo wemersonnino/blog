@@ -1,8 +1,8 @@
-name: CI/CD Staging BLOG
+name: Staging BLOG ci/cd
 on:
   push:
     branches:
-    - main
+    - develop
 
 jobs:          
   build:
