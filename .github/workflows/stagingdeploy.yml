@@ -19,7 +19,7 @@ jobs:
           script: |
             cd ~/
             git fetch --all
-            git checkout develop            
+            git checkout homolog            
             git pull
 
   slackNotification:
