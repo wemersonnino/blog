@@ -1748,6 +1748,7 @@ window.MasterPopups = (function ($, window, document, undefined) {
     },
 
     update_impressions: function (restore) {
+	  return;
       var _ = this;
       restore = restore || false;
       if (MPP_PUBLIC_JS.is_admin) {
@@ -1767,6 +1768,7 @@ window.MasterPopups = (function ($, window, document, undefined) {
     },
 
     update_submits: function () {
+	  return;
       var _ = this;
       var data = {};
       data.action = 'mpp_update_submits';

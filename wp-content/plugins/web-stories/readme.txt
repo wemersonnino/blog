@@ -3,7 +3,7 @@
 Contributors:      google
 Tested up to:      6.0
 Requires at least: 5.7
-Stable tag: 1.23.2
+Stable tag: 1.25.0
 License:           Apache License 2.0
 License URI:       https://www.apache.org/licenses/LICENSE-2.0
 Tags:              web stories, stories, amp, storytelling, google
@@ -109,6 +109,19 @@ Web Stories are powered by [AMP](https://amp.dev/), which adds some restrictions
 
 For the plugin's full changelog, please see [the Releases page on GitHub](https://github.com/googleforcreators/web-stories-wp/releases).
 
+= 1.25.1 =
+
+* Fixes an issue with an incorrectly shown compatibility warning in the checklist.
+* Fixes template insertion from the dashboard
+* Fixes a couple of edge case issues around media uploads & trimming.
+
+= 1.25.0 =
+
+* New feature: background blurring support for webcam recording.
+* Enhancement: change and lock placement of floating menu bar.
+* Enhancements: improved saving and revisions mechanism to prevent content loss.
+* Bug fixes and performance improvements.
+
 = 1.24.0 =
 
 * New feature: pause/resume and video trimming support for webcam recording.
@@ -119,25 +132,16 @@ For the plugin's full changelog, please see [the Releases page on GitHub](https:
 * Enhancement: improved media upload experience for pre-optimized videos.
 * Bug fixes and performance improvements.
 
-= 1.23.2 =
-
-* Fixes another issue related to story poster images.
-
-= 1.23.1 =
-
-* Fixes an issue with story poster images not saving correctly.
-
 == Upgrade Notice ==
+
+= 1.25.1 =
+
+This release addresses a few regressions regarding the checklist, templates, and media uploads.
+
+= 1.25.0 =
+
+This release adds improvements to webcam recording, saving, and the floating menu bar.
 
 = 1.24.0 =
 
 This release introduces multi-page canvas and contains improvements to webcam recording, third-party media, and templates.
-
-= 1.23.2 =
-
-This release fixes another issue related to story poster images.
-
-= 1.23.1 =
-
-This release fixes an issue with story poster images not saving correctly.
-
