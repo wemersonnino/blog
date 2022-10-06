@@ -4,7 +4,7 @@
 
 namespace Google_Web_Stories_Composer\Autoload;
 
-class ComposerStaticInitaa17e2aa12f124f7ea8f5df390a53cb4
+class ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -87,6 +87,7 @@ class ComposerStaticInitaa17e2aa12f124f7ea8f5df390a53cb4
         'Google\\Web_Stories\\Locale' => __DIR__ . '/../..' . '/Locale.php',
         'Google\\Web_Stories\\Media\\Base_Color' => __DIR__ . '/../..' . '/Media/Base_Color.php',
         'Google\\Web_Stories\\Media\\Blurhash' => __DIR__ . '/../..' . '/Media/Blurhash.php',
+        'Google\\Web_Stories\\Media\\Cropping' => __DIR__ . '/../..' . '/Media/Cropping.php',
         'Google\\Web_Stories\\Media\\Image_Sizes' => __DIR__ . '/../..' . '/Media/Image_Sizes.php',
         'Google\\Web_Stories\\Media\\Media_Source_Taxonomy' => __DIR__ . '/../..' . '/Media/Media_Source_Taxonomy.php',
         'Google\\Web_Stories\\Media\\SVG' => __DIR__ . '/../..' . '/Media/SVG.php',
@@ -174,6 +175,7 @@ class ComposerStaticInitaa17e2aa12f124f7ea8f5df390a53cb4
         'Google\\Web_Stories\\Story_Archive' => __DIR__ . '/../..' . '/Story_Archive.php',
         'Google\\Web_Stories\\Story_Post_Type' => __DIR__ . '/../..' . '/Story_Post_Type.php',
         'Google\\Web_Stories\\Story_Query' => __DIR__ . '/../..' . '/Story_Query.php',
+        'Google\\Web_Stories\\Story_Revisions' => __DIR__ . '/../..' . '/Story_Revisions.php',
         'Google\\Web_Stories\\Taxonomy\\Category_Taxonomy' => __DIR__ . '/../..' . '/Taxonomy/Category_Taxonomy.php',
         'Google\\Web_Stories\\Taxonomy\\Tag_Taxonomy' => __DIR__ . '/../..' . '/Taxonomy/Tag_Taxonomy.php',
         'Google\\Web_Stories\\Taxonomy\\Taxonomy_Base' => __DIR__ . '/../..' . '/Taxonomy/Taxonomy_Base.php',
@@ -187,7 +189,7 @@ class ComposerStaticInitaa17e2aa12f124f7ea8f5df390a53cb4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitaa17e2aa12f124f7ea8f5df390a53cb4::$classMap;
+            $loader->classMap = ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce::$classMap;
 
         }, null, ClassLoader::class);
     }

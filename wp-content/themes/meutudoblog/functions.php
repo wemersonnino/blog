@@ -1,4 +1,5 @@
 <?php
+define( "WP_DEBUG", true );
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -38,7 +39,7 @@ function register_menus() {
 }
 add_action('init', 'register_menus');
 
-//function custom_widgets_init() {
+function custom_widgets_init() {
   // register_sidebar(array(
   //   'name' => 'Post',
   //   'id'  => 'single-post',
@@ -47,19 +48,8 @@ add_action('init', 'register_menus');
   //   'before_title' => '<h3>',
   //   'after_title' => '</h3>',
   // ));
-//}
-//add_action('widgets_init', 'custom_widgets_init');
-
-function calculadora_sidebar(){
-    register_sidebar([
-        'name'          => 'Calculadora Front Sidebar',
-        'id'            => 'calculadora-meutudo-sidebar',
-        'description'   => 'Sidebar das paginas de calculadora',
-        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
-        'after_widget'  => '</div>',
-    ]);
 }
-add_action('widgets_init','calculadora_sidebar');
+add_action('widgets_init', 'custom_widgets_init');
 
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
@@ -206,8 +196,7 @@ function get_yoast_breadcrumb_array(){
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
 	$dom = $items->query('//*[contains(@class, "breadcrumb_last")]');
-    $wp = \GuzzleHttp\Psr7\Request::class;
-    $crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp)));
+	$crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp->request)));
 	
 	return $crumb;
 }
@@ -272,13 +261,3 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
-
-function calculadora_form_content($content){
-    if (is_single()){
-        ob_start();
-        get_template_part('partial/blocos/calculadora-form');
-        $content .= ob_get_clean();
-    }
-    return $content;
-}
-add_filter('the_content','calculadora_form_content');

@@ -2,7 +2,7 @@ name: Staging BLOG ci/cd
 on:
   push:
     branches:
-    - develop
+    - homolog
 
 jobs:          
   build:
@@ -18,18 +18,19 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ~/
-            git reset --hard
+            git fetch --all
+            git checkout develop            
             git pull
 
-  # slackNotification:
-  #   name: Slack Notification
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - name: Slack Notification
-  #     uses: rtCamp/action-slack-notify@v2
-  #     env:
-  #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}          
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_USERNAME: ${{ secrets.SLACK_USERNAME }}          
                     
-
 
