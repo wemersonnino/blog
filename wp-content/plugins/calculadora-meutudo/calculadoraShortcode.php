@@ -53,9 +53,9 @@ function diletec_calculadora_shortcode( $atts ) {
                 <header id="titulo-calculadora" class="titulo_<?php _e($args['id']); ?>">
                     <h2><?php _e($args['titulo_do_resultado']); ?></h2>
                 </header>
-                <main id="input-calc" class="input-calc bg-silver">
+                <main id="input-calc" class="input-calc bg-silver container">
                     <div class="row">
-                        <div id="boxBeneficioSalario" class="col calculadora_body_<?php _e($args['id']); ?>">
+                        <div id="boxBeneficioSalario" class="col-md-6 col-lg-6 col-xl-6 col-sm-12 calculadora_body_<?php _e($args['id']); ?>">
                             <div id="boxBeneficioSalario" class="col">
                                 <label for="beneficioSalario" class="form-label text-start">
                                     <?php _e($args['valor_do_beneficio']); ?>
@@ -92,7 +92,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </div>
                             </div>
                         </div><!--/input 1 -->
-                        <div id="boxParcelas" class="col">
+                        <div id="boxParcelas" class="col-md-6 col-lg-6 col-xl-6 col-sm-12">
                             <label for="parcelas" class="form-label text-start">
                                 <?php _e($args['parcela_de_emprestimo']); ?>
                                 <span class="align-content-around text-start">
@@ -226,7 +226,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 }
                 .calculadora_body_<?php _e($args['id']); ?>{
                     /*background: #f5f5f582;*/
-                    /*padding: 10px;*/
+                    padding: 0;
                 }
                 .calculadora_margem_permitida_<?php _e($args['id']); ?>{
                     line-height: 4em;
@@ -317,6 +317,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 #box-calculadora #titulo-calculadora h2{
                     font-size: var(--font-20);
                     font-weight: 600;
+                    line-height: 1;
                 }
                 #box-calculadora > main{
                     max-width: 100%;
@@ -544,7 +545,10 @@ function diletec_calculadora_shortcode( $atts ) {
                     else if (event != ""){
                         tratarSub(resultBeneficioSalario.textContent,parcelasEmprest.value);
                     }
-                },false)
+                    else if(event === 0){
+                        resultMargem.innerHTML = resultBeneficioSalario.textContent;
+                    }
+                },false);
 
 
                 /**Functions que realizam tratamentos das saidas de front e para a matemática da calculadora */
@@ -560,7 +564,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`montante: ${montante}`);
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
-                }
+                };
                 /**Function que realizam tratamentos das entradas, saidas e matematica do input de parcelas */
                 const tratarSub = (e,x) =>{
                     x = parcelasEmprest.value;
@@ -577,7 +581,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`montante parcel: ${x}`);
                     tratamentoResultadoSub(montante);
                     //console.log(`montante1 parcel: ${tratamentoResultadoSub(montante)}`);
-                }
+                };
 
                 const tratamentoResultado = (e) => {
                     let valorTarget = (e.valueOf() / 100).toFixed(2)+"";
@@ -587,7 +591,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`show value tratado: ${e}`);
                     resultBeneficioSalario.innerHTML = e;
                     return e;
-                }
+                };
                 const tratamentoResultadoSub = (e) => {
                     let valorTarget = (e.valueOf() / 100).toFixed(2)+"";
                     valorTarget = valorTarget.replace(".", ",");
@@ -596,7 +600,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`show value tratado: ${e}`);
                     resultMargem.innerHTML = e;
                     return e;
-                }
+                };
 
                 /**Function enable popovers */
                 jQuery(function () {
