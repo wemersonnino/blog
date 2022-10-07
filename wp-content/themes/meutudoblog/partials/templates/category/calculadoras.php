@@ -22,7 +22,7 @@ $posts = new WP_Query(array(
             <section class="container-posts category-listagem">
                 <article id="titles" class="row align-items-center">
                     <h1 class="titulo text-capitalize">
-                        <?php echo single_cat_title() ?>
+                        <?php echo the_title() ?>
                     </h1>
                 </article><!--\titulos-->
                 <?php if($posts->have_posts()) : ?>
