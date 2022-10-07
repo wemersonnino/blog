@@ -546,6 +546,7 @@ function diletec_calculadora_shortcode( $atts ) {
                         tratarSub(resultBeneficioSalario.textContent,parcelasEmprest.value);
                     }
                     else if(event === 0){
+                        /** aqui se o usuario não tiver nenhuma parcela o valor sera igual ao margem permitida */
                         resultMargem.innerHTML = resultBeneficioSalario.textContent;
                     }
                 },false);
