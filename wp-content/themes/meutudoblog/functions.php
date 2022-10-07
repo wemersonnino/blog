@@ -51,6 +51,16 @@ function custom_widgets_init() {
 }
 add_action('widgets_init', 'custom_widgets_init');
 
+function calculadora_sidebar(){
+    register_sidebar([
+        'name'          => 'Calculadora Front Sidebar',
+        'id'            => 'calculadora-meutudo-sidebar',
+        'description'   => 'Sidebar das paginas de calculadora',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
+    ]);
+}
+
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
 //   $api['key'] = '';
