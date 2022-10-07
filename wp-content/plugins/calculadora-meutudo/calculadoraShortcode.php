@@ -284,6 +284,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     --bg-pink: #D22688;
 
                     /*Sizes*/
+                    --font-8:  0.525em;
                     --font-12: 0.750em;
                     --font-14: 0.875em;
                     --font-15: 0.938em;
@@ -312,6 +313,10 @@ function diletec_calculadora_shortcode( $atts ) {
                     line-height: 24px;
                     letter-spacing: 0em;
                     text-align: left;
+                }
+                #box-calculadora #titulo-calculadora h2{
+                    font-size: var(--font-20);
+                    font-weight: 600;
                 }
                 #box-calculadora > main{
                     max-width: 100%;
