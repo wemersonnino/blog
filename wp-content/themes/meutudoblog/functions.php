@@ -60,6 +60,7 @@ function calculadora_sidebar(){
         'after_widget'  => '</div>',
     ]);
 }
+add_action('widgets_init', 'calculadora_sidebar');
 
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
