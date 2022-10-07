@@ -51,6 +51,17 @@ function custom_widgets_init() {
 }
 add_action('widgets_init', 'custom_widgets_init');
 
+function calculadora_sidebar(){
+    register_sidebar([
+        'name'          => 'Calculadora Front Sidebar',
+        'id'            => 'calculadora-meutudo-sidebar',
+        'description'   => 'Sidebar das paginas de calculadora',
+        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</div>',
+    ]);
+}
+add_action('widgets_init', 'calculadora_sidebar');
+
 /* ACF Google Maps Api Key */
 // function my_acf_google_map_api($api){
 //   $api['key'] = '';
@@ -183,6 +194,8 @@ add_filter('wpseo_canonical', 'prefix_filter_canonical_web_story');
 // Breadcrumb do Yoast Customizado
 // https://fellowtuts.com/wordpress/custom-breadcrumb-navigation-yoast-seo/
 function get_yoast_breadcrumb_array(){
+    global $request;
+
 	$crumb = array();
 	
 	// Get all preceding links before the current page
@@ -196,7 +209,8 @@ function get_yoast_breadcrumb_array(){
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
 	$dom = $items->query('//*[contains(@class, "breadcrumb_last")]');
-	$crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp->request)));
+    $wp = $request;
+	$crumb[] = array('text' =>  utf8_decode($dom->item(0)->nodeValue), 'href' => trailingslashit(home_url($wp)));
 	
 	return $crumb;
 }
