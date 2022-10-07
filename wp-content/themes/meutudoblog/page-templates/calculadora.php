@@ -5,10 +5,10 @@
 ?>
 <?php get_header(); ?>
 <?php get_template_part('/partials/topos/padrao'); ?><!--//header-->
-<main id="main-container 2">
+<main id="main-container" class="container">
     <section class="container">
         <article class="row justify-content-start">
-            <div class="w-100"></div><br><br>
+            <div class="w-100"></div>
             <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100">
                 <div class="row align-items-center">
                     <h1 class="title-nome nome">

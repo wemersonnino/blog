@@ -474,7 +474,7 @@ function diletec_calculadora_shortcode( $atts ) {
                         margin:0.4rem auto;
                     }
                     #boxParcelas label[for=parcelas]{
-                        margin: 0 auto 0.78rem auto;
+                        margin: 0 auto 0.38rem auto;
                     }
                 }
 
