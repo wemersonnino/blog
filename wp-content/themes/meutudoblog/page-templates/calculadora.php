@@ -11,7 +11,7 @@
             <div class="w-100"></div>
             <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100">
                 <div id="titles" class="row align-items-center">
-                    <h1 class="titulo text-capitalize fw-semibold lh-base mb-0">
+                    <h1 class="titulo text-capitalize fw-semibold lh-base mb-4">
                         <?php echo the_title()?>
                     </h1><!--\title-->
                     <div class="w-100"></div><br><br>
