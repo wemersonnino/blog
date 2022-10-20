@@ -275,3 +275,24 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
+
+// Modificando links de posts da categoria "notícias"
+function permanlink_post_news ($permalink, $post, $leavename) {
+    $category = get_the_category($post->ID);
+    if (isset($category[0]->cat_name) && $category[0]->cat_name == "notícias") {
+        list($date, $time) = explode(' ', $post->post_date);
+        if ($date >= '2022-08-25')
+            $permalink = trailingslashit(home_url('/' . str_replace('-', '/', $date) . '/' . $post->post_name . '/'));
+    }
+    return $permalink;
+}
+add_filter('post_link', 'permanlink_post_news', 10, 3);
+
+// Adiciona regras dos links da categoria "notícias"
+function permanlink_post_news_rules ($wp_rewrite) {
+    // 0000/00/00/postname
+    $new_rules['^([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/?$'] = 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]';
+    $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
+    return $wp_rewrite;
+}
+add_action('generate_rewrite_rules', 'permanlink_post_news_rules');
