@@ -280,9 +280,10 @@ add_filter('the_content', 'faq_after_content');
 function permanlink_post_news ($permalink, $post, $leavename) {
     $category = get_the_category($post->ID);
     if (isset($category[0]->cat_name) && $category[0]->cat_name == "notícias") {
-        list($date, $time) = explode(' ', $post->post_date);
-        if ($date >= '2022-08-25')
-            $permalink = trailingslashit(home_url('/' . str_replace('-', '/', $date) . '/' . $post->post_name . '/'));
+        $datePost = new DateTime($post->post_date);
+        $dateNews = new DateTime('2022-08-25');
+        if ($datePost->format('Y-m-d') > $dateNews->format('Y-m-d')) 
+            $permalink = trailingslashit(home_url('/' . $datePost->format('Y/m/d') . '/' . $post->post_name . '/'));
     }
     return $permalink;
 }
