@@ -488,7 +488,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 const parcelasEmprest = document.querySelector(".calculadora_parcela_de_emprestimo_<?php _e($args['id']); ?>");
                 const resultBeneficioSalario = document.querySelector('#resultBeneficioSalario');
                 const resultMargem = document.querySelector('.calculadora_margem_disponivel_<?php _e($args['id']); ?>');
-                let percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>
+                const percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>
 
                 /**evento do campo 1 onde sera input com salario ou valor do beneficio */
                 beneficioSalario.addEventListener('input',(evt)=>{
