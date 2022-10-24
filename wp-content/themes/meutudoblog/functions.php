@@ -293,6 +293,7 @@ add_filter('post_link', 'permanlink_post_news', 10, 3);
 function permanlink_post_news_rules ($wp_rewrite) {
     // 0000/00/00/postname
     $new_rules['^([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/?$'] = 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]';
+    $new_rules['^([0-9]{4})/([0-9]{1,2})/([0-9]{1,2})/([^/]+)/amp/?$'] = 'index.php?year=$matches[1]&monthnum=$matches[2]&day=$matches[3]&name=$matches[4]&amp=1';
     $wp_rewrite->rules = $new_rules + $wp_rewrite->rules;
     return $wp_rewrite;
 }
