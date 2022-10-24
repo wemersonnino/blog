@@ -5,7 +5,7 @@
  * @name Calculadora meutudo
  * @author Wemerson Pereira
  * @license   private
- * @version 0.0.3
+ * @version 0.0.5
  * @copyright 2022 meutudo.app
  * @package acf
  */
@@ -13,7 +13,7 @@
  * Plugin Name:    Calculadora meutudo
  * Plugin URI:     https://meutudo.blog.com.br/
  * Description:    Ferramenta da meutudo para criação de post customs como calculadoras.
- * Version:        0.0.3
+ * Version:        0.0.5
  * Author:         Wemerson Pereira
  * Author URI:     https://www.github.com/wemersonnino
  * License:        Private
