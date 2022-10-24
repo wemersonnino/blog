@@ -34,27 +34,27 @@ if ( !function_exists( 'add_action' ) ) {
 }
 
 // Define path and URL to the ACF plugin.
-define( 'DILETEC_CALCULADORA_ACF_PATH', plugin_dir_path( __FILE__ ) . 'includes/acf/' );
-define( 'DILETEC_CALCULADORA_ACF_URL', plugin_dir_url( __FILE__ ) . '/includes/acf/' );
+define( 'DILETEC_CALCULADORA_ACF_PATH', plugin_dir_path( __FILE__ ) . '../advanced-custom-fields/' );
+define( 'DILETEC_CALCULADORA_ACF_URL', plugin_dir_url( __FILE__ ) . '../advanced-custom-fields/' );
 
 // Include the ACF plugin.
-include_once( DILETEC_CALCULADORA_ACF_PATH . 'acf.php' );
+//include_once( DILETEC_CALCULADORA_ACF_PATH . 'acf.php' );
 
 // Customize the url setting to fix incorrect asset URLs.
-add_filter('acf/settings/url', 'my_acf_settings_url');
-function my_acf_settings_url( $url ) {
-    return DILETEC_CALCULADORA_ACF_URL;
-}
+//add_filter('acf/settings/url', 'my_acf_settings_url');
+//function my_acf_settings_url( $url ) {
+//    return DILETEC_CALCULADORA_ACF_URL;
+//}
 
 // (Optional) Hide the ACF admin menu item.
-add_filter('acf/settings/show_admin', 'diletec_calculadora_acf_settings_show_admin');
-function diletec_calculadora_acf_settings_show_admin( $show_admin ) {
-    return false;
-}
+//add_filter('acf/settings/show_admin', 'diletec_calculadora_acf_settings_show_admin');
+//function diletec_calculadora_acf_settings_show_admin( $show_admin ) {
+//    return false;
+//}
 
 include_once("calculadoraMenu.php");
 
-include_once('fields.php');
+//include_once('fields.php');
 
 include_once('calculadoraShortcode.php');
 

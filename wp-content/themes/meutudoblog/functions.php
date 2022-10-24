@@ -1,5 +1,5 @@
 <?php
-define( "WP_DEBUG", true );
+//define( "WP_DEBUG", true );
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -56,8 +56,8 @@ function calculadora_sidebar(){
         'name'          => 'Calculadora Front Sidebar',
         'id'            => 'calculadora-meutudo-sidebar',
         'description'   => 'Sidebar das paginas de calculadora',
-        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
-        'after_widget'  => '</div>',
+        'before_widget' => '<article id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</article>',
     ]);
 }
 add_action('widgets_init', 'calculadora_sidebar');
@@ -275,3 +275,7 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
+
+
+
+

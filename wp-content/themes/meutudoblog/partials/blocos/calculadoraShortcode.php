@@ -604,10 +604,10 @@ function diletec_calculadora_shortcode( $atts ) {
                 };
 
                 /**Function enable popovers */
-                jQuery(function () {
+                $(function () {
                     $('[data-bs-toggle="popover"]').popover()
                 });
-                jQuery(function () {
+                $(function () {
                     $('.parcelas-infor').popover({
                         container: 'body'
                     })
@@ -627,3 +627,4 @@ function diletec_calculadora_shortcode( $atts ) {
     wp_reset_postdata();
 }
 add_shortcode( 'calculadora', 'diletec_calculadora_shortcode' );
+
