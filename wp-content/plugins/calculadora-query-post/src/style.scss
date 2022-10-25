@@ -1,0 +1,25 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-calculadora-query-post-calculadora-query-post {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+}
+h5#title-post-calculadora-query{
+  width: 23ch;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1;
+  margin: 0 auto 0 auto;
+  height: auto;
+  padding: 0 1rem;
+  max-height: 5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
