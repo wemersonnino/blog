@@ -6,11 +6,10 @@ function diletec_calculadora_shortcode( $atts ) {
         'id' => null,
     );
     $filter = shortcode_atts( $default, $atts );
-    $mrt_load_calculadora = new WP_Query( array(
+    $mrt_load_calculadora = new WP_Query([
         'post_type' => 'calculadora',
-        'ID' => $filter['id'],
-        'offset' => 1,
-    ) );
+        'ID' => $filter['id']
+    ]);
 
     if ( $mrt_load_calculadora->have_posts() ) {
         while ( $mrt_load_calculadora->have_posts() ) { $mrt_load_calculadora->the_post();

@@ -1,6 +1,10 @@
-<?php $faq_habilitado = get_field('postagens-perguntas-frequentes')['habilitado']; ?>
-<?php if ($faq_habilitado) : ?>
-    <?php $selecionadas = get_field('postagens-perguntas-frequentes')['perguntas'] ? array_slice(get_field('postagens-perguntas-frequentes')['perguntas'], 0, 4) : null; ?>
+<?php
+
+$faq = $args['faq'] ?? get_field('postagens-perguntas-frequentes');
+
+?>
+<?php if ($faq['habilitado']) : ?>
+    <?php $selecionadas = $faq['perguntas'] ? array_slice($faq['perguntas'], 0, 4) : null; ?>
     
     <?php $bloco = new WP_Query(array(
       'post_type' => 'bloco',
