@@ -1,3 +1,4 @@
+<div id="line"></div>
 <?php
 $categoria = get_page_by_title('Calculadoras');
 
@@ -9,6 +10,7 @@ $posts = get_pages([
 		'post_status' => 'publish'
 ]);
 ?>
+
 	<article id="boxPostsCalculadora">
 		<?php if($categoria) : ?>
 		<h2>Mais <?php echo $categoria->post_title ?></h2>

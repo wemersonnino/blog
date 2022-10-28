@@ -1,0 +1,19 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-posts-sidebar-calculadora-posts-sidebar {
+	border: 1px dotted #f00;
+}
+
+.wp-block-posts-sidebar-calculadora-posts-sidebar a{
+  font-family: var(--Montserrat);
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-18);
+  line-height: 22px;
+  color: #000000;
+  text-decoration: auto;
+}
