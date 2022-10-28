@@ -1,1 +1,78 @@
-.wp-block-calculadora-query-post-calculadora-query-post{border:1px dotted red}h5#title-post-calculadora-query{font-size:1em;height:auto;line-height:1;margin:0 auto;max-height:5vh;overflow:hidden;padding:0 1rem;text-align:left;text-overflow:ellipsis;white-space:nowrap;width:23ch}
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+:root {
+  /*fonts*/
+  --Montserrat: "Montserrat", sans-serif;
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver:#F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+.wp-block-calculadora-query-post-calculadora-query-post {
+  border: 1px dotted #f00;
+}
+
+#boxPostsCalculadora {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  margin: 1rem auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#boxPostsCalculadora h2 {
+  font-family: var(--Montserrat);
+  font-size: var(--font-20);
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+#boxPostsCalculadora div > div {
+  /*max-width: min-content;*/
+}
+
+h5#title-post-calculadora-query {
+  width: 23ch;
+  text-align: left;
+  font-size: var(--font-14);
+  line-height: 1;
+  margin: 0 auto 0 auto;
+  height: auto;
+  padding: 0 1rem;
+  max-height: 5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*# sourceMappingURL=index.css.map*/
