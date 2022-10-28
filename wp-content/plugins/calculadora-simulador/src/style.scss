@@ -1,0 +1,120 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:root {
+  /*fonts*/
+  --Montserrat: 'Montserrat', sans-serif;
+
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver: #F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+.wp-block-simuladores-calculadora-simulador {
+  width: 100%;
+  height: auto;
+  background-color: var(--bg-white);
+  color: var(--colo-white);
+  padding: 2px;
+}
+
+section#box-simuladores #box-simuladores-topo {
+  width: 100%;
+  height: auto;
+  background-color: var(--bg_black);
+  border-radius: 16px 4px 0px 0px;
+  padding: 1rem;
+  color: var(--color-white);
+}
+
+section#box-simuladores #box-simuladores-topo h2 {
+  font-family: var(--Montserrat);
+  font-size: var(--font-20);
+  font-weight: 600;
+  line-height: 0.938em;
+  letter-spacing: 0em;
+  text-align: left;
+  color: var(--color-white);
+}
+
+section#box-simuladores main#box-simuladores-main table thead {
+  background-color: var(--bg-white);
+}
+
+section#box-simuladores main#box-simuladores-main table thead tr th {
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+}
+
+section#box-simuladores main#box-simuladores-main table tbody tr th, td {
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+}
+
+section#box-simuladores main#box-simuladores-main table tbody tr td {
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding: 1.2rem;
+  line-height: 2;
+  letter-spacing: 0em;
+}
+
+section#box-simuladores main#box-simuladores-main table tbody tr td p a {
+  color: var(--color-black);
+  font-size: var(--font-18);
+  font-weight: 300;
+}
+
+section#box-simuladores main#box-simuladores-main table tbody tr td a {
+  font-family: var(--Montserrat);
+  font-size: var(--font-18);
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: center;
+  position: relative;
+  /* MeuRosa */
+  background-color: var(--bg-pink);
+  border-radius: 5em;
+  padding: 1rem;
+  color: var(--color-white);
+  line-height: 0;
+}
