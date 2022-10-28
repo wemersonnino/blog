@@ -314,7 +314,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     text-align: left;
                 }
                 #box-calculadora #titulo-calculadora h2{
-                    font-size: var(--font-20);
+                    font-size: var(--font-15);
                     font-weight: 600;
                     line-height: 1;
                     margin: 0 auto;
@@ -467,6 +467,9 @@ function diletec_calculadora_shortcode( $atts ) {
                 }
                 @media only screen and (min-width: 35em) {
                     /* Style adjustments for viewports that meet the condition */
+                    #box-calculadora #titulo-calculadora h2{
+                        font-size: var(--font-20);
+                    }
                     #beneficioSalario{
                         padding: 0 1rem 0 1rem;
                     }
