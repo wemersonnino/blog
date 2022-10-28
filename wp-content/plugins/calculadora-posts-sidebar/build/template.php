@@ -19,7 +19,7 @@ if ($blog_posts_calculadora->have_posts()){
 			<a href="<?php the_permalink(); ?>">
 				<?php
 					if ( has_post_thumbnail() ){
-						the_post_thumbnail('calculadora-query-post',['class' => 'rounded mx-auto d-blocka img-fluid img-thumbnail']);
+						the_post_thumbnail('calculadora-query-post',['class' => 'mx-auto d-blocka img-fluid img-thumbnail']);
 					}
 				?>
 			</a>

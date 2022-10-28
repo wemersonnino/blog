@@ -1,3 +1,10 @@
+<style>
+    .wp-block-social-link-anchor{
+        border-radius: 29px;
+        background-color: #283327;
+        padding: 3px!important;
+    }
+</style>
 <?php
 
 global $wp_query;

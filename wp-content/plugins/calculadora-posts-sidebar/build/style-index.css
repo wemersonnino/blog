@@ -1,1 +1,69 @@
-:root{--Montserrat:"Montserrat",sans-serif;--color-black:#000;--color-pink:#d22688;--color-white:#fff;--color-black-50:#00000026;--color-silver-50:#f5f5f5;--bg_black:#000;--bg-silver:#f5f5f5;--bg-white:#fff;--bg-pink:#d22688;--bg-silver-25:#a6a6a6;--font-12:0.750em;--font-14:0.875em;--font-15:0.938em;--font-18:1.125em;--font-20:1.250em;--font-22:1.375em;--font-24:1.500em;--font-40:2.500em;--font-55:3.438em;--font-64:4.000em}.wp-block-posts-sidebar-calculadora-posts-sidebar{background-color:#21759b;color:#fff;padding:2px}.wp-post-thumbnail h5>a{color:#000;font-family:var(--Montserrat);font-size:var(--font-14);font-style:normal;font-weight:700;line-height:19px;text-align:left;-webkit-text-decoration:auto;text-decoration:auto}#line{background-color:var(--bg-silver-25);border-radius:29px;height:.3vh;margin:2rem auto;max-width:12vw}.img-thumbnail{border:none!important}
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/style.scss ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+:root {
+  /*fonts*/
+  --Montserrat: "Montserrat", sans-serif;
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver:#F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+  --bg-silver-25: #A6A6A6;
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+.wp-block-posts-sidebar-calculadora-posts-sidebar {
+  background-color: #21759b;
+  color: #fff;
+  padding: 2px;
+}
+
+.wp-post-thumbnail h5 > a {
+  font-family: var(--Montserrat);
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-14);
+  line-height: 19px;
+  color: #000000;
+  -webkit-text-decoration: auto;
+          text-decoration: auto;
+  text-align: left;
+}
+
+#line {
+  max-width: 12vw;
+  height: 0.3vh;
+  background-color: var(--bg-silver-25);
+  border-radius: 29px;
+  margin: 2rem auto;
+}
+
+.img-thumbnail {
+  border: none !important;
+  border-radius: 12px !important;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

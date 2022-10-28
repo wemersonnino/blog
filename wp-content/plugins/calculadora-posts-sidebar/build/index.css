@@ -1,1 +1,24 @@
-.wp-block-posts-sidebar-calculadora-posts-sidebar{border:1px dotted red}.wp-block-posts-sidebar-calculadora-posts-sidebar a{color:#000;font-family:var(--Montserrat);font-size:var(--font-18);font-style:normal;font-weight:700;line-height:22px;-webkit-text-decoration:auto;text-decoration:auto}
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/editor.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-posts-sidebar-calculadora-posts-sidebar {
+  border: 1px dotted #f00;
+}
+
+.wp-block-posts-sidebar-calculadora-posts-sidebar a {
+  font-family: var(--Montserrat);
+  font-style: normal;
+  font-weight: 700;
+  font-size: var(--font-18);
+  line-height: 22px;
+  color: #000000;
+  -webkit-text-decoration: auto;
+          text-decoration: auto;
+}
+
+/*# sourceMappingURL=index.css.map*/
