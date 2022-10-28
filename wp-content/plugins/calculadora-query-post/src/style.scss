@@ -53,11 +53,13 @@
   font-size: var(--font-20);
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: center;
 
 }
-
+#boxPostsCalculadora div > div{
+  //max-width: min-content;
+}
 h5#title-post-calculadora-query{
   width: 23ch;
   text-align: left;
