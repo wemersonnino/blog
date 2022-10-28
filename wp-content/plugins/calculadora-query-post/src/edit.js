@@ -33,7 +33,7 @@ export default function Edit() {
 	return (
 		<p { ...useBlockProps() }>
 			{ __(
-				'Calculadora Post  – hello from the editor!',
+				'Calculadora Post  – exibição das postagens no sidebar!',
 				'calculadora-query-post'
 			) }
 		</p>

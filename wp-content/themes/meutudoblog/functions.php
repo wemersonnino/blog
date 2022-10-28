@@ -264,7 +264,28 @@ function mt_banner_shortcode($atts) {
     }
     return ''; 
 } 
-add_shortcode('mt_banner', 'mt_banner_shortcode'); 
+add_shortcode('mt_banner', 'mt_banner_shortcode');
+
+function calc_simuladores_shortcode($atts) {
+    $simuladoresID = $atts['id'];
+
+    if(!empty($simuladoresID)) {
+        $alt = get_the_title($simuladoresID);
+        $link = get_field('link', $simuladoresID);
+        $desktopImage = get_field('imagem-desktop', $simuladoresID);
+        $mobileImage = get_field('imagem-mobile', $simuladoresID);
+
+        if(!empty($desktopImage) && !empty($mobileImage)) {
+            $style = '<style>.mt-banner .mt-banner-desktop { display: block; width: 100%; margin: 30px 0 0; } .mt-banner .mt-banner-mobile { display: none; width: 100%; } @media (max-width: 767.98px) { .mt-banner .mt-banner-desktop { display: none; } .mt-banner .mt-banner-mobile { display: block; } }</style>';
+
+            $html = $style . '<div class="mt-banner mt-banner-' . $simuladoresID . '"><a href="' . $link['url'] . '" target="' . $link['target'] . '" title="' . $link['title'] . '"><img src="' . $desktopImage['url'] . '" alt="' . $alt . '" class="mt-banner-desktop"><img src="' . $mobileImage['url'] . '" alt="' . $alt . '" class="mt-banner-mobile"></a></div>';
+
+            return $html;
+        }
+    }
+    return '';
+}
+add_shortcode('simuladores', 'calc_simuladores_shortcode');
 
 function faq_after_content($content) {
     if (is_single()) {
