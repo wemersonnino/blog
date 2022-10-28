@@ -24,7 +24,7 @@ $posts = get_pages([
 							foreach ($posts as $post):
 								if (is_page($post->ID)) continue;
 						?>
-						<a href="<?php the_permalink($categoria->post_title); ?>" class="btn bg-dark rounded-pill text-white p-4" type="button">
+						<a href="<?php the_permalink($post->ID); ?>" class="btn bg-dark rounded-pill text-white p-4" type="button">
 							<div class="row align-items-center">
 								<div class="col-2">
 									<svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
