@@ -44,10 +44,11 @@
   font-family: var(--Montserrat);
   font-style: normal;
   font-weight: 700;
-  font-size: var(--font-15);
-  line-height: 22px;
+  font-size: var(--font-14);
+  line-height: 19px;
   color: #000000;
   text-decoration: auto;
+  text-align: left;
 }
 
 #line{
@@ -56,4 +57,8 @@
   background-color: var(--bg-silver-25);
   border-radius: 29px;
   margin: 2rem auto;
+}
+
+.img-thumbnail{
+  border: none!important;
 }

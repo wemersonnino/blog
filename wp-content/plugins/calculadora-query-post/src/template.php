@@ -26,24 +26,32 @@ $posts = get_pages([
 							foreach ($posts as $post):
 								if (is_page($post->ID)) continue;
 						?>
-						<a href="<?php the_permalink($post->ID); ?>" class="btn bg-dark rounded-pill text-white p-4" type="button">
-							<div class="row align-items-center">
-								<div class="col-2">
-									<svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-										<rect width="18" height="24" fill="url(#pattern0)"/>
-										<defs>
-											<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-												<use xlink:href="#image0_241_892" transform="translate(-0.0208333) scale(0.0416667 0.03125)"/>
-											</pattern>
-											<image id="image0_241_892" width="25" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAgCAYAAADnnNMGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwUlEQVRIie2Xyw3DIBAFhyh3t5BS3IFTijsIJaWEdGJKSAcvB0PkT1CM5b1YrOTLM+wAGg4gifh1kgYdV0PsiZME0AFPbOqeIANwM4IEJ6kB3kYAAK6Z3AOvnT3bOP9b6bi0GOh2AgBWJ2MBWfW7ZAY9djZvfs3N7eTQyu2kQoogntH3lrnzpTmwTeGp96X5Zsj0f2kO/L8nS+9L83EFp78nnmrXPAeqXQdBPNWueQ6c0a5gyAgJ0htC+vRsMH06fACFfSvTxbDprQAAAABJRU5ErkJggg=="/>
-										</defs>
-									</svg>
-
-								</div>
-								<div class="col-10">
-									<h5 id="title-post-calculadora-query"><?php echo $post->post_title ?></h5>
-								</div>
-							</div>
+								<style>
+									.btn-calc-<?php  echo $post->ID?> {
+										display: flex;
+										align-items: center;
+										text-align: left;
+										padding: 10px 20px !important;
+										line-height: 20px;
+										font-size: 15px;
+										min-height: 65px;
+										border: 0;
+									}
+									.btn-calc-<?php  echo $post->ID?> :hover {
+										text-decoration: none;
+									}
+								</style>
+						<a href="<?php the_permalink($post->ID); ?>" class="btn bg-dark rounded-pill text-white p-4 btn-calc-<?php  echo $post->ID?>" type="button">
+							<svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 7px;">
+								<rect width="18" height="24" fill="url(#pattern0)"/>
+								<defs>
+									<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+										<use xlink:href="#image0_241_892" transform="translate(-0.0208333) scale(0.0416667 0.03125)"/>
+									</pattern>
+									<image id="image0_241_892" width="25" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAgCAYAAADnnNMGAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAwUlEQVRIie2Xyw3DIBAFhyh3t5BS3IFTijsIJaWEdGJKSAcvB0PkT1CM5b1YrOTLM+wAGg4gifh1kgYdV0PsiZME0AFPbOqeIANwM4IEJ6kB3kYAAK6Z3AOvnT3bOP9b6bi0GOh2AgBWJ2MBWfW7ZAY9djZvfs3N7eTQyu2kQoogntH3lrnzpTmwTeGp96X5Zsj0f2kO/L8nS+9L83EFp78nnmrXPAeqXQdBPNWueQ6c0a5gyAgJ0htC+vRsMH06fACFfSvTxbDprQAAAABJRU5ErkJggg=="/>
+								</defs>
+							</svg>
+							<?php echo $post->post_title ?>
 						</a>
 						<?php
 							endforeach;

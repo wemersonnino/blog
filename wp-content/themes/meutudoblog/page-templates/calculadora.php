@@ -7,7 +7,7 @@
 <?php get_template_part('/partials/topos/padrao'); ?><!--//header-->
 <main id="main-container" class="container">
     <section class="container">
-        <article class="row justify-content-start">
+        <article class="row justify-content-between">
             <div class="w-100"></div>
             <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100">
                 <div id="titles" class="row align-items-center">

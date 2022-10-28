@@ -131,7 +131,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     </header>
                     <div class="w-100"></div><br>
                     <main>
-                        <div class="row justify-content-around">
+                        <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12">
                                 <h3><?php _e($args['titulo_da_margem_permitida']); ?></h3>
                                 <p>
@@ -139,7 +139,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </p>
                             </div><!--/Text box ref input 01 -->
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-4 mt-5 mt-md-0 mt-lg-0 mt-xl-0">
-                                <div class="row justify-content-start">
+                                <div class="row justify-content-between">
                                     <div class="col">
                                         <p class="fs-6">
                                             <strong>R$ <span id="resultBeneficioSalario" class="calculadora_margem_permitida_<?php _e($args['id']); ?>">000,00</span></strong>
@@ -170,7 +170,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </div>
                             </div><!--/Text box result ref input 01 -->
                         </div><!--\Ref. Result and text All elements input 01-->
-                        <div class="row justify-content-around">
+                        <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12">
                                 <h3><?php _e($args['titulo_da_margem_disponivel']); ?></h3>
                                 <p>
@@ -317,6 +317,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-20);
                     font-weight: 600;
                     line-height: 1;
+                    margin: 0 auto;
                 }
                 #box-calculadora > main{
                     max-width: 100%;
