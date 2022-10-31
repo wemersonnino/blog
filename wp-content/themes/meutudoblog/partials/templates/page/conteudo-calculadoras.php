@@ -41,3 +41,4 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 </article>
 </section>
 </main>
+<?php get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
