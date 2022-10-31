@@ -61,6 +61,10 @@ section#box-simuladores #box-simuladores-topo h2 {
   text-align: left;
   color: var(--color-white);
   margin-bottom: 0;
+
+  strong{
+	color: var(--color-pink);
+  }
 }
 
 section#box-simuladores main#box-simuladores-main table thead {

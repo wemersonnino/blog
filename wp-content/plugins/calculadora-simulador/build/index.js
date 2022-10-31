@@ -54,12 +54,6 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 function Edit(props) {
-  titleSimulador: {
-    type: "string";
-  }
-  linkButton: {
-    type: "string";
-  }
   const uptdateSimulador = () => {
     props.setAttributes({
       titleSimulador: event.target.value
@@ -328,7 +322,7 @@ function _extends() {
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"simuladores/calculadora-simulador","version":"0.1.0","title":"Simuladores","category":"widgets","icon":"smiley","description":"Criação e edição de simuladores para calculadoras","supports":{"html":false},"textdomain":"calculadora-simulador","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"simuladores/calculadora-simulador","version":"0.1.0","title":"Simuladores","category":"widgets","icon":"smiley","description":"Criação e edição de simuladores para calculadoras","supports":{"html":false},"textdomain":"calculadora-simulador","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","attributes":{"titleSimulador":{"type":"string"}}}');
 
 /***/ })
 

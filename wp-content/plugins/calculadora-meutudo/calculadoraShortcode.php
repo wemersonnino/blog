@@ -210,6 +210,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     </main>
                 </footer>
             </section><!--\Calculadora Box-->
+            <div class="w-100"></div><br/>
             <style>
                 .titulo_<?php _e($args['id']); ?>{
                     /*background: black;*/

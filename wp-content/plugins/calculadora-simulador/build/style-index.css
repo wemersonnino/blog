@@ -38,7 +38,7 @@
   width: 100%;
   height: auto;
   background-color: var(--bg-white);
-  color: var(--color-white);
+  color: var(--colo-white);
   padding: 2px;
 }
 
@@ -60,6 +60,9 @@ section#box-simuladores #box-simuladores-topo h2 {
   text-align: left;
   color: var(--color-white);
   margin-bottom: 0;
+}
+section#box-simuladores #box-simuladores-topo h2 strong {
+  color: var(--color-pink);
 }
 
 section#box-simuladores main#box-simuladores-main table thead {

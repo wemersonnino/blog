@@ -46,6 +46,17 @@
 <!--						<p><a class="btn-link text-dark" href="#">i</a></p>-->
 					</td>
 				</tr>
+				<tr>
+					<th scope="row">Antecipação Saque-aniversário</th>
+					<td>1,72% a.m.</td>
+					<td>6 a 84 parcelas</td>
+					<td>
+						<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
+					</td>
+					<td>
+						<!--						<p><a class="btn-link text-dark" href="#">i</a></p>-->
+					</td>
+				</tr>
 				</tbody>
 			</table><!--\Table simuladores-->
 		</div>

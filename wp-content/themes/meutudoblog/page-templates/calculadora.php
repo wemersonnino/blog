@@ -1,6 +1,7 @@
 <?php
-/*
- Template Name: calculadoras-front
+/**
+ * Template Name: calculadoras-front
+ * Template Post Type: page
  */
 ?>
 <?php get_header(); ?>

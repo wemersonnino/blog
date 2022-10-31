@@ -30,8 +30,7 @@ import './editor.scss';
  * @return {WPElement} Element to render.
  */
 export default function Edit(props) {
-	titleSimulador: {type: "string"}
-	linkButton: {type: "string"}
+
 	const uptdateSimulador = () =>{
 		props.setAttributes({titleSimulador: event.target.value})
 	}
