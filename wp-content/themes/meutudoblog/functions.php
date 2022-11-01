@@ -204,7 +204,14 @@ function get_yoast_breadcrumb_array(){
 	$items = $dom->getElementsByTagName('a');
 	
 	foreach ($items as $tag)
-		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));			
+		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));
+
+    // Author
+    if (is_archive() && is_author()) {
+        $authorCrumb = ['text' => 'Autor', 'href' => get_permalink(get_page_by_path('autor'))];
+        if ($items->length == 1) $crumb[] = $authorCrumb;
+        else array_splice($crumb, 1, 0, [$authorCrumb]);
+    }
 	
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
@@ -275,3 +282,21 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
+
+// Author permanlink
+function author_new_base() {
+    global $wp_rewrite;
+    $wp_rewrite->author_base = 'autor';
+}
+add_action('init', 'author_new_base');
+
+// Author information post
+function author_after_content ($content) {
+    if (is_single()) {
+        ob_start();
+        get_template_part('partials/author/profile-post');
+        $content .= ob_get_clean();
+    }
+    return $content;
+}
+add_filter('the_content', 'author_after_content');
