@@ -3,6 +3,7 @@
     --light: #fff;
     --color-1: #FF1785;
     --color-2: #F8F8F8;
+    --color-3: #FAFAFA;
 }
 
 .color-1 { color: var(--color-1) !important; }
@@ -152,38 +153,39 @@
             padding: 0;
 
             .page-numbers {
-                background-color: rgba(255, 23, 133, 0.5);
-                margin: 0 5px;
-                font-size: 0;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
+                min-width: 55px;
+                height: 55px;
+                font-weight: bold;
+                color: var(--dark);
+                padding: 15px;
+                margin: 0 5px 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px #5b5b5b33;
                 transition: background-color 0.3s;
 
-                &:hover {
+                &.current {
+                    color: var(--light);
                     background-color: var(--color-1);
+
+                    &:hover {
+                        color: var(--light);
+                        background-color: var(--color-1);
+                    }
+                }
+
+                &:hover {
+                    background-color: var(--color-3);
                     text-decoration: none;
                 }
 
-                &.next ,&.prev {
-                    width: 25px;
-                    height: 25px;
-                    margin: 0 15px;
-
-                    &:after {
-                        content: "\203A";
-                        font-size: 30px;
-                        margin: -12px 0 0 2px;
-                        color: var(--color-1);
-                        font-weight: bold;
-                    }
+                &.prev, &.next {
+                    background-image: url('../images/paginacao-proximo.svg');
+                    background-repeat: no-repeat;
+                    background-position: center;
                 }
 
                 &.prev {
-                    &:after {
-                        content: "\2039";
-                        margin: -12px 2px 0 0;
-                    }
+                    background-image: url('../images/paginacao-anterior.svg');
                 }
             }
         }
