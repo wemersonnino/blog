@@ -41,9 +41,9 @@
                         'current' => max(1, get_query_var('paged')),
                         'total' => $wp_query->max_num_pages,
                         'type'  => 'list',
-                        'prev_text' => '&lsaquo;',
-                        'next_text' => '&rsaquo;',
-                        'mid_size' => 999
+                        'prev_text' => ' ',
+                        'next_text' => ' ',
+                        'mid_size' => 2
                     ]);
                     ?>
                 </div>
