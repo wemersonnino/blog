@@ -6,7 +6,7 @@ $authorPhoto = get_field('photo_profile', 'user_' . $author->ID) ?? null;
 $authorIcon = get_field('icon', 'user_' . $author->ID) ?? null;
 
 ?>
-<div class="profile row align-items-end">
+<div class="profile row align-items-center">
     <?php if ($authorPhoto) { ?>
         <div class="col-12 col-lg-4 mb-3 mb-lg-0">
             <img src="<?= $authorPhoto ?>" alt="<?= $author->user_firstname . ' ' . $author->user_lastname ?>" class="w-100" />

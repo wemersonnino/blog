@@ -6,7 +6,6 @@ $authorPhoto = get_field('photo_posts', 'user_' . $authorId) ?? null;
 $authorIcon = get_field('icon', 'user_' . $authorId) ?? null;
 
 ?>
-
 <div class="theme-author">
     <div class="profile-post row align-items-center">
         <?php if ($authorPhoto) { ?>
