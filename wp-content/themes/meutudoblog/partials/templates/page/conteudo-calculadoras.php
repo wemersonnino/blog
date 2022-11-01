@@ -33,7 +33,7 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 </section><!--\content post-->
 
 <?php if (is_active_sidebar('calculadora-meutudo-sidebar')):?>
-    <aside class="col-md-3 col-lg-3 col-xl-3 h-100 w-100">
+    <aside class="col-md-4 col-lg-4 col-xl-4 h-100 w-100">
         <?php dynamic_sidebar('calculadora-meutudo-sidebar') ?>
     </aside>
 <?php endif; ?>
@@ -41,4 +41,14 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 </article>
 </section>
 </main>
+<?php get_template_part('partials/templates/post/comentarios'); ?>
+
+<?php get_template_part('partials/blocos/newsletter'); ?>
+
+<?php //get_template_part('partials/blocos/postagens-sugeridas'); ?>
+
 <?php get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
+
+<?php get_template_part('partials/rodapes/padrao'); ?>
+
+<?php get_template_part('partials/blocos/compartilhar-lateral'); ?>

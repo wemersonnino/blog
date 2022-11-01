@@ -10,12 +10,12 @@
     <section class="container">
         <article class="row justify-content-between">
             <div class="w-100"></div>
-            <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100">
+            <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100 d-flex">
                 <div id="titles" class="row align-items-center">
                     <h1 class="titulo text-capitalize fw-semibold lh-base mb-0 mb-md-3 mb-lg-3 mb-xl-3">
                         <?php echo the_title()?>
                     </h1><!--\title-->
-                    <div class="w-100"></div><br><br>
+                    <div class="w-100"></div>
                     <?php get_template_part('/partials/templates/page/conteudo-calculadoras'); ?><!--//main-->
 
                     <?php if (get_field('/page-newsletter-habilitado')) get_template_part('partials/blocos/home-calculadoras'); ?>
