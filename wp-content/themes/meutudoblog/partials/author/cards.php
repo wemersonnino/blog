@@ -2,8 +2,8 @@
 
 // Get users
 $authors = get_users([
-    'fields' => ['ID', 'display_name'],
-    'role'    => 'author',
+    #'fields' => ['ID', 'display_name'],
+    'role__in'    => ['author', 'administrator'],
     'orderby' => 'display_name'
 ]);
 
@@ -11,6 +11,11 @@ $authors = get_users([
 <?php foreach ($authors as $author) { ?>
     <?php
 
+    // Only administrador "meutudo" show
+    if (isset($author->roles[0]) && $author->roles[0] == 'administrator' && $author->user_login != 'MEU TUDO') 
+        continue;
+
+    // Images
     $authorPhoto = get_field('photo_profile', 'user_' . $author->ID) ?? null;
     $authorIcon = get_field('icon', 'user_' . $author->ID) ?? null;
 
