@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "posts-sidebar/calculadora-posts-sidebar",
+	"version": "0.1.0",
+	"title": "Calculadora Posts Show",
+	"category": "widgets",
+	"icon": "embed-post",
+	"description": "Show posts type calculadora",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "calculadora-posts-sidebar",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
