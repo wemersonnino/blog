@@ -13,7 +13,7 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 ?>
 <?php if (have_posts()): ?>
     <?php while (have_posts() ): the_post(); ?> 
-        <div class="conteudo-wysiwyg">
+        <div class="conteudo-wysiwyg justify-content-between">
             <article class="col-auto px-1">
                 <?php the_content(); ?>
             </article>
@@ -33,7 +33,7 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 </section><!--\content post-->
 
 <?php if (is_active_sidebar('calculadora-meutudo-sidebar')):?>
-    <aside class="col-md-4 col-lg-4 col-xl-4 h-100 w-100">
+    <aside class="col-md-4 col-lg-4 col-xl-4 col-sm-12 h-100 w-100">
         <?php dynamic_sidebar('calculadora-meutudo-sidebar') ?>
     </aside>
 <?php endif; ?>

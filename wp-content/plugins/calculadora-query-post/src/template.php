@@ -45,6 +45,12 @@ $posts = get_pages([
 										width: 18px;
 										min-width:18px;
 									}
+									@media only screen and (min-width: 35em) {
+										/* Style adjustments for viewports that meet the condition */
+										.btn-calc-<?php  echo $post->ID?>{
+											/*width:20vw;*/
+										}
+									}
 								</style>
 						<a href="<?php the_permalink($post->ID); ?>" class="btn bg-dark rounded-pill text-white p-4 btn-calc-<?php  echo $post->ID?>" type="button">
 							<svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin-right: 7px;">

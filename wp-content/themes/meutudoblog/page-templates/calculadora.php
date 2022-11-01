@@ -10,7 +10,7 @@
     <section class="container">
         <article class="row justify-content-between">
             <div class="w-100"></div>
-            <section id="content-post" class="post-conteudo col-md-8 col-lg-8 col-xl-8 w-100 d-flex">
+            <section id="content-post" class="col-md-9 col-lg-8 col-xl-8 col-sm-12 w-100 d-flex">
                 <div id="titles" class="row align-items-center">
                     <h1 class="titulo text-capitalize fw-semibold lh-base mb-0 mb-md-3 mb-lg-3 mb-xl-3">
                         <?php echo the_title()?>
