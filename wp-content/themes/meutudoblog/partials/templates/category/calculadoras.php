@@ -1,9 +1,16 @@
 
 <?php
-
 global $post;
 
+$paged = (get_query_var('page')) ? get_query_var('page') : 1;
 $postPai = $post->ID;
+
+$test = get_category_by_slug('calculadoras');
+
+$namE = $test->name;
+echo $namE;
+
+//var_dump($id);
 
 $posts = new WP_Query(array(
     'post_type' => ['post','page'],

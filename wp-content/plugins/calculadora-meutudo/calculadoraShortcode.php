@@ -6,11 +6,10 @@ function diletec_calculadora_shortcode( $atts ) {
         'id' => null,
     );
     $filter = shortcode_atts( $default, $atts );
-    $mrt_load_calculadora = new WP_Query( array(
+    $mrt_load_calculadora = new WP_Query([
         'post_type' => 'calculadora',
-        'ID' => $filter['id'],
-        'offset' => 1,
-    ) );
+        'ID' => $filter['id']
+    ]);
 
     if ( $mrt_load_calculadora->have_posts() ) {
         while ( $mrt_load_calculadora->have_posts() ) { $mrt_load_calculadora->the_post();
@@ -37,14 +36,14 @@ function diletec_calculadora_shortcode( $atts ) {
                 'valor_do_beneficio' => $mrt_calculadora_meta['valor_do_beneficio'][0],
                 'parcela_de_emprestimo' => $mrt_calculadora_meta['parcela_de_emprestimo'][0],
                 'porcentagem_da_margem_permitida' => $mrt_calculadora_meta['porcentagem_da_margem_permitida'][0],
-                'infor_input_one'   => $mrt_calculadora_meta['infor_input_one'][0],
-                'title_info_input_one' => $mrt_calculadora_meta['title_info_input_one'][0],
-                'title_info_input_two' => $mrt_calculadora_meta['title_info_input_two'][0],
-                'infor_input_two' => $mrt_calculadora_meta['infor_input_two'][0],
-                'title_result_input_one' => $mrt_calculadora_meta['title_result_input_one'][0],
-                'infor_input_result_one' => $mrt_calculadora_meta['infor_input_result_one'][0],
-                'title_result_input_two' => $mrt_calculadora_meta['title_result_input_two'][0],
-                'infor_input_result_two' => $mrt_calculadora_meta['infor_input_result_two'][0],
+                'titulo_da_dica_no_primeiro_campo'   => $mrt_calculadora_meta['titulo_da_dica_no_primeiro_campo'][0],
+                'texto_para_compor_a_ajuda_no_primeiro_campo' => $mrt_calculadora_meta['texto_para_compor_a_ajuda_no_primeiro_campo'][0],
+                'titulo_da_dica_no_segundo_campo' => $mrt_calculadora_meta['titulo_da_dica_no_segundo_campo'][0],
+                'texto_para_compor_a_ajuda_no_campo_parcelas' => $mrt_calculadora_meta['texto_para_compor_a_ajuda_no_campo_parcelas'][0],
+                'texto_dica_campo_resultado_salario_beneficio' => $mrt_calculadora_meta['texto_dica_campo_resultado_salario_beneficio'][0],
+                'texto_para_compor_a_ajuda_no_campo_resultado_salario_beneficio' => $mrt_calculadora_meta['texto_para_compor_a_ajuda_no_campo_resultado_salario_beneficio'][0],
+                'titulo_da_dica_no_segundo_campo_parcelas' => $mrt_calculadora_meta['titulo_da_dica_no_segundo_campo_parcelas'][0],
+                'texto_que_compoem_a_dica_para_parcelas' => $mrt_calculadora_meta['texto_que_compoem_a_dica_para_parcelas'][0],
             );
             ob_start();
             ?>
@@ -53,9 +52,9 @@ function diletec_calculadora_shortcode( $atts ) {
                 <header id="titulo-calculadora" class="titulo_<?php _e($args['id']); ?>">
                     <h2><?php _e($args['titulo_do_resultado']); ?></h2>
                 </header>
-                <main id="input-calc" class="input-calc bg-silver">
+                <main id="input-calc" class="input-calc bg-silver container">
                     <div class="row">
-                        <div id="boxBeneficioSalario" class="col calculadora_body_<?php _e($args['id']); ?>">
+                        <div id="boxBeneficioSalario" class="col-md-6 col-lg-6 col-xl-6 col-sm-12 calculadora_body_<?php _e($args['id']); ?>">
                             <div id="boxBeneficioSalario" class="col">
                                 <label for="beneficioSalario" class="form-label text-start">
                                     <?php _e($args['valor_do_beneficio']); ?>
@@ -68,8 +67,8 @@ function diletec_calculadora_shortcode( $atts ) {
                                             data-bs-placement="auto"
                                             data-bs-sanitize="true"
                                             data-bs-html="false"
-                                            title="<?php _e($args['title_info_input_one']); ?>"
-                                            data-bs-content="<?php _e($args['infor_input_one']); ?>"
+                                            title="<?php _e($args['titulo_da_dica_no_primeiro_campo']); ?>"
+                                            data-bs-content="<?php _e($args['texto_para_compor_a_ajuda_no_primeiro_campo']); ?>"
                                             role="button"
                                     >
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -92,7 +91,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </div>
                             </div>
                         </div><!--/input 1 -->
-                        <div id="boxParcelas" class="col">
+                        <div id="boxParcelas" class="col-md-6 col-lg-6 col-xl-6 col-sm-12">
                             <label for="parcelas" class="form-label text-start">
                                 <?php _e($args['parcela_de_emprestimo']); ?>
                                 <span class="align-content-around text-start">
@@ -104,8 +103,8 @@ function diletec_calculadora_shortcode( $atts ) {
                                             data-bs-placement="auto"
                                             data-bs-sanitize="true"
                                             data-bs-html="false"
-                                            title="<?php _e($args['title_info_input_two']); ?>"
-                                            data-bs-content="<?php _e($args['infor_input_two']); ?>"
+                                            title="<?php _e($args['texto_para_compor_a_ajuda_no_campo_parcelas']); ?>"
+                                            data-bs-content="<?php _e($args['texto_para_compor_a_ajuda_no_campo_resultado_salario_beneficio']); ?>"
                                             role="button"
                                     >
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -132,7 +131,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     </header>
                     <div class="w-100"></div><br>
                     <main>
-                        <div class="row justify-content-around">
+                        <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12">
                                 <h3><?php _e($args['titulo_da_margem_permitida']); ?></h3>
                                 <p>
@@ -140,7 +139,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </p>
                             </div><!--/Text box ref input 01 -->
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-4 mt-5 mt-md-0 mt-lg-0 mt-xl-0">
-                                <div class="row justify-content-start">
+                                <div class="row justify-content-between">
                                     <div class="col">
                                         <p class="fs-6">
                                             <strong>R$ <span id="resultBeneficioSalario" class="calculadora_margem_permitida_<?php _e($args['id']); ?>">000,00</span></strong>
@@ -156,8 +155,8 @@ function diletec_calculadora_shortcode( $atts ) {
                                                     data-bs-placement="auto"
                                                     data-bs-sanitize="true"
                                                     data-bs-html="false"
-                                                    title="<?php _e($args['title_result_input_one']); ?>"
-                                                    data-bs-content="<?php _e($args['infor_input_result_one']); ?>"
+                                                    title="<?php _e($args['titulo_da_dica_no_segundo_campo']); ?>"
+                                                    data-bs-content="<?php _e($args['texto_dica_campo_resultado_salario_beneficio']); ?>"
                                                     role="button"
                                             >
                                                 <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -171,7 +170,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                 </div>
                             </div><!--/Text box result ref input 01 -->
                         </div><!--\Ref. Result and text All elements input 01-->
-                        <div class="row justify-content-around">
+                        <div class="row justify-content-between">
                             <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12">
                                 <h3><?php _e($args['titulo_da_margem_disponivel']); ?></h3>
                                 <p>
@@ -193,8 +192,8 @@ function diletec_calculadora_shortcode( $atts ) {
                                                     data-bs-placement="auto"
                                                     data-bs-sanitize="true"
                                                     data-bs-html="false"
-                                                    title="<?php _e($args['title_result_input_two']); ?>"
-                                                    data-bs-content="<?php _e($args['infor_input_result_two']); ?>"
+                                                    title="<?php _e($args['titulo_da_dica_no_segundo_campo_parcelas']); ?>"
+                                                    data-bs-content="<?php _e($args['texto_que_compoem_a_dica_para_parcelas']); ?>"
                                                     role="button"
                                             >
                                                 <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -211,6 +210,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     </main>
                 </footer>
             </section><!--\Calculadora Box-->
+            <div class="w-100"></div><br/>
             <style>
                 .titulo_<?php _e($args['id']); ?>{
                     /*background: black;*/
@@ -226,7 +226,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 }
                 .calculadora_body_<?php _e($args['id']); ?>{
                     /*background: #f5f5f582;*/
-                    /*padding: 10px;*/
+                    padding: 0;
                 }
                 .calculadora_margem_permitida_<?php _e($args['id']); ?>{
                     line-height: 4em;
@@ -315,8 +315,10 @@ function diletec_calculadora_shortcode( $atts ) {
                     text-align: left;
                 }
                 #box-calculadora #titulo-calculadora h2{
-                    font-size: var(--font-20);
+                    font-size: var(--font-15);
                     font-weight: 600;
+                    line-height: 1;
+                    margin: 0 auto;
                 }
                 #box-calculadora > main{
                     max-width: 100%;
@@ -466,6 +468,9 @@ function diletec_calculadora_shortcode( $atts ) {
                 }
                 @media only screen and (min-width: 35em) {
                     /* Style adjustments for viewports that meet the condition */
+                    #box-calculadora #titulo-calculadora h2{
+                        font-size: var(--font-20);
+                    }
                     #beneficioSalario{
                         padding: 0 1rem 0 1rem;
                     }
@@ -473,7 +478,7 @@ function diletec_calculadora_shortcode( $atts ) {
                         margin:0.4rem auto;
                     }
                     #boxParcelas label[for=parcelas]{
-                        margin: 0 auto 0.78rem auto;
+                        margin: 0 auto 0.38rem auto;
                     }
                 }
 
@@ -487,7 +492,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 const parcelasEmprest = document.querySelector(".calculadora_parcela_de_emprestimo_<?php _e($args['id']); ?>");
                 const resultBeneficioSalario = document.querySelector('#resultBeneficioSalario');
                 const resultMargem = document.querySelector('.calculadora_margem_disponivel_<?php _e($args['id']); ?>');
-
+                const percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>
 
                 /**evento do campo 1 onde sera input com salario ou valor do beneficio */
                 beneficioSalario.addEventListener('input',(evt)=>{
@@ -544,7 +549,11 @@ function diletec_calculadora_shortcode( $atts ) {
                     else if (event != ""){
                         tratarSub(resultBeneficioSalario.textContent,parcelasEmprest.value);
                     }
-                },false)
+                    else if(event === 0){
+                        /** aqui se o usuario não tiver nenhuma parcela o valor sera igual ao margem permitida */
+                        resultMargem.innerHTML = resultBeneficioSalario.textContent;
+                    }
+                },false);
 
 
                 /**Functions que realizam tratamentos das saidas de front e para a matemática da calculadora */
@@ -555,12 +564,13 @@ function diletec_calculadora_shortcode( $atts ) {
                         e = e.replace(".","");
                         e = e.replace(",","");
                     }
-                    let montante = e * 0.35;
+                    let montante = e * (percentValue / 100);
+                    //console.log(`Porcentagem: ${percentValue / 100}`);
                     //console.log(`result: ${e}`);
                     //console.log(`montante: ${montante}`);
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
-                }
+                };
                 /**Function que realizam tratamentos das entradas, saidas e matematica do input de parcelas */
                 const tratarSub = (e,x) =>{
                     x = parcelasEmprest.value;
@@ -577,7 +587,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`montante parcel: ${x}`);
                     tratamentoResultadoSub(montante);
                     //console.log(`montante1 parcel: ${tratamentoResultadoSub(montante)}`);
-                }
+                };
 
                 const tratamentoResultado = (e) => {
                     let valorTarget = (e.valueOf() / 100).toFixed(2)+"";
@@ -587,7 +597,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`show value tratado: ${e}`);
                     resultBeneficioSalario.innerHTML = e;
                     return e;
-                }
+                };
                 const tratamentoResultadoSub = (e) => {
                     let valorTarget = (e.valueOf() / 100).toFixed(2)+"";
                     valorTarget = valorTarget.replace(".", ",");
@@ -596,7 +606,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`show value tratado: ${e}`);
                     resultMargem.innerHTML = e;
                     return e;
-                }
+                };
 
                 /**Function enable popovers */
                 jQuery(function () {

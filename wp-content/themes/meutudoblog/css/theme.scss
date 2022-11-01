@@ -2153,7 +2153,7 @@ section.post-conteudo {
 
   @media (max-width: 1199.98px) {
     .nome {
-      font-size: 48px;
+      font-size: 1.499em;
     }
   }
   @media (max-width: 991.98px) {
@@ -2371,5 +2371,54 @@ body.page-template-template-home:not(.paged) {
 body.single-post {
   section.post-comentarios {
     padding-top: 0;
+  }
+}
+
+
+/* ==========================================================================
+   Wemerson custom styles
+   ========================================================================== */
+.breadcrumb{
+  margin-bottom: 0;
+}
+
+:root{
+  /*fonts*/
+  --Montserrat: 'Montserrat', sans-serif;
+
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver:#F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-23: 1.499em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+#titles h1{
+  font-size: var(--font-23);
+}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+  #titles h1{
+    font-size: var(--font-40);
   }
 }
