@@ -40,15 +40,18 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 
 </article>
 </section>
+<footer class="row">
+
+    <?php get_template_part('partials/templates/post/comentarios'); ?>
+
+    <?php get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
+
+    <?php get_template_part('partials/rodapes/padrao'); ?>
+
+    <?php get_template_part('partials/blocos/compartilhar-lateral'); ?>
+
+    <?php get_footer(); ?>
+</footer>
 </main>
-<?php get_template_part('partials/templates/post/comentarios'); ?>
+<div class="w-100"></div>
 
-<?php get_template_part('partials/blocos/newsletter'); ?>
-
-<?php //get_template_part('partials/blocos/postagens-sugeridas'); ?>
-
-<?php get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
-
-<?php get_template_part('partials/rodapes/padrao'); ?>
-
-<?php get_template_part('partials/blocos/compartilhar-lateral'); ?>

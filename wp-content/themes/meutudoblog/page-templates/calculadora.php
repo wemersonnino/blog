@@ -27,11 +27,6 @@
 
                     <?php if (get_field('/page-newsletter-habilitado')) get_template_part('partials/blocos/home-calculadoras'); ?>
 
-                    <?php if (get_field('/page-baixe-o-aplicativo-habilitado'))get_template_part('partials/blocos/baixe-o-aplicativo'); ?>
-
-                    <?php get_template_part('/partials/rodapes/padrao'); ?>
-
-                    <?php get_footer(); ?>
 
 
 

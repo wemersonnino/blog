@@ -2422,3 +2422,19 @@ body.single-post {
     font-size: var(--font-40);
   }
 }
+
+
+main#main-container{
+  display:grid !important;
+}
+
+#main-container > #titles{
+  width: 95%;
+  margin: 0 auto;
+}
+
+#titles .titulo{ margin: 0 auto 0 1rem;}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+  #titles .titulo{ width: 98%!important; margin: 0 auto;}
+}
