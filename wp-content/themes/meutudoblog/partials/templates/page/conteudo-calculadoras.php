@@ -13,8 +13,8 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 ?>
 <?php if (have_posts()): ?>
     <?php while (have_posts() ): the_post(); ?> 
-        <div class="conteudo-wysiwyg justify-content-between">
-            <article class="col-auto px-1">
+        <div class="conteudo-wysiwyg container">
+            <article class="row">
                 <?php the_content(); ?>
             </article>
             

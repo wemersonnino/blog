@@ -33,17 +33,22 @@ $posts = get_pages([
 										text-align: left;
 										padding: 10px 20px !important;
 										line-height: 20px;
-										font-size: 15px;
+										/*font-size: 15px;*/
 										min-height: 65px;
 										border: 0;
+										font-size:small;
 									}
 									.btn-calc-<?php  echo $post->ID?> :hover {
 										text-decoration: none;
 									}
+									.btn-calc-<?php  echo $post->ID?> svg{
+										width: 18px;
+										min-width:18px;
+									}
 									@media only screen and (min-width: 35em) {
 										/* Style adjustments for viewports that meet the condition */
 										.btn-calc-<?php  echo $post->ID?>{
-											width:20vw;
+											/*width:20vw;*/
 										}
 									}
 								</style>

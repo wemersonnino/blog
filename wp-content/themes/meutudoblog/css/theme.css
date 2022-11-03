@@ -1116,7 +1116,7 @@ footer.padrao .menu.credito > li > a {
   transition: color 0.3s;
 }
 footer.padrao .menu.institucional > li > a:hover,
-footer.padrao .menu.credito > li > a?:hover {
+footer.padrao .menu.credito > li > a:hover {
   color: #D22688 !important;
 }
 footer.padrao .menu.institucional > li:first-child,
@@ -1948,4 +1948,15 @@ body.page-template-template-home:not(.paged) section.home-sugeridos.sugeridos-2 
 
 body.single-post section.post-comentarios {
   padding-top: 0;
+}
+
+#main-container > #titles{
+  width: 95%;
+  margin: 0 auto;
+}
+
+#titles .titulo{ margin: 0 auto 0 1rem;}
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+  #titles .titulo{ width: 98%!important; margin: 0 auto;}
 }

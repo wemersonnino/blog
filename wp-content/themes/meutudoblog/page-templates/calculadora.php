@@ -6,12 +6,19 @@
 ?>
 <?php get_header(); ?>
 <?php get_template_part('/partials/topos/padrao'); ?><!--//header-->
-<main id="main-container" class="container">
-    <section class="container">
-        <article class="row justify-content-between">
-            <div class="w-100"></div>
-            <section id="content-post" class="col-md-9 col-lg-8 col-xl-8 col-sm-12 w-100 d-flex">
-                <div id="titles" class="row align-items-center">
+<style>
+    #content-post-calculadora{
+        padding: 0 2.5rem 0 0;
+    }
+</style>
+<main id="main-container">
+    <section class="container d-flex d-block">
+        <article class="row justify-content-md-center">
+            <section id="content-post" class="col col-md-8 col-sm-12">
+                <article class="row">
+                    <div class="ps-2">
+
+                <div id="titles">
                     <h1 class="titulo text-capitalize fw-semibold lh-base mb-0 mb-md-3 mb-lg-3 mb-xl-3">
                         <?php echo the_title()?>
                     </h1><!--\title-->

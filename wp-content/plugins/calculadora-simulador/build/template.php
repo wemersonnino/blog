@@ -1,7 +1,7 @@
 <section id="box-simuladores">
 	<header id="box-simuladores-topo">
 		<div class="row justify-content-around">
-			<div class="col-md-9 col-lg-9 col-xl-9 col-sm-12">
+			<div class="col-sm-12">
 				<h2>
 					<span>Confira as melhores soluções <strong>meutudo</strong> para você</span>
 				</h2>
