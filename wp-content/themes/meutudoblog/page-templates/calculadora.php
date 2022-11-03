@@ -14,7 +14,7 @@
 <main id="main-container">
     <section class="container d-flex">
         <article class="row">
-            <section id="content-post" class="col col-md-8 col-sm-12">
+            <section id="content-post" class="col-md-8 col-lg-8 col-xl-8 col-sm-12">
                 <article class="row">
                     <div class="ps-2">
 
