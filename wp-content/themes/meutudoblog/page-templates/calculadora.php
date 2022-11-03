@@ -12,8 +12,8 @@
     }
 </style>
 <main id="main-container">
-    <section class="container d-flex d-block">
-        <article class="row justify-content-md-center">
+    <section class="container d-flex">
+        <article class="row">
             <section id="content-post" class="col col-md-8 col-sm-12">
                 <article class="row">
                     <div class="ps-2">

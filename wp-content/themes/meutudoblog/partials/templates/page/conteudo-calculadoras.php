@@ -48,8 +48,6 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 
     <?php get_template_part('partials/rodapes/padrao'); ?>
 
-    <?php get_template_part('partials/blocos/compartilhar-lateral'); ?>
-
     <?php get_footer(); ?>
 </footer>
 </main>
