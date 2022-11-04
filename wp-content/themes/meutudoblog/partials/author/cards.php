@@ -2,7 +2,6 @@
 
 // Get users
 $authors = get_users([
-    #'fields' => ['ID', 'display_name'],
     'role__in'    => ['author', 'administrator'],
     'orderby' => 'display_name'
 ]);
@@ -32,8 +31,7 @@ $authors = get_users([
                     <?php if ($authorIcon) { ?>
                         <img src="<?= $authorIcon ?>" alt="<?= $author->display_name ?>" />
                     <?php } ?>
-                    <h2 class="font-weight-bold"><?= $author->display_name ?></h2>
-                    <p class="mb-2">Lorem Ipsum</p>
+                    <h2 class="font-weight-bold mb-2"><?= $author->display_name ?></h2>
                 </div>
             </div>
             <div class="links p-4 text-right">
