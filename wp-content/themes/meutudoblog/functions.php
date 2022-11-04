@@ -206,6 +206,13 @@ function get_yoast_breadcrumb_array(){
 	
 	foreach ($items as $tag)
 		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));			
+
+    // Author
+    if (is_archive() && is_author()) {
+        $authorCrumb = ['text' => 'Autor', 'href' => get_permalink(get_page_by_path('autor'))];
+        if ($items->length == 1) $crumb[] = $authorCrumb;
+        else array_splice($crumb, 1, 0, [$authorCrumb]);
+    }
 	
 	// Get the current page text and href 
 	$items = new DOMXpath($dom);
