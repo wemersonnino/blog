@@ -18,6 +18,7 @@ function enqueue_scripts() {
   wp_enqueue_style('swiper', get_template_directory_uri() . '/css/swiper-bundle.min.css');
   wp_enqueue_style('hamburgers', get_template_directory_uri() . '/css/hamburgers.min.css');
   wp_enqueue_style('theme', get_template_directory_uri() . '/css/theme.css');
+  wp_enqueue_style('theme_author', get_template_directory_uri() . '/css/author.css');
   wp_enqueue_style('wp-block-library'. get_site_url() . 'wp-includes/css/dist/block-library/style.min.css');
 
   /* Javascripts */
@@ -275,3 +276,21 @@ function faq_after_content($content) {
     return $content;
 }
 add_filter('the_content', 'faq_after_content');
+
+// Author permanlink
+function author_new_base() {
+    global $wp_rewrite;
+    $wp_rewrite->author_base = 'autor';
+}
+add_action('init', 'author_new_base');
+
+// Author information post
+function author_after_content ($content) {
+    if (is_single()) {
+        ob_start();
+        get_template_part('partials/author/profile-post');
+        $content .= ob_get_clean();
+    }
+    return $content;
+}
+add_filter('the_content', 'author_after_content');
