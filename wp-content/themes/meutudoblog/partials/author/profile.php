@@ -21,7 +21,7 @@ $authorIcon = get_field('icon', 'user_' . $author->ID) ?? null;
         </h1>
         <p class="font-weight-medium mb-0"><?= $author->user_description; ?></p>
         <div class="infos d-flex justify-content-between align-items-center mt-4">
-            <span><?= get_the_author_posts() ?> artigos escritos</span>
+            <span><?= count_user_posts($author->ID, 'post', true) ?> artigos escritos</span>
         </div>
     </div>
 </div>
