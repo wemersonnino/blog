@@ -1,5 +1,5 @@
 <?php
-define( "WP_DEBUG", true );
+//define( "WP_DEBUG", true );
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -57,8 +57,8 @@ function calculadora_sidebar(){
         'name'          => 'Calculadora Front Sidebar',
         'id'            => 'calculadora-meutudo-sidebar',
         'description'   => 'Sidebar das paginas de calculadora',
-        'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper">',
-        'after_widget'  => '</div>',
+        'before_widget' => '<article id="%1$s" class="widget %2$s widget-wrapper">',
+        'after_widget'  => '</article>',
     ]);
 }
 add_action('widgets_init', 'calculadora_sidebar');
@@ -205,7 +205,7 @@ function get_yoast_breadcrumb_array(){
 	$items = $dom->getElementsByTagName('a');
 	
 	foreach ($items as $tag)
-		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));			
+		$crumb[] =  array('text' => utf8_decode($tag->nodeValue), 'href' => $tag->getAttribute('href'));
 
     // Author
     if (is_archive() && is_author()) {
@@ -272,7 +272,28 @@ function mt_banner_shortcode($atts) {
     }
     return ''; 
 } 
-add_shortcode('mt_banner', 'mt_banner_shortcode'); 
+add_shortcode('mt_banner', 'mt_banner_shortcode');
+
+function calc_simuladores_shortcode($atts) {
+    $simuladoresID = $atts['id'];
+
+    if(!empty($simuladoresID)) {
+        $alt = get_the_title($simuladoresID);
+        $link = get_field('link', $simuladoresID);
+        $desktopImage = get_field('imagem-desktop', $simuladoresID);
+        $mobileImage = get_field('imagem-mobile', $simuladoresID);
+
+        if(!empty($desktopImage) && !empty($mobileImage)) {
+            $style = '<style>.mt-banner .mt-banner-desktop { display: block; width: 100%; margin: 30px 0 0; } .mt-banner .mt-banner-mobile { display: none; width: 100%; } @media (max-width: 767.98px) { .mt-banner .mt-banner-desktop { display: none; } .mt-banner .mt-banner-mobile { display: block; } }</style>';
+
+            $html = $style . '<div class="mt-banner mt-banner-' . $simuladoresID . '"><a href="' . $link['url'] . '" target="' . $link['target'] . '" title="' . $link['title'] . '"><img src="' . $desktopImage['url'] . '" alt="' . $alt . '" class="mt-banner-desktop"><img src="' . $mobileImage['url'] . '" alt="' . $alt . '" class="mt-banner-mobile"></a></div>';
+
+            return $html;
+        }
+    }
+    return '';
+}
+add_shortcode('simuladores', 'calc_simuladores_shortcode');
 
 function faq_after_content($content) {
     if (is_single()) {
