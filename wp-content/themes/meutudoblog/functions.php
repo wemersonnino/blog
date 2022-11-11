@@ -314,7 +314,7 @@ add_action('init', 'author_new_base');
 
 // Author information post
 function author_after_content ($content) {
-    if (is_single()) {
+    if (is_single() && get_post_type() == 'post') {
         ob_start();
         get_template_part('partials/author/profile-post');
         $content .= ob_get_clean();
