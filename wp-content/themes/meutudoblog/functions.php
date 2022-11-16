@@ -23,7 +23,7 @@ function enqueue_scripts() {
   wp_enqueue_style('swiper', get_template_directory_uri() . '/css/swiper-bundle.min.css');
   wp_enqueue_style('hamburgers', get_template_directory_uri() . '/css/hamburgers.min.css');
   wp_enqueue_style('theme', get_template_directory_uri() . '/css/theme.css');
-  wp_enqueue_style('theme_author', get_template_directory_uri() . '/css/author.css');
+  wp_enqueue_style('theme_widgets', get_template_directory_uri() . '/css/widgets.css');
   wp_enqueue_style('wp-block-library'. get_site_url() . 'wp-includes/css/dist/block-library/style.min.css');
 
   /* Javascripts */
@@ -298,7 +298,7 @@ add_action('init', 'author_new_base');
 
 // Author information post
 function author_after_content ($content) {
-    if (is_single()) {
+    if (is_single() && get_post_type() == 'post') {
         ob_start();
         get_template_part('partials/author/profile-post');
         $content .= ob_get_clean();
@@ -306,3 +306,58 @@ function author_after_content ($content) {
     return $content;
 }
 add_filter('the_content', 'author_after_content');
+
+// Tabela: add script in admin
+function table_post_scripts ($hook) {
+    global $post;  
+    if (($hook == 'post-new.php' || $hook == 'post.php') && $post->post_type == 'tabelas')
+        wp_enqueue_script('table_js', get_stylesheet_directory_uri() . '/js/admin/table_script.js');
+}
+add_action('admin_enqueue_scripts', 'table_post_scripts', 10, 1);
+
+// Tabela: add shortcode
+function mt_tabela_shortcode($atts) {
+    $id = $atts['id'];
+    if (empty($id)) return null;
+
+    // get fields acf
+    $cols = 1;
+    $titleShow = get_field('title_show', $id);
+    $titleLabel = get_field('title_label', $id);
+    $subtitleShow = get_field('subtitle_show', $id);
+    $subtitleLabels = get_field('subtitle_labels', $id);
+    $caption = get_field('caption', $id);
+    $table = get_field('table', $id);
+    $html = "<table class=\"" . (!$titleShow || empty($titleLabel) ? 'no-head' : null) . "\">";
+
+    // caption
+    if (!empty($caption)) {
+        $html .= "<caption>{$caption}</caption>";
+    }
+
+    // body > contents
+    if (!empty($table)) {
+        $htmlContent = null;
+        foreach ($table['body'] as $key => $tr) {
+            $cols = count($tr);
+            $htmlContent .= "<tr class=\"content content-{$key}\">";
+            foreach ($tr as $td) $htmlContent .= "<td><span>{$td['c']}</span></td>";
+        }
+    }
+
+    // header > title
+    if ($titleShow && !empty($titleLabel)) $html .= "<thead><tr><th colspan=\"{$cols}\">{$titleLabel}</th></tr></thead>";
+
+    // body > subtitle
+    $html .= "<tbody>";
+    if ($subtitleShow && !empty($subtitleLabels)) {
+        $html .= "<tr class='subtitle'>";
+        foreach ($subtitleLabels as $v) $html.= "<td colspan='" . round($cols / count($subtitleLabels)) . "'><span>{$v['subtitle_label']}</span></td>";
+        $html .= "</tr>";
+    }
+
+    // return html content
+    $html .= $htmlContent . "</tbody></table>";
+    return "<div class=\"mt-table\">{$html}</div>";
+} 
+add_shortcode('mt_tabela', 'mt_tabela_shortcode'); 
