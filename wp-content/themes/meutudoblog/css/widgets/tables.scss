@@ -47,7 +47,6 @@
                     span {
                         display: inline-block;
                         margin: 0 30px;
-                        line-height: 30px;
                     }
                 }
 
@@ -56,7 +55,7 @@
                         &:after {
                             content: "";
                             width: 2px;
-                            height: 45px;
+                            min-height: 40px;
                             background-color: rgba(0, 0, 0, 0.2);
                             display: inline-flex;
                             float: right;
@@ -103,7 +102,7 @@
                     &:after {
                         content: "";
                         width: 2px;
-                        height: 30px;
+                        min-height: 30px;
                         background-color: var(--light);
                         display: inline-flex;
                         float: right;
@@ -119,7 +118,7 @@
             tr.content {
                 td {
                     span {
-                        line-height: 45px;
+                        line-height: 40px;
                     }
                 }
 

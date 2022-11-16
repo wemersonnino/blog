@@ -376,4 +376,4 @@ function mt_tabela_shortcode($atts) {
     $html .= $htmlContent . "</tbody></table>";
     return "<div class=\"mt-table\">{$html}</div>";
 } 
-add_shortcode('mt_tabela', 'mt_tabela_shortcode'); 
+add_shortcode('mt_tabela', 'mt_tabela_shortcode');
