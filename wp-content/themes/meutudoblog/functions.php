@@ -1,5 +1,10 @@
 <?php
-//define( "WP_DEBUG", true );
+define( "WP_DEBUG", true );
+
+// Configs
+include 'functions_admin.php';
+
+// Theme configs
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -256,7 +261,7 @@ function custom_yoast_breadcrumb($crumb){
 function mt_banner_shortcode($atts) {
     $bannerID = $atts['id'];
     
-   if(!empty($bannerID)) {
+    if (!empty($bannerID) && get_post_status($bannerID) == 'publish') {
         $alt = get_the_title($bannerID);
         $link = get_field('link', $bannerID);
         $desktopImage = get_field('imagem-desktop', $bannerID);
@@ -376,4 +381,4 @@ function mt_tabela_shortcode($atts) {
     $html .= $htmlContent . "</tbody></table>";
     return "<div class=\"mt-table\">{$html}</div>";
 } 
-add_shortcode('mt_tabela', 'mt_tabela_shortcode');
+add_shortcode('mt_tabela', 'mt_tabela_shortcode'); 

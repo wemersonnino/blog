@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Loads plugin textdomain.
  * https://codex.wordpress.org/Function_Reference/load_plugin_textdomain
  */
- 
+
 function acf_table_load_plugin_textdomain( $version ) {
 
 	load_plugin_textdomain( 'acf-table', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
