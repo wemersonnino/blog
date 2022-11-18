@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-calculadora-query-post-calculadora-query-post {
+  border: 1px dotted #f00; }
+
+h5#title-post-calculadora-query {
+  width: 23ch;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1;
+  margin: 0 auto 0 auto;
+  height: auto;
+  padding: 0 1rem;
+  max-height: 5vh;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+/*# sourceMappingURL=editor.css.map */
