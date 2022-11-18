@@ -133,11 +133,11 @@ Header append Vary: Accept-Encoding
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /tudo-blog/
+RewriteBase /blog/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /tudo-blog/index.php [L]
+RewriteRule . /blog/index.php [L]
 </IfModule>
 
 # END WordPress
