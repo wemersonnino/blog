@@ -1,5 +1,12 @@
 <?php
+
+// Debug
 define( "WP_DEBUG", true );
+
+// Admin Settings
+include 'admin/functions.php';
+
+// Theme Settings
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
 
@@ -256,7 +263,7 @@ function custom_yoast_breadcrumb($crumb){
 function mt_banner_shortcode($atts) {
     $bannerID = $atts['id'];
     
-   if(!empty($bannerID)) {
+   if(!empty($bannerID) && get_post_status($bannerID) == 'publish') {
         $alt = get_the_title($bannerID);
         $link = get_field('link', $bannerID);
         $desktopImage = get_field('imagem-desktop', $bannerID);
@@ -302,18 +309,10 @@ function author_after_content ($content) {
 }
 add_filter('the_content', 'author_after_content');
 
-// Tabela: add script in admin
-function table_post_scripts ($hook) {
-    global $post;  
-    if (($hook == 'post-new.php' || $hook == 'post.php') && $post->post_type == 'tabelas')
-        wp_enqueue_script('table_js', get_stylesheet_directory_uri() . '/js/admin/table_script.js');
-}
-add_action('admin_enqueue_scripts', 'table_post_scripts', 10, 1);
-
 // Tabela: add shortcode
 function mt_tabela_shortcode($atts) {
     $id = $atts['id'];
-    if (empty($id)) return null;
+    if (empty($id) || get_post_status($id) != 'publish') return null;
 
     // get fields acf
     $cols = 1;
