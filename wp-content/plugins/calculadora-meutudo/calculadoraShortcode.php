@@ -546,7 +546,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     if (event === ""){
                         resultBeneficioSalario.innerHTML = "R$ 0,00";
                     }
-                    else if (event !== ""){
+                    else if (event != ""){
                         tratarSub(resultBeneficioSalario.textContent,parcelasEmprest.value);
                     }
                     else if(event === 0){
@@ -603,7 +603,6 @@ function diletec_calculadora_shortcode( $atts ) {
                     valorTarget = valorTarget.replace(".", ",");
                     valorTarget = valorTarget.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                     e = valorTarget;
-
                     //console.log(`show value tratado: ${e}`);
                     resultMargem.innerHTML = e;
                     return e;
