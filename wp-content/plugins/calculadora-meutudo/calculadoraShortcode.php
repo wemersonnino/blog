@@ -565,9 +565,9 @@ function diletec_calculadora_shortcode( $atts ) {
                         e = e.replace(",","");
                     }
                     let montante = e * (percentValue / 100);
-                    //console.log(`Porcentagem: ${percentValue / 100}`);
-                    //console.log(`result: ${e}`);
-                    //console.log(`montante: ${montante}`);
+                    console.log(`Porcentagem: ${percentValue / 100}`);
+                    console.log(`result: ${e}`);
+                    console.log(`montante: ${montante}`);
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
                 };
@@ -594,7 +594,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     valorTarget = valorTarget.replace(".", ",");
                     valorTarget = valorTarget.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                     e = valorTarget;
-                    //console.log(`show value tratado: ${e}`);
+                    console.log(`show value tratado: ${e}`);
                     resultBeneficioSalario.innerHTML = e;
                     return e;
                 };
