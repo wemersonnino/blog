@@ -6,6 +6,9 @@ define( "WP_DEBUG", true );
 // Admin Settings
 include 'admin/functions.php';
 
+// Widgets Settings
+include 'widgets/widgets.php';
+
 // Theme Settings
 add_theme_support('post-thumbnails');
 add_theme_support('title-tag');
@@ -329,50 +332,3 @@ function author_after_content ($content) {
     return $content;
 }
 add_filter('the_content', 'author_after_content');
-
-// Tabela: add shortcode
-function mt_tabela_shortcode($atts) {
-    $id = $atts['id'];
-    if (empty($id) || get_post_status($id) != 'publish') return null;
-
-    // get fields acf
-    $cols = 1;
-    $titleShow = get_field('title_show', $id);
-    $titleLabel = get_field('title_label', $id);
-    $subtitleShow = get_field('subtitle_show', $id);
-    $subtitleLabels = get_field('subtitle_labels', $id);
-    $caption = get_field('caption', $id);
-    $table = get_field('table', $id);
-    $html = "<table class=\"" . (!$titleShow || empty($titleLabel) ? 'no-head' : null) . "\">";
-
-    // caption
-    if (!empty($caption)) {
-        $html .= "<caption>{$caption}</caption>";
-    }
-
-    // body > contents
-    if (!empty($table)) {
-        $htmlContent = null;
-        foreach ($table['body'] as $key => $tr) {
-            $cols = count($tr);
-            $htmlContent .= "<tr class=\"content content-{$key}\">";
-            foreach ($tr as $td) $htmlContent .= "<td><span>{$td['c']}</span></td>";
-        }
-    }
-
-    // header > title
-    if ($titleShow && !empty($titleLabel)) $html .= "<thead><tr><th colspan=\"{$cols}\">{$titleLabel}</th></tr></thead>";
-
-    // body > subtitle
-    $html .= "<tbody>";
-    if ($subtitleShow && !empty($subtitleLabels)) {
-        $html .= "<tr class='subtitle'>";
-        foreach ($subtitleLabels as $v) $html.= "<td colspan='" . round($cols / count($subtitleLabels)) . "'><span>{$v['subtitle_label']}</span></td>";
-        $html .= "</tr>";
-    }
-
-    // return html content
-    $html .= $htmlContent . "</tbody></table>";
-    return "<div class=\"mt-table\">{$html}</div>";
-} 
-add_shortcode('mt_tabela', 'mt_tabela_shortcode'); 

@@ -47,28 +47,11 @@
                     span {
                         display: inline-block;
                         margin: 0 30px;
+                        line-height: 30px;
                     }
                 }
 
                 &:not(.subtitle) {
-                    td {
-                        &:after {
-                            content: "";
-                            width: 2px;
-                            min-height: 40px;
-                            background-color: rgba(0, 0, 0, 0.2);
-                            display: inline-flex;
-                            float: right;
-                            margin-right: -1px;
-                        }
-
-                        &:last-child {
-                            &:after {
-                                content: none;
-                            }
-                        }
-                    }
-
                     &:nth-child(odd) {
                         td {
                             background-color: var(--color-4);
@@ -79,6 +62,11 @@
                 &:last-child {
                     td {
                         padding-bottom: 13px;
+
+                        &:after {
+                            bottom: 20%;
+                            height: 80% !important;
+                        }
 
                         &:first-child {
                             border-radius: 0 0 0 30px;
@@ -98,15 +86,16 @@
                     font-weight: bold;
                     font-size: 19px;
                     padding: 15px 0;
+                    position: relative;
 
                     &:after {
                         content: "";
                         width: 2px;
-                        min-height: 30px;
                         background-color: var(--light);
-                        display: inline-flex;
-                        float: right;
-                        margin-right: -1px;
+                        position: absolute;
+                        right: 0;
+                        top: 20%;
+                        height: 60%;
                     }
 
                     &:last-child:after {
@@ -117,14 +106,50 @@
 
             tr.content {
                 td {
+                    position: relative;
+
                     span {
                         line-height: 40px;
+                        font-weight: 400 !important;
+
+                        &.text-long {
+                            line-height: 30px;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 2px;
+                        background-color: rgba(0,0,0,.2);
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        height: 100%;
+                    }
+
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
                     }
                 }
 
                 &.content-0 {
                     td {
                         padding-top: 13px;
+
+                        &:after {
+                            top: 20%;
+                            height: 80%;
+                        }
+                    }
+                }
+
+                &.content-only {
+                    td {
+                        &:after {
+                            height: 60% !important;
+                        }
                     }
                 }
             }
@@ -143,15 +168,99 @@
 
             thead {
                 th {
+                    font-size: 17px;
                     padding: 15px 5px !important;
                 }
             }
 
             tbody {
                 tr {
+                    &.subtitle {
+                        td {
+                            font-size: 16px;
+                        }
+                    }
+
                     td {
+                        font-size: 16px;
+
                         span {
                             margin: 0 5px !important;
+                        }
+                    }
+                }
+            }
+
+            &.responsive {
+                tbody {
+                    tr {                        
+                        &.subtitle {
+                            border: none;
+                            clip: rect(0 0 0 0);
+                            height: 1px;
+                            margin: -1px;
+                            overflow: hidden;
+                            padding: 0;
+                            position: absolute;
+                            width: 1px;
+                        }
+
+                        &.content-0 {
+                            td {
+                                padding-top: 0;
+                            }
+                        }
+
+                        &:not(.subtitle) {
+                            td {
+                                &:after {
+                                    content: none;
+                                }
+                            }
+                        }
+
+                        &:last-child {
+                            td {
+                                &:first-child {
+                                    border-radius: 0;
+                                }
+
+                                &:last-child {
+                                    border-radius: 0 0 30px 30px;
+                                }
+                            }
+                        }
+    
+                        td {
+                            display: block;
+                            text-align: right;
+                            padding: 0 8px;
+
+                            span {
+                                line-height: 30px;
+                                margin: 0 !important;
+
+                                &.text-long {
+                                    text-align: left;
+                                    margin-bottom: 10px !important;
+                                }
+                            }
+    
+                            &:before {
+                                content: attr(data-label) ':';
+                                float: left;
+                                font-weight: 500 !important;
+                                display: block;
+                                line-height: 30px;
+                            }
+
+                            &:first-child {
+                                padding-top: 10px;
+                            }
+
+                            &:last-child {
+                                padding-bottom: 10px;
+                            }
                         }
                     }
                 }
