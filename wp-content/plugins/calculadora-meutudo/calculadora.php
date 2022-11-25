@@ -81,7 +81,8 @@ function meutudo_calculadora_front_script(){
         'meutudo-calculadora-bundle-front',
         plugins_url('/assets/js/bootstrap.bundle.min.js',__FILE__),
         [],
-        '5.2.0'
+        '5.2.0',
+        true
     );
 }
 add_action('wp_enqueue_scripts','meutudo_calculadora_front_script');
