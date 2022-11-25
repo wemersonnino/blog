@@ -296,7 +296,9 @@ function diletec_calculadora_shortcode( $atts ) {
                     --font-55: 3.438em;
                     --font-64: 4.000em;
                 }
-
+                .calculadora {
+                    padding: 1rem 1rem 1.5rem 1rem;
+                }
                 #box-calculadora #titulo-calculadora{
                     width: auto;
                     max-width: 100%;
