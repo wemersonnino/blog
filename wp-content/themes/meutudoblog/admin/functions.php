@@ -165,3 +165,15 @@ add_action('manage_mt-banner_posts_custom_column' , function ($column, $post_id)
             break;
     }
 }, 10, 2);
+
+/**
+* Tables sidebar
+*/
+add_action('widgets_init', function () {
+    register_sidebar([
+        'name' => 'Tabelas',
+        'id' => 'sidebar_tables',
+        'before_widget' => '<li class="line">',
+        'after_widget' => '</li>',
+    ]);
+});

@@ -2,70 +2,59 @@
 /*
 Template Name: Ferramentas > Tabelas
 */
+
+// Infos
+$page = get_queried_object();
+$paged = get_query_var('paged') ?? 1; 
+
+// Get child pages
+$posts = new WP_Query([
+    'post_type' => 'page',
+    'post_parent' => $page->ID,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 9,
+    'paged' => $paged
+]);
+
 ?>
 
 <?php get_header(); ?>
 
 <?php get_template_part('partials/topos/padrao'); ?>
 
-
-<?php
-
-$term = get_queried_object();
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1; 
-
-$posts = new WP_Query(array(
-    'ID' => $term->term_id,
-    'post_type' => 'page',
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'posts_per_page' => 9,
-    'paged' => $paged
-  ));
-
-  var_dump($posts);
-
-?>
-
-<?php if($posts->have_posts()) : ?>
-  <section class="category-listagem">
+<section class="category-listagem">
     <div class="container">
-      <h1 class="titulo"><?php echo sprintf(__('Categoria <span>"%s"</span>', 'meutudoblog'), $term->name); ?></h1>
+        <h1 class="titulo">
+            <?php if (get_field('page-mostrar-titulo')) { ?>
+                <h1 class="titulo"><?php the_title(); ?></h1>
+            <?php } ?>
+        </h1>
 
-      <div class="posts">
-        <div class="row">
-          <?php while($posts->have_posts()) : $posts->the_post(); ?>
-            <?php $categorias = array_map(function($object) { return $object->name; }, get_the_terms(get_the_ID(), 'category')); ?>
-
-            <div class="col-12 col-sm-6 col-lg-4">
-              <?php get_template_part('partials/items/post', 'card'); ?>
+        <?php if ($posts->have_posts()) { ?>
+            <div class="posts">
+                <div class="row">
+                    <?php while ($posts->have_posts()) { $posts->the_post() ?>
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <?php get_template_part('partials/items/post', 'card'); ?>
+                        </div>
+                    <?php } wp_reset_postdata() ?>
+                </div>
             </div>
-          <?php endwhile; wp_reset_postdata(); ?>
-        </div>
-      </div>
 
-      <?php if($posts->max_num_pages > 1) : ?>
-        <div class="paginacao">
-          <?php echo paginate_links(array(
-            'current' => $paged,
-            'total' => $posts->max_num_pages,
-            'prev_text' => '',
-            'next_text' => ''
-          )); ?>
-        </div>
-      <?php endif; ?>
+            <?php if ($posts->max_num_pages > 1) { ?>
+                <div class="paginacao">
+                    <?= paginate_links([
+                        'current' => $paged,
+                        'total' => $posts->max_num_pages,
+                        'prev_text' => '',
+                        'next_text' => ''
+                    ]) ?>
+                </div>
+            <?php } ?>
+        <?php } ?>
     </div>
-  </section>
-<?php else : ?>
-  <section class="search-listagem sem-resultados">
-    <div class="container">
-      <h1 class="titulo"><?php echo sprintf(__('Ainda não possuímos nenhum conteúdo relacionado a <span>"%s"</span>', 'meutudoblog'), get_search_query()); ?></h1>
-      <img src="<?php echo get_template_directory_uri(); ?>/images/search-listagem-sem-resultados.png" alt="<?php _e('Não encontrado', 'meutudoblog'); ?>" class="imagem">
-    </div>
-  </section>
-<?php endif; ?>
-
-
+</section>
 
 <?php if (get_field('page-newsletter-habilitado')) get_template_part('partials/blocos/newsletter'); ?>
 
