@@ -11,6 +11,7 @@
         flex-grow: initial;
         width: 100%;
         max-width: max-content;
+        margin: 0 auto;
     }
 </style>
 <?php
