@@ -19,11 +19,11 @@ $posts = new WP_Query(array(
 
 <main id="main-container">
     <section class="container">
-        <article class="row align-content-start">
+        <article class="row align-content-start p-4">
             <div class="w-100"></div>
             <section class="container-posts category-listagem">
                 <article id="titles" class="row align-items-center">
-                    <h1 class="titulo text-capitalize">
+                    <h1 class="titulo text-capitalize pb-5 mb-4">
                         <?php echo the_title() ?>
                     </h1>
                 </article><!--\titulos-->
