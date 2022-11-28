@@ -358,7 +358,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     max-height: 100%;
                     padding: 1.5rem;
                     background-color: #D22688;
-                    border-radius: 0px 0px 32px 4px;
+                    border-radius: 0 0 32px 4px;
                     color: var(--color-silver-50);
                 }
                 section#box-calculadora #footer-input-calc header h4{
@@ -366,7 +366,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-20);
                     font-weight: 700;
                     line-height: 24px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                     margin-bottom: 0;
                 }
@@ -375,7 +375,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-20);
                     font-weight: 600;
                     line-height: 24px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                 }
                 section#box-calculadora #footer-input-calc main div p{
@@ -383,7 +383,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-14);
                     font-weight: 400;
                     line-height: 17px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
 
                 }
@@ -391,7 +391,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     width: 100%;
                     height: auto;
                     background-color: var(--bg_black);
-                    border-radius: 16px 4px 0px 0px;
+                    border-radius: 16px 4px 0 0;
                     padding: 1rem;
                     color: var(--color-white);
                 }
@@ -400,7 +400,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-20);
                     font-weight: 600;
                     line-height: 0.938em;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                     color: var(--color-white);
                 }
@@ -412,7 +412,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-14);
                     font-weight: 400;
                     line-height: 17px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                     padding: 1.2rem;
                 }
@@ -421,7 +421,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-14);
                     font-weight: 600;
                     line-height: 17px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                     padding: 1.2rem;
                 }
@@ -430,11 +430,9 @@ function diletec_calculadora_shortcode( $atts ) {
                     font-size: var(--font-14);
                     font-weight: 600;
                     line-height: 17px;
-                    letter-spacing: 0em;
+                    letter-spacing: 0;
                     text-align: left;
                     padding: 1.2rem;
-                    line-height: 2;
-                    letter-spacing: 0em;
                 }
                 section#box-simuladores main#box-simuladores-main table tbody tr td p a{
                     color: var(--color-black);

@@ -48,6 +48,8 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 
 </article>
 </section>
+</main>
+<div class="w-100"></div>
 <footer class="row">
 
     <?php get_template_part('partials/templates/post/comentarios'); ?>
@@ -58,6 +60,4 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 
     <?php get_footer(); ?>
 </footer>
-</main>
-<div class="w-100"></div>
 
