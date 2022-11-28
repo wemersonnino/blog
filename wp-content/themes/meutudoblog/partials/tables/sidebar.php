@@ -3,10 +3,9 @@
 // Infos
 $page = get_queried_object();
 $pageId = (int) $page->ID;
-$listPagesId = get_field('table_pages', $pageId) ?? [];
-$listPostsId = get_field('table_posts', $pageId) ?? [];
 
 // Get pages by IDs
+$listPagesId = get_field('table_pages', $pageId) ?? [];
 $listPages = !empty($listPagesId) ? new WP_Query([
     'post__in' => $listPagesId,
     'post_type' => 'page',
@@ -15,12 +14,20 @@ $listPages = !empty($listPagesId) ? new WP_Query([
 ]) : null;
 
 // Get posts by IDs
+$listPostsId = get_field('table_posts', $pageId) ?? [];
 $listPosts = !empty($listPostsId) ? new WP_Query([
     'post__in' => $listPostsId,
     'post_type' => 'post',
     'orderby' => 'date',
     'order' => 'DESC'
 ]) : null;
+
+// Get footer informations
+$footerBlock = new WP_Query([
+    'post_type' => 'bloco',
+    'name' => 'rodape-padrao',
+    'posts_per_page' => 1
+]);
 
 ?>
 <div class="sidebar">
@@ -42,7 +49,14 @@ $listPosts = !empty($listPostsId) ? new WP_Query([
                     <li>
                         <a href="<?= get_the_permalink() ?>">
                             <h3 class="mb-0">
-                                <div class="icon"></div><div><?= get_the_title() ?></div>
+                                <?php if (has_post_thumbnail() && !empty(get_the_post_thumbnail_url())) { ?>
+                                    <img src="<?php the_post_thumbnail_url('postagem-400x280'); ?>" alt="<?= get_the_title() ?>" class="imagem d-flex d-lg-none" width="100%">
+                                <?php } else { ?>
+                                    <img src="https://dummyimage.com/400x280/eeeeee/cccccc" alt="<?= get_the_title() ?>" class="imagem d-flex d-lg-none" width="100%">
+                                <?php } ?>
+                                <div class="d-flex flex-row align-items-center justify-content-start">
+                                    <div class="icon"></div><div><?= get_the_title() ?></div>
+                                </div>
                             </h3>
                         </a>
                     </li>
@@ -56,13 +70,13 @@ $listPosts = !empty($listPostsId) ? new WP_Query([
             <ul class="posts-list line position-relative p-0">
                 <?php while ($listPosts->have_posts()) { ?>
                     <?php $listPosts->the_post() ?>
-                    <li>
+                    <li class="px-2 px-lg-0">
                         <a href="<?= get_the_permalink() ?>" class="post-card">
-                            <?php if(has_post_thumbnail() && !empty(get_the_post_thumbnail_url())) : ?>
+                            <?php if (has_post_thumbnail() && !empty(get_the_post_thumbnail_url())) { ?>
                                 <img src="<?php the_post_thumbnail_url('postagem-400x280'); ?>" alt="<?= get_the_title() ?>" class="imagem" width="400" height="280">
-                            <?php else : ?>
+                            <?php } else { ?>
                                 <img src="https://dummyimage.com/400x280/eeeeee/cccccc" alt="<?= get_the_title() ?>" class="imagem" width="400" height="280">
-                            <?php endif; ?>
+                            <?php } ?>
                             <h3><?= get_the_title() ?></h3>
                         </a>
                     </li>
@@ -72,36 +86,39 @@ $listPosts = !empty($listPostsId) ? new WP_Query([
         <!-- /list posts -->
 
         <!-- list sociais -->
-        <ul class="sociais justify-content-center justify-content-lg-start">
-            <?php if (get_field('redes-sociais')['facebook']) : ?>
-              <li>
-                <a href="<?php echo get_field('redes-sociais')['facebook']['url']; ?>" target="<?php echo get_field('redes-sociais')['facebook']['target']; ?>" title="<?php get_field('redes-sociais')['facebook']['title']; ?>">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><g><path d="M18.284 31.829h4.224a.656.656 0 0 0 .656-.656V21.66h2.194a.656.656 0 0 0 .653-.589l.37-3.591a.656.656 0 0 0-.653-.724h-2.561v-1.454c0-.3.1-.323.24-.323h2.271a.656.656 0 0 0 .656-.656v-3.487a.656.656 0 0 0-.654-.656l-3.132-.013a4.62 4.62 0 0 0-3.962 1.775 5.4 5.4 0 0 0-.956 3.145v1.673h-1.353a.656.656 0 0 0-.656.656v3.591a.656.656 0 0 0 .656.656h1.353v9.508a.656.656 0 0 0 .654.658zm-1.353-11.477v-2.278h1.353a.656.656 0 0 0 .656-.656v-2.324a4.162 4.162 0 0 1 .7-2.367 3.377 3.377 0 0 1 2.9-1.241l2.476.01v2.176h-1.615a1.51 1.51 0 0 0-1.553 1.635v2.111a.656.656 0 0 0 .656.656h2.494l-.235 2.278h-2.259a.656.656 0 0 0-.656.656v9.508h-2.911v-9.508a.656.656 0 0 0-.656-.656z" fill="currentColor"/><path d="M35.849 6.151A21 21 0 1 0 42 21a20.861 20.861 0 0 0-6.151-14.849zm-.931 28.767a19.689 19.689 0 1 1 5.766-13.922 19.559 19.559 0 0 1-5.766 13.922z" fill="currentColor"/></g></svg>
-                </a>
-              </li>
-            <?php endif; ?>
-            <?php if (get_field('redes-sociais')['instagram']) : ?>
-              <li>
-                <a href="<?php echo get_field('redes-sociais')['instagram']['url']; ?>" target="<?php echo get_field('redes-sociais')['instagram']['target']; ?>" title="<?php get_field('redes-sociais')['instagram']['title']; ?>">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><g><g><path d="M35.676 6.118a20.9 20.9 0 1 0 6.121 14.778 20.761 20.761 0 0 0-6.121-14.778zm-.923 28.632a19.593 19.593 0 1 1 5.738-13.854 19.463 19.463 0 0 1-5.738 13.854z" fill="currentColor"/></g><g><path d="M26.387 10.421H15.45a5.035 5.035 0 0 0-5.029 5.029v10.937a5.035 5.035 0 0 0 5.029 5.029h10.937a5.035 5.035 0 0 0 5.029-5.029V15.45a5.035 5.035 0 0 0-5.029-5.029zm3.705 15.966a3.709 3.709 0 0 1-3.705 3.705H15.45a3.709 3.709 0 0 1-3.7-3.705V15.45a3.709 3.709 0 0 1 3.7-3.7h10.937a3.709 3.709 0 0 1 3.705 3.7z" fill="currentColor"/><path d="M26.786 14.258a.806.806 0 1 0 .806.806.808.808 0 0 0-.806-.806z" fill="currentColor"/><path d="M20.919 15.773a5.146 5.146 0 1 0 5.146 5.146 5.152 5.152 0 0 0-5.146-5.146zm0 8.968a3.822 3.822 0 1 1 3.822-3.822 3.826 3.826 0 0 1-3.822 3.822z" fill="currentColor"/></g></g></svg>
-                </a>
-              </li>
-            <?php endif; ?>
-            <?php if (get_field('redes-sociais')['linkedin']) : ?>
-              <li>
-                <a href="<?php echo get_field('redes-sociais')['linkedin']['url']; ?>" target="<?php echo get_field('redes-sociais')['linkedin']['target']; ?>" title="<?php get_field('redes-sociais')['linkedin']['title']; ?>">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42 42"><g><path d="M35.849 6.151A21 21 0 1 0 42 21a20.861 20.861 0 0 0-6.151-14.849zm-.928 28.767a19.688 19.688 0 1 1 5.766-13.922 19.558 19.558 0 0 1-5.766 13.922z" fill="currentColor"/><path d="M26.716 30.601h4.067a.656.656 0 0 0 .656-.656V22.93a6.571 6.571 0 0 0-1.513-4.607 5.043 5.043 0 0 0-3.827-1.554 4.71 4.71 0 0 0-3.009.954v-.011a.656.656 0 0 0-.656-.656h-4.06a.657.657 0 0 0-.656.686c.051 1.117 0 12.089 0 12.2a.656.656 0 0 0 .656.659h4.065a.656.656 0 0 0 .656-.656v-6.832a2.2 2.2 0 0 1 .086-.746 1.6 1.6 0 0 1 1.478-1.078c.384 0 1.4 0 1.4 2.111v6.545a.656.656 0 0 0 .657.656zm-2.061-10.625a2.862 2.862 0 0 0-2.693 1.9 3.235 3.235 0 0 0-.183 1.241v6.176h-2.75c.009-2.121.034-8.651.01-10.92h2.74v1.076a.656.656 0 0 0 1.207.357 3.372 3.372 0 0 1 3.114-1.72c2.559 0 4.027 1.767 4.027 4.849v6.358h-2.753v-5.889a4.174 4.174 0 0 0-.592-2.37 2.444 2.444 0 0 0-2.126-1.058z" fill="currentColor"/><path d="M17.041 13.913a2.948 2.948 0 1 0-2.983 2.784h.024a2.773 2.773 0 0 0 2.956-2.77zm-2.959 1.471h-.027a1.446 1.446 0 0 1-1.589-1.458 1.475 1.475 0 0 1 1.643-1.458 1.456 1.456 0 0 1 1.618 1.465 1.476 1.476 0 0 1-1.645 1.451z" fill="currentColor"/><path d="M12.052 17.056a.656.656 0 0 0-.656.656v12.233a.656.656 0 0 0 .656.656h4.068a.656.656 0 0 0 .656-.656V17.712a.656.656 0 0 0-.656-.656zm3.412 12.233H12.71v-10.92h2.756z" fill="currentColor"/></g></svg>
-                </a>
-              </li>
-            <?php endif; ?>
-            <?php if (get_field('redes-sociais')['youtube']) : ?>
-              <li>
-                <a href="<?php echo get_field('redes-sociais')['youtube']['url']; ?>" target="<?php echo get_field('redes-sociais')['youtube']['target']; ?>" title="<?php get_field('redes-sociais')['youtube']['title']; ?>">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40.907 40.908"><g><path d="M34.913 5.991a20.456 20.456 0 1 0 5.991 14.463 20.319 20.319 0 0 0-5.991-14.463zm-.9 28.023a19.177 19.177 0 1 1 5.616-13.56 19.05 19.05 0 0 1-5.616 13.56z" fill="currentColor"/><path d="M31.464 15.917a5.511 5.511 0 0 0-1-2.576 3.432 3.432 0 0 0-2.387-1.141l-.116-.013h-.029c-2.937-.227-7.369-.23-7.414-.23h-.01c-.044 0-4.477 0-7.413.23h-.029l-.117.013a3.433 3.433 0 0 0-2.387 1.141 5.511 5.511 0 0 0-1 2.576v.011a36.349 36.349 0 0 0-.215 3.707v1.7a36.341 36.341 0 0 0 .215 3.708v.01a5.5 5.5 0 0 0 1 2.575 3.664 3.664 0 0 0 2.426 1.121c.1.013.184.024.242.035.02 0 .04.007.06.009 1.694.173 6.991.227 7.223.229.045 0 4.481-.011 7.417-.235h.032l.12-.013a3.441 3.441 0 0 0 2.38-1.142 5.506 5.506 0 0 0 1-2.574v-.011a36.392 36.392 0 0 0 .215-3.708v-1.7a36.4 36.4 0 0 0-.215-3.708zm-1.062 5.421c0 1.71-.193 3.447-.206 3.556a4.356 4.356 0 0 1-.671 1.872l-.007.008a2.185 2.185 0 0 1-1.564.727l-.133.015c-2.888.22-7.262.231-7.3.231-.054 0-5.4-.054-7.071-.22a4.909 4.909 0 0 0-.3-.043 2.429 2.429 0 0 1-1.641-.71l-.007-.008a4.252 4.252 0 0 1-.67-1.873 35.597 35.597 0 0 1-.206-3.555v-1.7c0-1.71.194-3.447.206-3.555a4.364 4.364 0 0 1 .671-1.875l.007-.007a2.179 2.179 0 0 1 1.567-.726l.129-.014c2.887-.223 7.257-.225 7.3-.225h.01c.044 0 4.414 0 7.3.225l.129.014a2.177 2.177 0 0 1 1.567.726l.007.008a4.26 4.26 0 0 1 .671 1.875c.013.111.206 1.847.206 3.555z" fill="currentColor"/><path d="M24.796 19.941l-6.58-3.948a.639.639 0 0 0-.968.548v7.9a.639.639 0 0 0 .968.548l6.58-3.948a.639.639 0 0 0 0-1.1zm-6.27 3.368V17.67l4.7 2.819z" fill="currentColor"/></g></svg>
-                </a>
-              </li>
-            <?php endif; ?>
-          </ul>
+        <?php if ($footerBlock->have_posts()) { ?>
+            <?php $footerBlock->the_post() ?>
+            <ul class="social-list p-0">
+                <?php if (get_field('redes-sociais')['facebook']) { ?>
+                    <li>
+                        <a href="<?= get_field('redes-sociais')['facebook']['url'] ?>" target="<?= get_field('redes-sociais')['facebook']['target'] ?>" title="Facebook" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.475 42.876"><g id="Grupo_79" data-name="Grupo 79" transform="translate(-93.292 -905.598)"><ellipse id="Elipse_2" data-name="Elipse 2" cx="22.737" cy="21.438" rx="22.737" ry="21.438" transform="translate(93.292 905.598)" /><path id="Caminho_19" data-name="Caminho 19" d="M91.928,707.036a3.893,3.893,0,0,0-2.833,1.247,4.4,4.4,0,0,0-1.173,3.01v2.369H85.778a.2.2,0,0,0-.195.208V717a.2.2,0,0,0,.195.208h2.144v6.418a.2.2,0,0,0,.195.208h2.945a.2.2,0,0,0,.195-.208v-6.418H93.42a.2.2,0,0,0,.189-.157l.736-3.129a.205.205,0,0,0-.189-.259h-2.9v-2.369a.738.738,0,0,1,.2-.505.651.651,0,0,1,.475-.208H94.18a.2.2,0,0,0,.195-.208v-3.129a.2.2,0,0,0-.195-.208Z" transform="translate(25.357 211.602)" fill="currentColor" /></g></svg>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php if (get_field('redes-sociais')['instagram']) { ?>
+                    <li>
+                        <a href="<?= get_field('redes-sociais')['instagram']['url'] ?>" target="<?= get_field('redes-sociais')['instagram']['target'] ?>" title="Instagram" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 44.176 42.876"><g id="Grupo_78" data-name="Grupo 78" transform="translate(-38.722 -905.598)"><ellipse id="Elipse_1" data-name="Elipse 1" cx="22.088" cy="21.438" rx="22.088" ry="21.438" transform="translate(38.722 905.598)" /><g id="Grupo_76" data-name="Grupo 76"><path id="Caminho_16" data-name="Caminho 16" d="M47.351,711.292a3.523,3.523,0,1,0,3.695,3.518A3.61,3.61,0,0,0,47.351,711.292Z" transform="translate(12.809 212.876)" fill="currentColor" /><path id="Caminho_17" data-name="Caminho 17" d="M42.961,706.64a56.688,56.688,0,0,1,11.893,0,4.6,4.6,0,0,1,4.152,3.912,47.1,47.1,0,0,1,0,11.488,4.6,4.6,0,0,1-4.152,3.912,56.671,56.671,0,0,1-11.893,0,4.6,4.6,0,0,1-4.152-3.912,47.1,47.1,0,0,1,0-11.488A4.6,4.6,0,0,1,42.961,706.64Zm11.631,3.16a1.084,1.084,0,1,0,1.137,1.082A1.111,1.111,0,0,0,54.591,709.8Zm-11.085,6.5a5.407,5.407,0,1,1,5.4,5.143A5.276,5.276,0,0,1,43.507,716.3Z" transform="translate(11.253 211.39)" fill="currentColor" fill-rule="evenodd" /></g></g></svg>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php if (get_field('redes-sociais')['linkedin']) { ?>
+                    <li>
+                        <a href="<?= get_field('redes-sociais')['linkedin']['url'] ?>" target="<?= get_field('redes-sociais')['linkedin']['target'] ?>" title="LinkdIn" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.475 42.876"><g id="Grupo_81" data-name="Grupo 81" transform="translate(-202.432 -905.598)"><ellipse id="Elipse_4" data-name="Elipse 4" cx="22.737" cy="21.438" rx="22.737" ry="21.438" transform="translate(202.432 905.598)" /><g id="Grupo_77" data-name="Grupo 77"><path id="Caminho_20" data-name="Caminho 20" d="M169.591,706.328a1.96,1.96,0,1,0,1.84,1.955A1.9,1.9,0,0,0,169.591,706.328Z" transform="translate(49.948 211.39)" fill="currentColor" /><path id="Caminho_21" data-name="Caminho 21" d="M167.858,710.578a.112.112,0,0,0-.108.116v11.964a.112.112,0,0,0,.108.116h3.465a.112.112,0,0,0,.108-.116V710.694a.112.112,0,0,0-.108-.116Z" transform="translate(49.948 212.662)" fill="currentColor" /><path id="Caminho_22" data-name="Caminho 22" d="M172.192,710.578a.113.113,0,0,0-.109.116v11.964a.113.113,0,0,0,.109.116h3.464a.113.113,0,0,0,.109-.116v-6.442a1.776,1.776,0,0,1,.476-1.22,1.558,1.558,0,0,1,2.3,0,1.782,1.782,0,0,1,.476,1.22v6.442a.112.112,0,0,0,.108.116h3.465a.112.112,0,0,0,.108-.116v-7.933a3.683,3.683,0,0,0-3.92-3.778,5.9,5.9,0,0,0-1.877.5l-1.132.515v-1.271a.113.113,0,0,0-.109-.116Z" transform="translate(51.245 212.662)" fill="currentColor" /></g></g></svg>
+                        </a>
+                    </li>
+                <?php } ?>
+                <?php if (get_field('redes-sociais')['youtube']) { ?>
+                    <li>
+                        <a href="<?= get_field('redes-sociais')['youtube']['url'] ?>" target="<?= get_field('redes-sociais')['youtube']['target'] ?>" title="YouTube" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 42.876 42.876"><g id="Grupo_80" data-name="Grupo 80" transform="translate(-149.161 -905.598)"><circle id="Elipse_3" data-name="Elipse 3" cx="21.438" cy="21.438" r="21.438" transform="translate(149.161 905.598)" /><path id="Caminho_18" data-name="Caminho 18" d="M129.033,708.505a59.082,59.082,0,0,1,9.224,0l2.062.161a2.507,2.507,0,0,1,2.278,2.088,26.029,26.029,0,0,1,0,8.588,2.507,2.507,0,0,1-2.278,2.088l-2.062.161a59.082,59.082,0,0,1-9.224,0l-2.063-.161a2.507,2.507,0,0,1-2.278-2.088,26.028,26.028,0,0,1,0-8.588,2.507,2.507,0,0,1,2.278-2.088Zm2.77,8.817v-4.547a.276.276,0,0,1,.418-.236l3.789,2.274a.275.275,0,0,1,0,.473l-3.789,2.274A.276.276,0,0,1,131.8,717.322Z" transform="translate(36.955 211.988)" fill="currentColor" fill-rule="evenodd" /></g></svg>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        <?php } ?>
         <!-- /list sociais -->
 
     </div>
