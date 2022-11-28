@@ -25,11 +25,9 @@ $posts = new WP_Query([
 
 <section class="category-listagem">
     <div class="container">
-        <h1 class="titulo">
-            <?php if (get_field('page-mostrar-titulo')) { ?>
-                <h1 class="titulo"><?php the_title(); ?></h1>
-            <?php } ?>
-        </h1>
+        <?php if (get_field('page-mostrar-titulo')) { ?>
+            <h1 class="titulo"><?php the_title(); ?></h1>
+        <?php } ?>
 
         <?php if ($posts->have_posts()) { ?>
             <div class="posts">
