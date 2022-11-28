@@ -138,7 +138,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                     <?php _e($args['descricao_da_margem_permitida']); ?>
                                 </p>
                             </div><!--/Text box ref input 01 -->
-                            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-4 mt-5 mt-md-0 mt-lg-0 mt-xl-0">
+                            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-0 mt-0 mt-md-0 mt-lg-0 mt-xl-0">
                                 <div class="row justify-content-between">
                                     <div class="col">
                                         <p class="fs-6">
@@ -177,7 +177,7 @@ function diletec_calculadora_shortcode( $atts ) {
                                     <?php _e($args['descricao_da_margem_disponivel']); ?>
                                 </p>
                             </div>
-                            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-4 mt-5 mt-md-0 mt-lg-0 mt-xl-0">
+                            <div class="col-md-5 col-lg-5 col-xl-5 col-sm-12 mb-0 mt-0 mt-md-0 mt-lg-0 mt-xl-0">
                                 <div class="row justify-content-start">
                                     <div class="col">
                                         <strong>R$ <span class="fs-6 calculadora_margem_disponivel_<?php _e($args['id']); ?>">000,00</span></strong>
@@ -368,6 +368,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     line-height: 24px;
                     letter-spacing: 0em;
                     text-align: left;
+                    margin-bottom: 0;
                 }
                 section#box-calculadora #footer-input-calc main h3{
                     font-family: var(--Montserrat);
