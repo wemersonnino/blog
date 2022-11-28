@@ -89,8 +89,8 @@
                             }
 
                             .icon {
-                                min-width: 25px;
-                                height: 25px;
+                                min-width: 20px;
+                                height: 20px;
                                 background-image: url('../../images/tables/table-list.svg');
                                 background-size: contain;
                                 background-repeat: no-repeat;
@@ -118,6 +118,7 @@
 
                         h3 {
                             font-size: 18px;
+                            font-weight: bold;
                             transition: color .3s;
                             margin-bottom: 0;
                         }
