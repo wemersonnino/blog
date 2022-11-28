@@ -23,19 +23,21 @@ $faq = [
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-9">
+                <div class="pr-0 pr-lg-4">
 
-                <!-- content -->
-                <?php get_template_part('partials/tables/content'); ?>
-                <!-- /content -->
+                    <!-- content -->
+                    <?php get_template_part('partials/tables/content'); ?>
+                    <!-- /content -->
 
-                <!-- faq -->
-                <?php if ($faq['habilitado']) { ?>
-                    <div class="mt-4">
-                        <?php get_template_part('partials/blocos/perguntas-frequentes', null, ['faq' => $faq]); ?>
-                    </div>
-                <?php } ?>
-                <!-- /faq -->
+                    <!-- faq -->
+                    <?php if ($faq['habilitado']) { ?>
+                        <div class="mt-4">
+                            <?php get_template_part('partials/blocos/perguntas-frequentes', null, ['faq' => $faq]); ?>
+                        </div>
+                    <?php } ?>
+                    <!-- /faq -->
 
+                </div>
             </div>
             <div class="col-12 col-lg-3">
 

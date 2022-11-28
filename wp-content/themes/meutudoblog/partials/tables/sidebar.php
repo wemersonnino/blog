@@ -22,6 +22,14 @@ $listPosts = !empty($listPostsId) ? new WP_Query([
     'order' => 'DESC'
 ]) : null;
 
+// Get default posts
+if (empty($listPosts)) $listPosts = new WP_Query([
+    'post_type' => 'post',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 3
+]);
+
 // Get footer informations
 $footerBlock = new WP_Query([
     'post_type' => 'bloco',
