@@ -1313,8 +1313,13 @@ footer.padrao {
   }
 
   .conquistas-imagem {
-    display: block;
-    max-width: 200px;
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: auto;
+    }
   }
 
   .menu.institucional,

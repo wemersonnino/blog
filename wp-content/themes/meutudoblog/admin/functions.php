@@ -158,3 +158,10 @@ add_action('manage_mt-banner_posts_custom_column' , function ($column, $post_id)
             break;
     }
 }, 10, 2);
+
+/**
+ * Add menu in footer
+ */
+add_action('init', function () {
+    register_nav_menu('rodape-ferramentas', 'Rodapé (Ferramentas)');
+});
