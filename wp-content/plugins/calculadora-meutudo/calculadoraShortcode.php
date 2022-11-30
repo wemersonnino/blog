@@ -494,7 +494,8 @@ function diletec_calculadora_shortcode( $atts ) {
                 const parcelasEmprest = document.querySelector(".calculadora_parcela_de_emprestimo_<?php _e($args['id']); ?>");
                 const resultBeneficioSalario = document.querySelector('#resultBeneficioSalario');
                 const resultMargem = document.querySelector('.calculadora_margem_disponivel_<?php _e($args['id']); ?>');
-                const percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>
+                const percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>;
+                const helpClass = document.querySelector('#help');
 
                     /**evento do campo 1 onde sera input com salario ou valor do beneficio */
                     beneficioSalario.addEventListener('input',(evt)=>{
@@ -562,11 +563,12 @@ function diletec_calculadora_shortcode( $atts ) {
 
                 /**Function que faz o tratamento e calculo das entradas no campo 1 (ou input 1) */
                 const tratarSoma = (e) =>{
+                    let montante;
                     if (e.indexOf('.')){
                         e = e.replace(".","");
                         e = e.replace(",","");
                     }
-                    if (e > 1000000){
+                    if (e >= 1000000){
                         console.log(`Ultrapassou o valor`);
                         beneficioSalario.value = "10.000,00";
                         e = 1000000;
@@ -575,10 +577,11 @@ function diletec_calculadora_shortcode( $atts ) {
                         console.log(`Não Utrapassou o valor`);
                         helpClass.classList.add('d-none');
                     }
-                    let montante = e * (percentValue / 100);
-                    console.log(`Porcentagem: ${percentValue / 100}`);
-                    console.log(`result: ${e}`);
-                    console.log(`montante: ${montante}`);
+                    montante = e * (percentValue / 100);
+                    //console.log(`Porcentagem: ${percentValue / 100}`);
+                    //console.log(`result: ${e}`);
+                    //console.log(`montante: ${montante}`);
+
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
                 };
