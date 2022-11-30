@@ -1,74 +1,62 @@
 <?php
 
+// Infos
 $faq = $args['faq'] ?? get_field('postagens-perguntas-frequentes');
 
+// Busca bloco com infos
+$bloco = new WP_Query([
+    'post_type' => 'bloco',
+    'name' => 'bloco-perguntas-frequentes',
+    'posts_per_page' => 1
+]);
+
+// Busca perguntas
+$selecionadas = $faq['perguntas'] ? $faq['perguntas'] : [];
+$perguntas_selecionadas = !empty($selecionadas) ? new WP_Query([
+    'post_type' => 'pergunta',
+    'orderby' => 'post__in',
+    'post__in' => $selecionadas
+]) : null;
+
 ?>
-<?php if ($faq['habilitado']) : ?>
-    <?php $selecionadas = $faq['perguntas'] ? array_slice($faq['perguntas'], 0, 4) : null; ?>
-    
-    <?php $bloco = new WP_Query(array(
-      'post_type' => 'bloco',
-      'name' => 'bloco-perguntas-frequentes',
-      'posts_per_page' => 1
-    )); ?>
-    <?php if($bloco->have_posts()) : $bloco->the_post(); ?>
-        <?php $schema = array(
+<?php if ($faq['habilitado']) { ?>
+    <?php if ($bloco->have_posts()) { ?>
+        <?php 
+            
+        $bloco->the_post();
+        $schema = [
             '@context' => 'https://schema.org',
             '@type' => 'FAQPage',
-            'mainEntity' => array()
-        ); ?>
-        <?php $padrao = get_field('perguntas-padrao') ? array_slice(get_field('perguntas-padrao'), 0, 4) : null; ?>
-        <?php $padrao_amount = 4 - ($selecionadas ? count($selecionadas) : 0); ?>
-    
-        <?php if ($selecionadas) : ?>
-            <?php $perguntas_selecionadas = new WP_Query(array(
-                'post_type' => 'pergunta',
-                'orderby' => 'post__in',
-                'post__in' => $selecionadas,
-                'posts_per_page' => 4
-            )); ?>
-        <?php endif; ?>
-        <?php $perguntas_padrao = new WP_Query(array(
-            'post_type' => 'pergunta',
-            'orderby' => 'post__in',
-            'post__in' => $padrao,
-            'posts_per_page' => $padrao_amount
-        )); ?>
+            'mainEntity' => []
+        ];
         
-        <?php if (($selecionadas ? $perguntas_selecionadas->post_count : 0) + $perguntas_padrao->post_count > 0) : ?>
-    
+        ?>
+        <?php if ($perguntas_selecionadas && $perguntas_selecionadas->post_count > 0) { ?>
             <section class="bloco-perguntas-frequentes">
-              <!--<div class="container">-->
-                <h2 class="titulo"><?php the_field('titulo'); ?></h2>
-                
+                <h2 class="titulo"><?= get_field('titulo') ?></h2>
                 <div class="perguntas">
-                    <?php if($selecionadas) : ?>
-                        <?php if($perguntas_selecionadas->have_posts()) : ?>
-                            <?php while($perguntas_selecionadas->have_posts()) : $perguntas_selecionadas->the_post(); ?>
-                                <?php get_template_part('partials/items/pergunta', 'list'); ?>
-                                <?php array_push($schema['mainEntity'], array(
-                                    '@type' => 'Question',
-                                    'name' => get_the_title(),
-                                    'acceptedAnswer' => array(
-                                        '@type' => 'Answer',
-                                        'text' => wp_strip_all_tags(get_the_content())
-                                    )
-                                )); ?>
-                            <?php endwhile; wp_reset_postdata(); ?>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                    
-                    <?php if($padrao_amount > 0) : ?>
-                        <?php if($perguntas_padrao->have_posts()) : ?>
-                            <?php while($perguntas_padrao->have_posts()) : $perguntas_padrao->the_post(); ?>
-                                <?php get_template_part('partials/items/pergunta', 'list'); ?>
-                            <?php endwhile; wp_reset_postdata(); ?>
-                        <?php endif; ?>
-                    <?php endif; ?>
-                <!--</div>-->
-              </div>
+                    <?php if ($perguntas_selecionadas->have_posts()) { ?>
+                        <?php while ($perguntas_selecionadas->have_posts()) { ?>
+                            <?php
+                            
+                            $perguntas_selecionadas->the_post();
+                            get_template_part('partials/items/pergunta', 'list');
+                            array_push($schema['mainEntity'], [
+                                '@type' => 'Question',
+                                'name' => wp_strip_all_tags(get_the_title()),
+                                'acceptedAnswer' => [
+                                    '@type' => 'Answer',
+                                    'text' => wp_strip_all_tags(get_the_content())
+                                ]
+                            ]);
+
+                            ?>
+                        <?php } ?>
+                        <?php wp_reset_postdata() ?>
+                    <?php } ?>
+                </div>
             </section>
-            <script type="application/ld+json"><?php echo json_encode($schema); ?></script>
+            <script type="application/ld+json"><?= json_encode($schema) ?></script>
             <script>
                 window.addEventListener('DOMContentLoaded', function() {
                     jQuery(function($) {
@@ -87,8 +75,7 @@ $faq = $args['faq'] ?? get_field('postagens-perguntas-frequentes');
                     });
                 });
             </script>
-            
-        <?php endif; ?>
-        
-    <?php endif; wp_reset_postdata(); ?>
-<?php endif; ?>
+        <?php } ?>
+    <?php } ?>
+    <?php wp_reset_postdata() ?>
+<?php } ?>

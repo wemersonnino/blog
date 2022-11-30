@@ -12,3 +12,6 @@ wp-content/*
 #ignore twenty
 wp-content/themes/twenty*/
 .htaccess
+
+#ignore specific folders
+wp-content/plugins/master-popups/libs/xbox/backups/
