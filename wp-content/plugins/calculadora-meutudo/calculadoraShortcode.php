@@ -82,9 +82,9 @@ function diletec_calculadora_shortcode( $atts ) {
                                 <div class="input-group mb-3 form-floating">
                                     <span class="input-group-text" id="basic-addon1">R$</span>
                                     <input type="text" id="beneficioSalario" name="beneficioSalario"
-                                           inputmode="numeric" min="1" max="5000000"
+                                           inputmode="numeric" min="1" max="100000"
                                            class="form-control calculadora_valor_do_beneficio_<?php _e($args['id']); ?>"
-                                           placeholder="0,00"
+                                           placeholder="0,00" value="0,00"
                                            aria-label="<?php _e($args['valor_do_beneficio']); ?>"
                                            role="button"
                                     >
@@ -117,13 +117,14 @@ function diletec_calculadora_shortcode( $atts ) {
                             </label>
                             <div class="input-group mb-3 form-floating">
                                 <span class="input-group-text" id="basic-addon2">R$</span>
-                                <input inputmode="numeric" min="1" max="5000000" type="text"
+                                <input inputmode="numeric" min="1" max="100000" type="text"
                                        id="parcelas" class="form-control calculadora_parcela_de_emprestimo_<?php _e($args['id']); ?>"
-                                       placeholder="0,00"
+                                       placeholder="0,00" value="0,00"
                                        aria-label="Parcela de empréstimos do benefício">
                             </div>
                         </div><!--/input 2 -->
                     </div>
+                    <div id="help" class="form-text">Valor limite até R$ 10.000,00, por favor inserir outro valor.</div>
                 </main>
                 <footer id="footer-input-calc" class="calculadora_footer_<?php _e($args['id']); ?>">
                     <header class="titulo_do_resultado_<?php _e($args['id']); ?>">
@@ -564,6 +565,15 @@ function diletec_calculadora_shortcode( $atts ) {
                     if (e.indexOf('.')){
                         e = e.replace(".","");
                         e = e.replace(",","");
+                    }
+                    if (e > 1000000){
+                        console.log(`Ultrapassou o valor`);
+                        beneficioSalario.value = "10.000,00";
+                        e = 1000000;
+                        helpClass.classList.remove('d-none');
+                    }else{
+                        console.log(`Não Utrapassou o valor`);
+                        helpClass.classList.add('d-none');
                     }
                     let montante = e * (percentValue / 100);
                     console.log(`Porcentagem: ${percentValue / 100}`);
