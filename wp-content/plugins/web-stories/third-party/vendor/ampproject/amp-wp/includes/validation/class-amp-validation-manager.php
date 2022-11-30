@@ -237,11 +237,14 @@ class AMP_Validation_Manager
     /**
      * Filter AMP options to set Standard template mode if it is an AMP-override request.
      *
-     * @param array $options Options.
+     * @param array|false $options Options.
      * @return array Filtered options.
      */
     public static function filter_options_when_force_standard_mode_request($options)
     {
+        if (!$options) {
+            $options = [];
+        }
         if (self::is_validate_request() && self::get_validate_request_args()[self::VALIDATE_QUERY_VAR_FORCE_STANDARD_MODE]) {
             $options[Option::THEME_SUPPORT] = \Google\Web_Stories_Dependencies\AMP_Theme_Support::STANDARD_MODE_SLUG;
             $options[Option::ALL_TEMPLATES_SUPPORTED] = \true;

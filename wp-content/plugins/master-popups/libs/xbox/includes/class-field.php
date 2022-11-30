@@ -928,6 +928,10 @@ class Field {
 			$value = $this->arg( 'default' );
 		}
 
+        if( isset($this->args['value']) && $this->is_saved_field() ){
+            $value = $this->args['value'];
+        }
+
 		if( $escaping_function ){
 			$value = $this->escape_value( $value, $escaping_function );
 		}

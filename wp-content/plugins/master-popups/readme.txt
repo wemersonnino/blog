@@ -8,6 +8,12 @@ Multi-Purpose Popup Plugin for WordPress with Powerful and Easy Email Marketing 
 
 == Changelog ==
 
+= 3.8.6 (02 July 2022) =
+* Fixed - Fixed a reported issue.
+
+= 3.8.6 (02 July 2022) =
+* Fixed - Fixed a reported issue.
+
 = 3.8.5 (26 March 2022) =
 * Fixed - Fixed a reported issue.
 

@@ -215,7 +215,10 @@ class MasterPopups {
             //Excluir roles de usuarios que no pueden gestionar el custom post type
             if( is_user_logged_in() ){
                 $user = wp_get_current_user();
-                $role = $user->roles ? $user->roles[0] : false;
+                $role = false;
+                if( is_array( $user->roles ) && isset( $user->roles[0] ) ){
+                    $role = $user->roles[0];
+                }
                 if( in_array( $role, $disable_roles ) ){
                     $args['show_ui'] = false;
                 }

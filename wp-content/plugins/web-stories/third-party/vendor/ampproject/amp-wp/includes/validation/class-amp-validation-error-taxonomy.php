@@ -2561,8 +2561,10 @@ class AMP_Validation_Error_Taxonomy
             $redirect_query_args['amp_actioned_count'] = 1;
         }
         // Even if the user didn't select any errors to bulk edit, redirect back to the same page.
-        \wp_safe_redirect(\add_query_arg($redirect_query_args, \get_edit_post_link($post_id, 'raw')));
-        exit;
+        if (\wp_safe_redirect(\add_query_arg($redirect_query_args, \get_edit_post_link($post_id, 'raw')))) {
+            exit;
+            // @codeCoverageIgnore
+        }
     }
     /**
      * Handle bulk and inline edits to amp_validation_error terms.

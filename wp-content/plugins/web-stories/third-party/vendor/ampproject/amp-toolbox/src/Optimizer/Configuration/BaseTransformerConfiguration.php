@@ -22,6 +22,12 @@ abstract class BaseTransformerConfiguration implements TransformerConfiguration
      */
     private $allowedKeys;
     /**
+     * Associative array of configuration data.
+     *
+     * @var array
+     */
+    private $configuration = [];
+    /**
      * Instantiate an AmpRuntimeCssConfiguration object.
      *
      * @param array $configuration Optional. Associative array of configuration data. Defaults to an empty array.
@@ -34,7 +40,7 @@ abstract class BaseTransformerConfiguration implements TransformerConfiguration
             if (!\array_key_exists($key, $this->allowedKeys)) {
                 throw InvalidConfigurationKey::fromTransformerKey(static::class, $key);
             }
-            $this->{$key} = $this->validate($key, $value);
+            $this->configuration[$key] = $this->validate($key, $value);
         }
     }
     /**
@@ -53,7 +59,56 @@ abstract class BaseTransformerConfiguration implements TransformerConfiguration
             throw UnknownConfigurationKey::fromTransformerKey(static::class, $key);
         }
         // At this point, the configuration should either have received this value or filled it with a default.
-        return $this->{$key};
+        return $this->configuration[$key];
+    }
+    /**
+     * Magic getter to get value for a given key.
+     *
+     * Mostly for backward compatibility.
+     *
+     * @param string $name Name of the property to set.
+     */
+    public function __get($name)
+    {
+        if (!\array_key_exists($name, $this->allowedKeys)) {
+            // Mimic regular PHP behavior for missing notices.
+            \trigger_error('Undefined property: ' . \get_class($this) . '::$' . $name, \E_USER_NOTICE);
+            return null;
+        }
+        return $this->configuration[$name];
+    }
+    /**
+     * Magic setter for configurations.
+     *
+     * Mostly for backward compatibility.
+     *
+     * @param string $name Name of the property to set.
+     * @param mixed  $value Value of the property.
+     */
+    public function __set($name, $value)
+    {
+        if (!\array_key_exists($name, $this->allowedKeys)) {
+            // Mimic regular PHP behavior for missing notices.
+            \trigger_error('Undefined property: ' . \get_class($this) . '::$' . $name, \E_USER_NOTICE);
+            return;
+        }
+        $this->configuration[$name] = $value;
+    }
+    /**
+     * Magic method to check whether a configuration exists.
+     *
+     * Mostly for backward compatibility.
+     *
+     * @param string $name Name of the property to set.
+     */
+    public function __isset($name)
+    {
+        if (!\array_key_exists($name, $this->allowedKeys)) {
+            // Mimic regular PHP behavior for missing notices.
+            \trigger_error('Undefined property: ' . \get_class($this) . '::$' . $name, \E_USER_NOTICE);
+            return \false;
+        }
+        return isset($this->configuration[$name]);
     }
     /**
      * Get an array of configuration entries for this transformer configuration.
@@ -64,7 +119,7 @@ abstract class BaseTransformerConfiguration implements TransformerConfiguration
     {
         $configArray = [];
         foreach (\array_keys($this->allowedKeys) as $key) {
-            $configArray[$key] = $this->{$key};
+            $configArray[$key] = $this->configuration[$key];
         }
         return $configArray;
     }

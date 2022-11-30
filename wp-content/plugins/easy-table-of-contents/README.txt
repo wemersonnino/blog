@@ -1,11 +1,11 @@
 === Easy Table of Contents ===
 Contributors: magazine3
-Donate link: https://magazine3.company/
+Donate link: https://tocwp.com/
 Tags: table of contents, toc
 Requires at least: 5.3
-Tested up to: 6.0
+Tested up to: 6.1.1
 Requires PHP: 5.6.20
-Stable tag: 2.0.33.2
+Stable tag: 2.0.39
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -105,6 +105,75 @@ Easy Table Contents is a fork of the excellent [Table of Contents Plus](https://
 4. Activate the plugin on the Plugins admin page.
 
 == Changelog ==
+= 2.0.39 11/30/2022 =
+* BUG: Toggle Icons going to opposite side when rtl option settings used #348
+* BUG: Newsletter subscribe form is not popping up during plugin activation. #344
+* BUG: Causing CLS issues #339
+* BUG: Unable to access Divi module when Sticky Toggle is enable. #309
+* BUG: When the name of the Open Button Text in sticky toggle is long, the sticky toggle is not working on mobile devices. #294
+
+= 2.0.38 11/21/2022 =
+* BUG: Deactivate Feedback Form need to be filtered #345
+* NEW: BFCM internal offer #342
+* BUG: Ajax call is missing security nonce #340
+* BUG: On hover, the contents heads show in two lines. #337
+* BUG: Easy table of content is visible in FAQ section #321
+* BUG: TOC Container Toggle is working on widget TOC container. #316
+* BUG: Problem with TOC on mobile #284
+* NEW: Admin General Settings Section Tabs customization #270
+
+= 2.0.37 11/11/2022 =
+* BUG: Need to test compatibility with wp 6.1. #335
+* BUG: Warning: Trying to access array offset on value of type null #334
+* BUG: Numbers are wrong #330
+* NEW: Add a new functionality "reset to default settings" #293
+* BUG: Shortcode are not working with Salient theme #271
+
+= 2.0.36.1 11/07/2022 =
+* BUG: Shortcode [toc] not working #332
+
+= 2.0.36 11/05/2022 =
+* BUG: Last version removed sidebar & some other contents #329
+* BUG: Structured plugin is broken with TOC 2.0.35 + Pure CSS stopped working #327
+* BUG: After updating the 2.0.35 10/29/2022 version, the interface code component can only display one line #326
+* BUG: Anchor links not working if the position "After first paragraph" is selected. #319
+* BUG: Name entity should be a mandatory field while adding the TOC as a block in widget area. #318
+* BUG: It is making the heading to repeat when we are selecting the option "After the first paragraph." #310
+* BUG: Shortcode are not working with Salient theme #271
+
+= 2.0.35.2 11/02/2022 =
+* BUG: Jump anchors on new headings not working after the update of last version 2.0.35
+* BUG: The TOC is not showing on the sidebar of all posts with the latest update 2.0.35
+
+= 2.0.35.1 10/31/2022 =
+* BUG: Last version removed sidebar & some other contents #329
+* BUG: Apostrophes removed from content #328
+
+= 2.0.35 10/29/2022 =
+* BUG: TOC shows on reload even if is closed #322
+* BUG: Sticky Toggle TOC Container is showing in footer on disabled TOC #317
+* BUG: wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.eot #308
+* BUG: Second line of heading should equally align to first line, If the heading is large #307
+* BUG: Some bugs occurring due to a "-" in pages created with Elementor #306
+* BUG: Not working in Persian Language. duplicate #303
+* NEW: get it listed on https://amp-wp.org/ecosystem/ #302
+* BUG: TOC Pro Elementor block bugs. #298
+* BUG: Not working in sidebar if Auto insert is disabled. #297
+* TWEAK: Move TOC Pro setting section to TOC Pro plugin #296
+* BUG/TWEAK: Audit the PRO version #277
+* BUG/TWEAK: Need to audit and fix Fixed TOC feature in pro #276
+* BUG: Shortcode are not working with Salient theme #271
+* BUG: While using the WP Bakery page builder, in the custom heading module, TOC is not working. #205
+
+= 2.0.34 09/29/2022 =
+* BUG: Enabling sticky toggle makes the other links unclickable. #301
+* BUG: Need to fix Pro Settings #300
+* BUG: PRO Settings link design is disturb after esc_html_e() added in code #283
+* BUG: Links are disabled when Sticky Toggle is on #282
+* BUG: The numbering of the titles has disappeared after latest update. #281
+* BUG: Sticky Toggle is not working on the plugin "Multiple Page Generator – MPG" #279
+* BUG: makesure this link goes to tocwp #273
+* BUG: Admin JS issue not working well on other pages of WordPress #269
 
 = 2.0.33.2 09/08/2022 =
 * BUG: Default settings set in options for ltr/rtl text direction - The numbering of the titles has disappeared after latest update. #281

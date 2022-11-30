@@ -920,12 +920,7 @@ class Ajax {
         //Si falla la consulta o la respuesta no es un json, por algún problema de seguridad.
         if( ! isset( $response['status'] ) ){
             $return['message'] = 'Error in the connection. Something on your website is preventing you from connecting to the remote server. It can be some security plugin.';
-            if( is_string( $original_response ) && stripos( $original_response, 'BitNinja.IO' ) !== false ){
-                $return = $this->update_plugin_with_error( 'BitNinja.IO', $return, $data );
-            }
-            if( is_string( $original_response ) && stripos( $original_response, 'Imunify360' ) !== false ){
-                $return = $this->update_plugin_with_error( 'Imunify360', $return, $data );
-            }
+            $return = $this->update_plugin_with_error( 'Error', $return, $data );
             wp_send_json( $return );
         }
 
@@ -965,25 +960,13 @@ class Ajax {
     public function update_plugin_with_error( $error = null, $return = array(), $data = array() ){
         $data['status'] = 'error';
         $subject = 'MasterPopups. Licence Activation Error: ';
-        if( $error == 'BitNinja.IO' ){
-            $data['type'] = 'BitNinja.IO';
-            $subject .= 'BitNinja.IO';
-            $return['message'] = sprintf( 'The security of BitNinja.IO is preventing the connection to the License Validator Server. Maybe BitNinja.IO is blocking your IP. See more: %sbitninja.io%s', '<a href="https://bitninja.io/" target="_blank">', '</a>' );
-        } else if( $error == 'cURL error' ){
-            $data['type'] = 'cURL error 28';
-            $return['message'] = 'cURL error 28: Connection timed out after 5000 milliseconds';
-            if( stripos( $return['message'], 'cURL error 35' ) !== false ){
-                $data['type'] = 'cURL error 35';
-                $return['message'] = 'cURL error 35: Unknown SSL protocol error in connection to masterpopups.com:443';
-            }
-            $subject .= $data['type'];
-        } else{
-            $data['type'] = 'Ajax error';
-            $data['user_name'] = isset( $data['user_name'] ) ? $data['user_name'] : 'Unknown';
-            $data['domain'] = Functions::get_site_domain();
-            $data['purchase_code'] = isset( $data['purchase_code'] ) ? $data['purchase_code'] : 'Unknown';
-            $return['message'] = 'Ajax error';
-        }
+
+        $data['type'] = 'Ajax error';
+        $data['user_name'] = isset( $data['user_name'] ) ? $data['user_name'] : 'Unknown';
+        $data['domain'] = Functions::get_site_domain();
+        $data['purchase_code'] = isset( $data['purchase_code'] ) ? $data['purchase_code'] : 'Unknown';
+        $return['message'] = 'Ajax error';
+
         update_option( 'mpp-plugin-status', $data );
         $return['message'] = "Registered license.";
         $return['success'] = true;

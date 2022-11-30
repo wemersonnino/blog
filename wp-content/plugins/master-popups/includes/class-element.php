@@ -82,8 +82,10 @@ class Element extends ElementOptions {
         }
         $element_class = trim( implode( ' ', $element_class ) );
 
-        $element_data = htmlentities( $this->get_element_data( 'html' ) );
-        $element_content_data = htmlentities( $this->get_element_content_data( 'html' ) );
+        //$element_data = htmlentities( $this->get_element_data( 'html' ) );
+        //$element_content_data = htmlentities( $this->get_element_content_data( 'html' ) );
+        $element_data = $this->get_element_data( 'html' );
+        $element_content_data = $this->get_element_content_data( 'html' );
         $element_id = ! empty( $attributes['id'] ) ? 'id="' . esc_attr( $attributes['id'] ) . '"' : '';
         $tabindex = in_array( $this->type, $this->tabindex_elements() ) ? 'tabindex="' . ( $this->get_tabindex() ) . '"' : '';
 
@@ -120,6 +122,7 @@ class Element extends ElementOptions {
         if( $return == 'html' ){
             $html = '';
             foreach( $element_data as $data => $value ){
+                $value = esc_attr($value);
                 $html .= " data-$data='$value'";
             }
             return $html;
@@ -141,6 +144,7 @@ class Element extends ElementOptions {
         if( $return == 'html' ){
             $html = '';
             foreach( $content_data as $data => $value ){
+                $value = esc_attr($value);
                 $html .= " data-$data='$value'";
             }
             return $html;

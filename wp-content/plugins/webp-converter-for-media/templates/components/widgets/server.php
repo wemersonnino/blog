@@ -2,13 +2,14 @@
 /**
  * Widget displayed on plugin settings page.
  *
- * @var string  $size_png_path         Size of file.
- * @var string  $size_png2_path        Size of file.
- * @var string  $size_png_url          Size of file.
- * @var string  $size_png2_url         Size of file.
- * @var string  $size_png_as_webp_url  Size of file.
- * @var string  $size_png2_as_webp_url Size of file.
- * @var mixed[] $plugin_settings       Option keys with values.
+ * @var string[] $errors_codes          List of server configuration errors.
+ * @var string   $size_png_path         Size of file.
+ * @var string   $size_png2_path        Size of file.
+ * @var string   $size_png_url          Size of file.
+ * @var string   $size_png2_url         Size of file.
+ * @var string   $size_png_as_webp_url  Size of file.
+ * @var string   $size_png2_as_webp_url Size of file.
+ * @var mixed[]  $plugin_settings       Option keys with values.
  *
  * @package Converter for Media
  */
@@ -47,6 +48,7 @@
 				require_once dirname( __DIR__ ) . '/server/debug.php';
 				require_once dirname( __DIR__ ) . '/server/filters.php';
 				require_once dirname( __DIR__ ) . '/server/wordpress.php';
+				require_once dirname( __DIR__ ) . '/server/sub-sizes.php';
 				require_once dirname( __DIR__ ) . '/server/options.php';
 				require_once dirname( __DIR__ ) . '/server/php.php';
 				require_once dirname( __DIR__ ) . '/server/gd.php';

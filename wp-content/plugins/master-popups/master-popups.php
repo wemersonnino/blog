@@ -3,7 +3,7 @@
  * Plugin Name: Master Popups
  * Plugin URI: http://masterpopups.com
  * Description: Multi-Purpose Popup Plugin for WordPress with Powerful and Easy Email Marketing Integration
- * Version: 3.8.5
+ * Version: 3.8.6
  * Author: CodexHelp
  * Author URI: https://codecanyon.net/user/codexhelp
  * Text Domain: masterpopups
