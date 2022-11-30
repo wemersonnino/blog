@@ -563,7 +563,7 @@ function diletec_calculadora_shortcode( $atts ) {
 
                 /**Function que faz o tratamento e calculo das entradas no campo 1 (ou input 1) */
                 const tratarSoma = (e) =>{
-                    let montante;
+                    let montante = 0;
                     if (e.indexOf('.')){
                         e = e.replace(".","");
                         e = e.replace(",","");
