@@ -37,6 +37,14 @@ $faq = [
                     <?php } ?>
                     <!-- /faq -->
 
+                    <!-- author -->
+                    <?php get_template_part('partials/author/profile-post'); ?>
+                    <!-- /author -->
+
+                    <!-- comments -->
+                    <?php get_template_part('partials/templates/post/comentarios'); ?>
+                    <!-- /comments -->
+
                 </div>
             </div>
             <div class="col-12 col-lg-3">
