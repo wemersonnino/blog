@@ -5,6 +5,19 @@ $authorId = (int) $post->post_author;
 $authorPhoto = get_field('photo_posts', 'user_' . $authorId) ?? null;
 $authorIcon = get_field('icon', 'user_' . $authorId) ?? null;
 
+// Get pages by author
+$countPages = new WP_Query([
+    'post_type' => 'page',
+    'meta_query' => [
+        [
+            'key'   => '_wp_page_template', 
+            'value' => ['page-templates/table.php'],
+            'compare' => 'IN'
+        ]
+    ],
+    'author' => $authorId,
+]);
+
 ?>
 <div class="theme-author">
     <div class="profile-post row align-items-center">
@@ -26,7 +39,7 @@ $authorIcon = get_field('icon', 'user_' . $authorId) ?? null;
                 <?= get_the_author_meta('description') ?>
             </p>
             <a href="<?= get_author_posts_url($authorId) ?>" class="font-weight-bold" aria-label="Ver perfil de <?= get_the_author_meta('display_name') ?>">
-                <?= count_user_posts($authorId) ?> artigos escritos
+                <?= count_user_posts($authorId, 'post', true) + $countPages->post_count ?> artigos escritos
             </a>
         </div>
     </div>

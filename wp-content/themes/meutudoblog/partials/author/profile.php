@@ -5,6 +5,19 @@ $author = $args['author'];
 $authorPhoto = get_field('photo_profile', 'user_' . $author->ID) ?? null;
 $authorIcon = get_field('icon', 'user_' . $author->ID) ?? null;
 
+// Get pages by author
+$countPages = new WP_Query([
+    'post_type' => 'page',
+    'meta_query' => [
+        [
+            'key'   => '_wp_page_template', 
+            'value' => ['page-templates/table.php'],
+            'compare' => 'IN'
+        ]
+    ],
+    'author' => $author->ID,
+]);
+
 ?>
 <div class="profile row align-items-center">
     <?php if ($authorPhoto) { ?>
@@ -21,7 +34,7 @@ $authorIcon = get_field('icon', 'user_' . $author->ID) ?? null;
         </h1>
         <p class="font-weight-medium mb-0"><?= $author->user_description; ?></p>
         <div class="infos d-flex justify-content-between align-items-center mt-4">
-            <span><?= count_user_posts($author->ID, 'post', true) ?> artigos escritos</span>
+            <span><?= count_user_posts($author->ID, 'post', true) + $countPages->post_count ?> artigos escritos</span>
         </div>
     </div>
 </div>

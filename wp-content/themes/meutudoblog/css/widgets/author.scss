@@ -167,13 +167,13 @@
                 }
 
                 &.prev, &.next {
-                    background-image: url('../images/paginacao-proximo.svg');
+                    background-image: url('../../images/paginacao-proximo.svg');
                     background-repeat: no-repeat;
                     background-position: center;
                 }
 
                 &.prev {
-                    background-image: url('../images/paginacao-anterior.svg');
+                    background-image: url('../../images/paginacao-anterior.svg');
                 }
             }
         }
