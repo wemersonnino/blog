@@ -17,6 +17,7 @@ add_action ('admin_menu', function () {
     add_pages_page('Páginas', 'Páginas', 'manage_options', 'edit.php?post_type=page&template=default', null, 0); // pages
     add_pages_page('Calculadoras', 'Calculadoras', 'manage_options', 'edit.php?post_type=page&template=calculator', null, 1); // calculators pages
     add_pages_page('Mapas do Site', 'Mapas do Site', 'manage_options', 'edit.php?post_type=page&template=sitemap', null, 2); // sitemaps pages
+    add_pages_page('Tabelas', 'Tabelas', 'manage_options', 'edit.php?post_type=page&template=tables', null, 3); // tables pages
 });
 
 /**
@@ -34,6 +35,9 @@ add_action('admin_footer', function () {
             break;
         case 'sitemap':
             $title = 'Mapas do Site';
+            break;
+        case 'tables':
+            $title = 'Tabelas';
             break;
         default:
             $title = 'Páginas';
@@ -76,6 +80,9 @@ add_action ('pre_get_posts', function ($query) {
             break;
         case 'calculator':
             $templates = ['page-templates/calculadoras.php', 'page-templates/calculadora.php'];
+            break;
+        case 'tables':
+            $templates = ['page-templates/tables.php', 'page-templates/table.php'];
             break;
         default:
             $templates = [sanitize_text_field($_GET['template']) . ".php"];
@@ -159,6 +166,18 @@ add_action('manage_mt-banner_posts_custom_column' , function ($column, $post_id)
     }
 }, 10, 2);
 
+/**
+* Tables sidebar
+*/
+add_action('widgets_init', function () {
+    register_sidebar([
+        'name' => 'Tabelas',
+        'id' => 'sidebar_tables',
+        'before_widget' => '<li class="line">',
+        'after_widget' => '</li>',
+    ]);
+ });
+    
 /**
  * Add menu in footer
  */

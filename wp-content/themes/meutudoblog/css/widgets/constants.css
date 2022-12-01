@@ -5,6 +5,9 @@
     --color-2: #F8F8F8;
     --color-3: #FAFAFA;
     --color-4: #EFEFEF;
+
+    /* tables_front */
+    --color-5: #A6A6A6;
 }
 
 .color-1 { color: var(--color-1) !important; }

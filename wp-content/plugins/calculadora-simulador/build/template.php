@@ -26,7 +26,7 @@
 				<tbody>
 				<tr>
 					<th scope="row">Empréstimo consignado</th>
-					<td>1,62% a.m.</td>
+					<td>1,76% a.m.</td>
 					<td>6 a 84 parcelas</td>
 					<td>
 						<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
@@ -37,7 +37,7 @@
 				</tr>
 				<tr>
 					<th scope="row">Portabilidade consignado</th>
-					<td>1,63% a.m.</td>
+					<td>1,75% a.m.</td>
 					<td>6 a 84 parcelas</td>
 					<td>
 						<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
@@ -48,8 +48,8 @@
 				</tr>
 				<tr>
 					<th scope="row">Antecipação Saque-aniversário</th>
-					<td>1,72% a.m.</td>
-					<td>6 a 84 parcelas</td>
+					<td>1,80% a.m.</td>
+					<td>até 7 parcelas anuais</td>
 					<td>
 						<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
 					</td>
