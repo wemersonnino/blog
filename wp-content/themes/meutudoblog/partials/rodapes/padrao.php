@@ -43,20 +43,14 @@
             <?php endif; ?>
           </ul>
           
-          <p class="titulo"><?php echo get_field('conquistas')['titulo']; ?></p>
-          <?php if (get_field('conquistas')['imagem']) : ?>
-            <img src="<?php echo get_field('conquistas')['imagem']['url']; ?>" width="<?php echo get_field('conquistas')['imagem']['width']; ?>" height="<?php echo get_field('conquistas')['imagem']['height']; ?>" alt="<?php echo get_field('conquistas')['titulo']; ?>" class="conquistas-imagem">
-          <?php endif; ?>
+          <p class="titulo mb-1"><?php echo get_field('conquistas')['titulo']; ?></p>
+          <div class="d-flex flex-row flex-wrap align-items-center justify-content-around justify-content-lg-between">
+            <?php foreach (get_field('conquistas')['imagens'] as $img) { ?>
+                <img src="<?= $img['imagem'] ?>" alt="<?= get_field('conquistas')['titulo'] ?>" class="conquistas-imagem" />
+            <?php } ?>
+          </div>
         </div>
-        <?php /*
-        <div class="col-12 col-lg-4 d-lg-none">
-          <p class="titulo"><?php echo get_field('conquistas')['titulo']; ?></p>
-          <?php if (get_field('conquistas')['imagem']) : ?>
-            <img src="<?php echo get_field('conquistas')['imagem']['url']; ?>" width="<?php echo get_field('conquistas')['imagem']['width']; ?>" height="<?php echo get_field('conquistas')['imagem']['height']; ?>" alt="<?php echo get_field('conquistas')['titulo']; ?>" class="conquistas-imagem">
-          <?php endif; ?>
-        </div>
-        */ ?>
-		 <div class="col-12 col-md">
+		<div class="col-12 col-md-4 col-lg-3">
           <p class="titulo"><?php echo get_field('institucional')['titulo']; ?></p>
           <?php wp_nav_menu(array(
             'theme_location' => 'rodape-institucional',
@@ -64,7 +58,15 @@
             'container' => false
           )); ?>
         </div>
-        <div class="col-12 col-md-5 col-lg-4">
+        <div class="col-12 col-md-4 col-lg-3">
+          <p class="titulo"><?php echo get_field('ferramentas')['titulo']; ?></p>
+          <?php wp_nav_menu([
+            'theme_location' => 'rodape-ferramentas',
+            'menu_class' => 'menu institucional',
+            'container' => false
+          ]) ?>
+        </div>
+        <div class="col-12 col-md-4 col-lg-3">
           <p class="titulo"><?php echo get_field('contatos')['titulo']; ?></p>
           <ul class="contatos">
             <li class="email"><?php echo get_field('contatos')['email']; ?></li>

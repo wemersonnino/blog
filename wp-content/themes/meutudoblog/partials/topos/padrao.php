@@ -31,7 +31,7 @@
           <nav>
             <?php wp_nav_menu(array(
               'theme_location' => 'principal',
-              'menu_class' => 'menu',
+              'menu_class' => 'menu justify-content-between',
               'container' => false
             )); ?>
           </nav>

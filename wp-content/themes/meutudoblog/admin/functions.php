@@ -176,4 +176,11 @@ add_action('widgets_init', function () {
         'before_widget' => '<li class="line">',
         'after_widget' => '</li>',
     ]);
+ });
+    
+/**
+ * Add menu in footer
+ */
+add_action('init', function () {
+    register_nav_menu('rodape-ferramentas', 'Rodapé (Ferramentas)');
 });
