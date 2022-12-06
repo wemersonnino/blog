@@ -139,28 +139,23 @@ class ImageResizeOption extends OptionAbstract {
 	 * @return mixed[]
 	 */
 	public function get_default_value( array $settings = null ): array {
-		$size = $this->get_max_image_size();
-		return [ '', $size['width'], $size['height'] ];
+		return [ '', '', '' ];
 	}
 
 	/**
 	 * @return int[]
 	 */
 	private function get_max_image_size(): array {
-		$sizes = wp_get_additional_image_sizes();
-		usort(
-			$sizes,
-			function ( $a, $b ) {
-				if ( $a['width'] === $a['height'] ) {
-					return $b['height'] - $a['height'];
-				}
-				return $b['width'] - $a['width'];
-			}
-		);
+		$sizes = ( function_exists( 'wp_get_registered_image_subsizes' ) )
+			? wp_get_registered_image_subsizes()
+			: wp_get_additional_image_sizes();
+
+		$column_width  = array_column( $sizes, 'width' );
+		$column_height = array_column( $sizes, 'height' );
 
 		return [
-			'width'  => $sizes[0]['width'] ?? 0,
-			'height' => $sizes[0]['height'] ?? 0,
+			'width'  => ( $column_width ) ? max( $column_width ) : 0,
+			'height' => ( $column_height ) ? max( $column_height ) : 0,
 		];
 	}
 }

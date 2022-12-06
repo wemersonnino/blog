@@ -41,6 +41,7 @@ final class StubbedRemoteGetRequest implements RemoteGetRequest
         if (!\array_key_exists($url, $this->argumentMap)) {
             throw new LogicException("Trying to stub a remote request for an unknown URL: {$url}.");
         }
-        return new RemoteGetRequestResponse($this->argumentMap[$url]);
+        $args = $this->argumentMap[$url];
+        return new RemoteGetRequestResponse($args['body'], [], isset($args['status']) ? $args['status'] : 200);
     }
 }

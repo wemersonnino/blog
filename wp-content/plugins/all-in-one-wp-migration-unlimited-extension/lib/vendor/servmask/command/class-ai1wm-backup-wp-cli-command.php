@@ -83,6 +83,9 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Command' ) ) {
 		 * [--sites]
 		 * : Export sites by id (To list sites use: wp site list --fields=blog_id,url)
 		 *
+		 * [--password]
+		 * : Encrypt backup with password
+		 *
 		 * [--exclude-spam-comments]
 		 * : Do not export spam comments
 		 *
@@ -140,6 +143,11 @@ if ( defined( 'WP_CLI' ) && ! class_exists( 'Ai1wm_Backup_WP_CLI_Command' ) ) {
 				'cli_args'   => $assoc_args,
 				'secret_key' => get_option( AI1WM_SECRET_KEY, false ),
 			);
+
+			if ( function_exists( 'ai1wm_can_encrypt' ) && ai1wm_can_encrypt() && ! empty( $assoc_args['password'] ) ) {
+				$params['options']['encrypt_backups']  = true;
+				$params['options']['encrypt_password'] = $assoc_args['password'];
+			}
 
 			if ( isset( $assoc_args['exclude-spam-comments'] ) ) {
 				$params['options']['no_spam_comments'] = true;

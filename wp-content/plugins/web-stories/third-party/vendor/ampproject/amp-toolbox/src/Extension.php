@@ -185,7 +185,7 @@ interface Extension
     /**
      * Prefix of an AMP extension.
      *
-     * @var string.
+     * @var string
      */
     const PREFIX = 'amp-';
 }

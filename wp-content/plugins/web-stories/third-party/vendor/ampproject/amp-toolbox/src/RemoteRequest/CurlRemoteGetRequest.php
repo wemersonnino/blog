@@ -6,6 +6,7 @@ use Google\Web_Stories_Dependencies\AmpProject\Exception\FailedRemoteRequest;
 use Google\Web_Stories_Dependencies\AmpProject\Exception\FailedToGetFromRemoteUrl;
 use Google\Web_Stories_Dependencies\AmpProject\RemoteGetRequest;
 use Google\Web_Stories_Dependencies\AmpProject\Response;
+use Google\Web_Stories_Dependencies\AmpProject\Exception\FailedToParseUrl;
 /**
  * Remote request transport using cURL.
  *
@@ -30,7 +31,7 @@ final class CurlRemoteGetRequest implements RemoteGetRequest
      *
      * @var int[]
      */
-    const RETRYABLE_ERROR_CODES = [\CURLE_COULDNT_RESOLVE_HOST, \CURLE_COULDNT_CONNECT, \CURLE_HTTP_NOT_FOUND, \CURLE_READ_ERROR, \CURLE_OPERATION_TIMEOUTED, \CURLE_HTTP_POST_ERROR, \CURLE_SSL_CONNECT_ERROR];
+    const RETRYABLE_ERROR_CODES = [\CURLE_COULDNT_RESOLVE_HOST, \CURLE_COULDNT_CONNECT, \CURLE_READ_ERROR, \CURLE_OPERATION_TIMEOUTED, \CURLE_HTTP_POST_ERROR, \CURLE_SSL_CONNECT_ERROR];
     /**
      * Whether to verify SSL certificates or not.
      *
@@ -80,14 +81,18 @@ final class CurlRemoteGetRequest implements RemoteGetRequest
     public function get($url, $headers = [])
     {
         $retriesLeft = $this->retries;
+        if (!\is_string($url) || empty($url)) {
+            throw FailedToGetFromRemoteUrl::withException($url, FailedToParseUrl::forUrl($url));
+        }
         do {
             $curlHandle = \curl_init();
             \curl_setopt($curlHandle, \CURLOPT_URL, $url);
-            \curl_setopt($curlHandle, \CURLOPT_HEADER, 0);
+            \curl_setopt($curlHandle, \CURLOPT_HEADER, \false);
             \curl_setopt($curlHandle, \CURLOPT_FOLLOWLOCATION, \true);
-            \curl_setopt($curlHandle, \CURLOPT_SSL_VERIFYPEER, $this->sslVerify ? 1 : 0);
+            \curl_setopt($curlHandle, \CURLOPT_SSL_VERIFYPEER, $this->sslVerify);
             \curl_setopt($curlHandle, \CURLOPT_SSL_VERIFYHOST, $this->sslVerify ? 2 : 0);
             \curl_setopt($curlHandle, \CURLOPT_RETURNTRANSFER, \true);
+            \curl_setopt($curlHandle, \CURLOPT_FAILONERROR, \true);
             \curl_setopt($curlHandle, \CURLOPT_CONNECTTIMEOUT, $this->timeout);
             \curl_setopt($curlHandle, \CURLOPT_TIMEOUT, $this->timeout);
             \curl_setopt($curlHandle, \CURLOPT_HEADERFUNCTION, static function ($curl, $header) use(&$headers) {
@@ -103,7 +108,7 @@ final class CurlRemoteGetRequest implements RemoteGetRequest
             $status = \curl_getinfo($curlHandle, \CURLINFO_HTTP_CODE);
             $curlErrno = \curl_errno($curlHandle);
             \curl_close($curlHandle);
-            if ($body === \false) {
+            if ($body === \false || $status < 200 || $status >= 300) {
                 if (!$retriesLeft || \in_array($curlErrno, self::RETRYABLE_ERROR_CODES, \true) === \false) {
                     if (!empty($status) && \is_numeric($status)) {
                         throw FailedToGetFromRemoteUrl::withHttpStatus($url, (int) $status);

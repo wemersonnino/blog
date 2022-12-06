@@ -4,7 +4,7 @@
 
 namespace Google_Web_Stories_Composer\Autoload;
 
-class ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce
+class ComposerStaticInit578f9e0ec7279cb04e1e4586680262df
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -60,6 +60,7 @@ class ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce
         'Google\\Web_Stories\\Infrastructure\\Plugin' => __DIR__ . '/../..' . '/Infrastructure/Plugin.php',
         'Google\\Web_Stories\\Infrastructure\\PluginActivationAware' => __DIR__ . '/../..' . '/Infrastructure/PluginActivationAware.php',
         'Google\\Web_Stories\\Infrastructure\\PluginDeactivationAware' => __DIR__ . '/../..' . '/Infrastructure/PluginDeactivationAware.php',
+        'Google\\Web_Stories\\Infrastructure\\PluginUninstallAware' => __DIR__ . '/../..' . '/Infrastructure/PluginUninstallAware.php',
         'Google\\Web_Stories\\Infrastructure\\Registerable' => __DIR__ . '/../..' . '/Infrastructure/Registerable.php',
         'Google\\Web_Stories\\Infrastructure\\Service' => __DIR__ . '/../..' . '/Infrastructure/Service.php',
         'Google\\Web_Stories\\Infrastructure\\ServiceBasedPlugin' => __DIR__ . '/../..' . '/Infrastructure/ServiceBasedPlugin.php',
@@ -144,6 +145,7 @@ class ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce
         'Google\\Web_Stories\\REST_API\\Stories_Terms_Controller' => __DIR__ . '/../..' . '/REST_API/Stories_Terms_Controller.php',
         'Google\\Web_Stories\\REST_API\\Stories_Users_Controller' => __DIR__ . '/../..' . '/REST_API/Stories_Users_Controller.php',
         'Google\\Web_Stories\\Register_Widget' => __DIR__ . '/../..' . '/Register_Widget.php',
+        'Google\\Web_Stories\\Remove_Transients' => __DIR__ . '/../..' . '/Remove_Transients.php',
         'Google\\Web_Stories\\Renderer\\Archives' => __DIR__ . '/../..' . '/Renderer/Archives.php',
         'Google\\Web_Stories\\Renderer\\Feed' => __DIR__ . '/../..' . '/Renderer/Feed.php',
         'Google\\Web_Stories\\Renderer\\Oembed' => __DIR__ . '/../..' . '/Renderer/Oembed.php',
@@ -189,7 +191,7 @@ class ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitc5b5157ec3b3e1f47540883e23085cce::$classMap;
+            $loader->classMap = ComposerStaticInit578f9e0ec7279cb04e1e4586680262df::$classMap;
 
         }, null, ClassLoader::class);
     }

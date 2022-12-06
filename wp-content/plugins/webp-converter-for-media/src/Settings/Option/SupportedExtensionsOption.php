@@ -34,7 +34,7 @@ class SupportedExtensionsOption extends OptionAbstract {
 	 * {@inheritdoc}
 	 */
 	public function get_label(): string {
-		return __( 'List of supported files extensions', 'webp-converter-for-media' );
+		return __( 'Supported files extensions', 'webp-converter-for-media' );
 	}
 
 	/**
@@ -67,6 +67,10 @@ class SupportedExtensionsOption extends OptionAbstract {
 	 */
 	public function get_valid_value( $current_value, array $available_values = null, array $disabled_values = null ) {
 		$valid_values = [];
+		if ( ! $current_value ) {
+			return $valid_values;
+		}
+
 		foreach ( $current_value as $option_value ) {
 			if ( array_key_exists( $option_value, $available_values ?: [] )
 				&& ! in_array( $option_value, $disabled_values ?: [] ) ) {

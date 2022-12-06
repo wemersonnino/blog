@@ -648,6 +648,11 @@ window.MasterPopups = (function ($, window, document, undefined) {
       _.$popup.on('click', '.mpp-element', function (event) {
         var actions = $(this).data('actions');
         if (actions.onclick) {
+          var delay = 0;
+          if (actions.onclick.cookie_name) {
+            delay = 1000;
+            app.set_custom_cookies_on_event(_.popup_id, 'click', actions.onclick.cookie_name);
+          }
           switch (actions.onclick.action) {
             case 'close-popup':
               //Lo quité porque evita que redireccione a una URL en caso el botón tenga un link
@@ -673,15 +678,13 @@ window.MasterPopups = (function ($, window, document, undefined) {
               //event.preventDefault();
               if (actions.onclick.url_close == 'on') {
                 _.close(app.last_open_event);
+                delay = 1000;
+                console.log(".");
               }
               if (actions.onclick.url && actions.onclick.url != '#' && actions.onclick.url != 'http://') {
-                app.redirect(actions.onclick.url, actions.onclick.target, 500);
+                app.redirect(actions.onclick.url, actions.onclick.target, delay);
               }
               break;
-          }
-
-          if (actions.onclick.cookie_name) {
-            app.set_custom_cookies_on_event(_.popup_id, 'click', actions.onclick.cookie_name);
           }
         }
       });
@@ -1748,7 +1751,6 @@ window.MasterPopups = (function ($, window, document, undefined) {
     },
 
     update_impressions: function (restore) {
-	  return;
       var _ = this;
       restore = restore || false;
       if (MPP_PUBLIC_JS.is_admin) {
@@ -1768,7 +1770,6 @@ window.MasterPopups = (function ($, window, document, undefined) {
     },
 
     update_submits: function () {
-	  return;
       var _ = this;
       var data = {};
       data.action = 'mpp_update_submits';

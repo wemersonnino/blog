@@ -30,12 +30,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Ai1wmue_Stats_Controller {
 
 	public static function export( $params ) {
+		if ( ! isset( $params['file'] ) ) {
+			return;
+		}
+
 		if ( isset( $params['ai1wm_manual_export'] ) ) {
 			self::send( 'export' );
 		}
 	}
 
 	public static function import( $params ) {
+		if ( ! isset( $params['file'] ) ) {
+			return;
+		}
+
 		if ( isset( $params['ai1wm_manual_restore'] ) ) {
 			self::send( 'restore' );
 		}
