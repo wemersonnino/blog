@@ -4,7 +4,7 @@
 
 namespace Google_Web_Stories_Composer\Autoload;
 
-class ComposerStaticInit578f9e0ec7279cb04e1e4586680262df
+class ComposerStaticInit2ee73b06b074fb864dd08381137402e4
 {
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -15,6 +15,7 @@ class ComposerStaticInit578f9e0ec7279cb04e1e4586680262df
         'Google\\Web_Stories\\AMP\\Output_Buffer' => __DIR__ . '/../..' . '/AMP/Output_Buffer.php',
         'Google\\Web_Stories\\AMP\\Sanitization' => __DIR__ . '/../..' . '/AMP/Sanitization.php',
         'Google\\Web_Stories\\AMP\\Story_Sanitizer' => __DIR__ . '/../..' . '/AMP/Story_Sanitizer.php',
+        'Google\\Web_Stories\\AMP\\Tag_And_Attribute_Sanitizer' => __DIR__ . '/../..' . '/AMP/Tag_And_Attribute_Sanitizer.php',
         'Google\\Web_Stories\\AMP\\Traits\\Sanitization_Utils' => __DIR__ . '/../..' . '/AMP/Traits/Sanitization_Utils.php',
         'Google\\Web_Stories\\AMP_Story_Player_Assets' => __DIR__ . '/../..' . '/AMP_Story_Player_Assets.php',
         'Google\\Web_Stories\\AdSense' => __DIR__ . '/../..' . '/AdSense.php',
@@ -191,7 +192,7 @@ class ComposerStaticInit578f9e0ec7279cb04e1e4586680262df
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit578f9e0ec7279cb04e1e4586680262df::$classMap;
+            $loader->classMap = ComposerStaticInit2ee73b06b074fb864dd08381137402e4::$classMap;
 
         }, null, ClassLoader::class);
     }
