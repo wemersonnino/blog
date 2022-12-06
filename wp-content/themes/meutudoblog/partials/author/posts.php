@@ -1,14 +1,43 @@
+<?php
+
+// Infos
+$paged = get_query_var('paged') ?? 1; 
+
+// Get posts and pages by author
+$posts = new WP_Query([
+    'post_type' => ['post', 'page'],
+    'meta_query' => [
+        'relation' => 'OR',
+        'template_clause' => [
+            'key'   => '_wp_page_template', 
+            'value' => ['page-templates/table.php'],
+            'compare' => 'IN'
+        ],
+        'type_clause' => [
+            'key' => '_wp_page_template',
+            'compare' => 'NOT EXISTS'
+        ]
+    ],
+    'author' => $args['author']->ID,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => 9,
+    'paged' => $paged
+]);
+
+?>
+
 <div class="author-posts row mt-5">
     <div class="col-12 mb-5">
         <div class="subtitle d-flex align-items-center font-weight-semibold">Artigos escritos</div>
     </div>
     <div class="col-12">
         
-        <?php if (have_posts()) { ?>
+        <?php if ($posts->have_posts()) { ?>
             
             <div class="row">
-                <?php while (have_posts()) { ?>
-                    <?php the_post(); ?>
+                <?php while ($posts->have_posts()) { ?>
+                    <?php $posts->the_post() ?>
                     
                     <div class="col-12 col-lg-4 mb-4">
                         <div class="post-content mb-3 px-3 px-lg-0">
@@ -34,18 +63,15 @@
                 <?php } ?>
                 
                 <div class="col-12 mt-4 mb-5">
-                    <?php
-                    global $wp_query;
-                    echo paginate_links([
+                    <?= paginate_links([
                         'format' => '?paged=%#%',
-                        'current' => max(1, get_query_var('paged')),
-                        'total' => $wp_query->max_num_pages,
+                        'current' => max(1, $paged),
+                        'total' => $posts->max_num_pages,
                         'type'  => 'list',
                         'prev_text' => ' ',
                         'next_text' => ' ',
                         'mid_size' => 2
-                    ]);
-                    ?>
+                    ]) ?>
                 </div>
             </div>
 
