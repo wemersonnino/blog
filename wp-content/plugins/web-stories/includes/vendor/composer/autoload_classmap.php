@@ -14,6 +14,7 @@ return array(
     'Google\\Web_Stories\\AMP\\Output_Buffer' => $baseDir . '/AMP/Output_Buffer.php',
     'Google\\Web_Stories\\AMP\\Sanitization' => $baseDir . '/AMP/Sanitization.php',
     'Google\\Web_Stories\\AMP\\Story_Sanitizer' => $baseDir . '/AMP/Story_Sanitizer.php',
+    'Google\\Web_Stories\\AMP\\Tag_And_Attribute_Sanitizer' => $baseDir . '/AMP/Tag_And_Attribute_Sanitizer.php',
     'Google\\Web_Stories\\AMP\\Traits\\Sanitization_Utils' => $baseDir . '/AMP/Traits/Sanitization_Utils.php',
     'Google\\Web_Stories\\AMP_Story_Player_Assets' => $baseDir . '/AMP_Story_Player_Assets.php',
     'Google\\Web_Stories\\AdSense' => $baseDir . '/AdSense.php',

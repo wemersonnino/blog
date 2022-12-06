@@ -24,6 +24,8 @@
  * limitations under the License.
  */
 
+declare(strict_types = 1);
+
 namespace Google\Web_Stories;
 
 use Google\Web_Stories\Infrastructure\HasMeta;
@@ -68,7 +70,7 @@ class Story_Post_Type extends Post_Type_Base implements HasRequirements, HasMeta
 	 *
 	 * @var Settings Settings instance.
 	 */
-	private $settings;
+	private Settings $settings;
 
 
 	/**
@@ -268,20 +270,24 @@ class Story_Post_Type extends Post_Type_Base implements HasRequirements, HasMeta
 	 *
 	 * @since 1.1.0
 	 *
-	 * @param array[]|mixed $bulk_messages Arrays of messages, each keyed by the corresponding post type. Messages are
-	 *                                     keyed with 'updated', 'locked', 'deleted', 'trashed', and 'untrashed'.
-	 * @param int[]         $bulk_counts   Array of item counts for each message, used to build internationalized
-	 *                                     strings.
+	 * @param array[]|mixed     $bulk_messages Arrays of messages, each keyed by the corresponding post type. Messages are
+	 *                                         keyed with 'updated', 'locked', 'deleted', 'trashed', and 'untrashed'.
+	 * @param array<string,int> $bulk_counts   Array of item counts for each message, used to build internationalized
+	 *                                         strings.
 	 * @return array|mixed Bulk counts.
+	 *
+	 * @template T
+	 *
+	 * @phpstan-return ($bulk_messages is array<T> ? array<T> : mixed)
 	 */
-	public function bulk_post_updated_messages( $bulk_messages, $bulk_counts ) {
+	public function bulk_post_updated_messages( $bulk_messages, array $bulk_counts ) {
 		if ( ! \is_array( $bulk_messages ) ) {
 			return $bulk_messages;
 		}
 		$bulk_messages[ $this->get_slug() ] = [
 			/* translators: %s: Number of stories. */
 			'updated'   => _n( '%s story updated.', '%s stories updated.', $bulk_counts['updated'], 'web-stories' ),
-			'locked'    => ( 1 === $bulk_counts['locked'] ) ? __( 'Story not updated, somebody is editing it.', 'web-stories' ) :
+			'locked'    => 1 === $bulk_counts['locked'] ? __( 'Story not updated, somebody is editing it.', 'web-stories' ) :
 				/* translators: %s: Number of stories. */
 				_n( '%s story not updated, somebody is editing it.', '%s stories not updated, somebody is editing them.', $bulk_counts['locked'], 'web-stories' ),
 			/* translators: %s: Number of stories. */
@@ -302,6 +308,10 @@ class Story_Post_Type extends Post_Type_Base implements HasRequirements, HasMeta
 	 *
 	 * @param array|mixed $data Array of data to save.
 	 * @return array|mixed
+	 *
+	 * @template T
+	 *
+	 * @phpstan-return ($data is array<T> ? array<T> : mixed)
 	 */
 	public function change_default_title( $data ) {
 		if ( ! \is_array( $data ) ) {
