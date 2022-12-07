@@ -571,6 +571,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     if (e >= 1000000){
                         console.log(`Ultrapassou o valor`);
                         beneficioSalario.value = "10.000,00";
+                        parcelasEmprest.value  = "3.500,00"
                         e = 1000000;
                         helpClass.classList.remove('d-none');
                     }else{
