@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "tools-meutudo-calc/simulador-meutudo",
+  "title": "Simulador Meutudo",
+  "category": "widgets",
+  "description": "Criação e edição de simuladores",
+  "keywords": [
+    "simuladores",
+    "simulador",
+    "calculadora"
+  ],
+  "version": "2",
+  "textdomain": "tools-meutudo",
+  "attributes": {
+    "taxaConsignado": {
+      "type": "string",
+      "default": ""
+    },
+    "pagamentoConsignado": {
+      "type": "string",
+      "default": ""
+    },
+    "taxaPortabilidade": {
+      "type": "string",
+      "default": ""
+    },
+    "pagamentoPortabilidade": {
+      "type": "string",
+      "default": ""
+    },
+    "taxaSaqueAniversario": {
+      "type": "string",
+      "default": ""
+    },
+    "pagamentoSaqueAniversario": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": [
+    "file:./index.js"
+  ],
+  "style": [
+    "file:./index.css"
+  ]
+}
