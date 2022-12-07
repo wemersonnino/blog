@@ -124,7 +124,7 @@ function diletec_calculadora_shortcode( $atts ) {
                             </div>
                         </div><!--/input 2 -->
                     </div>
-                    <div id="help" class="form-text">Valor limite até R$ 10.000,00, por favor inserir outro valor.</div>
+                    <div id="help" class="form-text d-none">Valor limite até R$ 10.000,00, por favor inserir outro valor.</div>
                 </main>
                 <footer id="footer-input-calc" class="calculadora_footer_<?php _e($args['id']); ?>">
                     <header class="titulo_do_resultado_<?php _e($args['id']); ?>">
@@ -228,6 +228,9 @@ function diletec_calculadora_shortcode( $atts ) {
                 .calculadora_body_<?php _e($args['id']); ?>{
                     /*background: #f5f5f582;*/
                     padding: 0;
+                    position: relative;
+                    left: 0;
+                    right: auto;
                 }
                 .calculadora_margem_permitida_<?php _e($args['id']); ?>{
                     line-height: 4em;
@@ -328,6 +331,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     max-height: 100%;
                     background: var(--bg-silver);
                     padding: 1.5rem;
+                    position:relative;
                 }
                 #boxbeneficioSalatio{
                     padding: 1rem;
@@ -481,6 +485,24 @@ function diletec_calculadora_shortcode( $atts ) {
                     }
                     #boxParcelas label[for=parcelas]{
                         margin: 0 auto 0.38rem auto;
+                        position: relative;
+                        top: 12%;
+                    }
+                    #boxParcelas label > span{
+                        position: absolute;
+                        right: 17px;
+                        left: auto;
+                        margin: -1.655em auto;
+                        display: flex;
+                        flex-flow: row wrap;
+                    }
+                    #boxParcelas > div.input-group{
+                        position: absolute;
+                        top: 36%;
+                        left: 1px;
+                        display: flex;
+                        flex-flow: row wrap;
+                        width: max-content;
                     }
                 }
 
@@ -496,6 +518,7 @@ function diletec_calculadora_shortcode( $atts ) {
                 const resultMargem = document.querySelector('.calculadora_margem_disponivel_<?php _e($args['id']); ?>');
                 const percentValue = <?php _e($args['porcentagem_da_margem_permitida']); ?>;
                 const helpClass = document.querySelector('#help');
+                const parcelas = document.querySelector('#parcelas');
 
                     /**evento do campo 1 onde sera input com salario ou valor do beneficio */
                     beneficioSalario.addEventListener('input',(evt)=>{
@@ -549,7 +572,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     if (event === ""){
                         resultBeneficioSalario.innerHTML = "R$ 0,00";
                     }
-                    else if (event != ""){
+                    else if (event !== ""){
                         tratarSub(resultBeneficioSalario.textContent,parcelasEmprest.value);
                     }
                     else if(event === 0){
@@ -571,7 +594,7 @@ function diletec_calculadora_shortcode( $atts ) {
                     if (e >= 1000000){
                         console.log(`Ultrapassou o valor`);
                         beneficioSalario.value = "10.000,00";
-                        parcelasEmprest.value  = "3.500,00"
+                        parcelasEmprest.value  = "0,00"
                         e = 1000000;
                         helpClass.classList.remove('d-none');
                     }else{
@@ -582,6 +605,9 @@ function diletec_calculadora_shortcode( $atts ) {
                     //console.log(`Porcentagem: ${percentValue / 100}`);
                     //console.log(`result: ${e}`);
                     //console.log(`montante: ${montante}`);
+
+                    (tratamentoResultado(montante) === "3.500,00")?
+                        parcelas.setAttribute('disabled','') : parcelas.removeAttribute('disabled');
 
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
