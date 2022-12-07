@@ -14,4 +14,6 @@ wp-content/themes/twenty*/
 .htaccess
 
 #ignore specific folders
-wp-content/plugins/master-popups/libs/xbox/backups/
+wp-content/plugins/master-popups/libs/xbox/backups/!/.htaccess
+!/wp-content/.htaccess
+/wp-content/plugins/tools-meutudo-calc/node_modules/
