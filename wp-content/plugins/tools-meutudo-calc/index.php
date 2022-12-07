@@ -5,7 +5,7 @@
  * Description:       Um plugin que contém as ferramentas necessárias para criar CALCULADORAS, SIMULADORES e CONVERSORES.
  * Version:           1.0.0
  * Requires at least: 5.9
- * Requires PHP:      7.4
+ * Requires PHP:      8.1
  * Author:            Wemerson Nino
  * Author URI:        https://github.com/wemersonnino
  * License:           GPL v2 or later
