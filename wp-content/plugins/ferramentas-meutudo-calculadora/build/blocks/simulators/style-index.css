@@ -50,6 +50,9 @@ section.wp-block-create-block-simulators-meutudo .mt-table-simulador {
   padding: 0;
   width: 100%;
 }
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador table {
+  width: 100%;
+}
 section.wp-block-create-block-simulators-meutudo .mt-table-simulador tr.first {
   width: 100%;
   height: 64px;
