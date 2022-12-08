@@ -506,6 +506,11 @@ function diletec_calculadora_shortcode( $atts ) {
                     }
                 }
 
+                /*//Bloco perguntas frequentes page calculadora*/
+                  .bloco-perguntas-frequentes > .titulo{
+                      margin: 0 auto 0 0;
+                  }
+
             </style>
 
             <!-- JavaScript Bundle with Popper -->
