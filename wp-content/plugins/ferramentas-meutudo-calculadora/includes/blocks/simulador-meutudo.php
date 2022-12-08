@@ -9,7 +9,7 @@ function up_simulador_meutudo_render_cb($atts){
 	ob_start();
 	?>
 
-	<section class="wp-block-create-block-simulators-meutudo container">
+	<section class="wp-block-create-block-simulators-meutudo mt-2 mb-4">
 		<div class="w-100"></div><br>
 		<div class="mt-table-simulador">
 			<table>

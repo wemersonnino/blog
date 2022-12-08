@@ -492,13 +492,13 @@ function diletec_calculadora_shortcode( $atts ) {
                         position: absolute;
                         right: 17px;
                         left: auto;
-                        margin: -1.655em auto;
+                        margin: -1.9855em auto;
                         display: flex;
                         flex-flow: row wrap;
                     }
                     #boxParcelas > div.input-group{
                         position: absolute;
-                        top: 36%;
+                        top: 41%;
                         left: 1px;
                         display: flex;
                         flex-flow: row wrap;
