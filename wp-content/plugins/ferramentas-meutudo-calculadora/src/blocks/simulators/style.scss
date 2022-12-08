@@ -1,0 +1,202 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+:root {
+  /*fonts*/
+  --Montserrat: 'Montserrat', sans-serif;
+
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver: #F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+
+section.wp-block-create-block-simulators-meutudo {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 0;
+
+  /* Tables */
+  .mt-table-simulador {
+	display: flex;
+	justify-content: center;
+	padding: 0;
+	width: 100%;
+
+	.table > :not(caption) > * > * {
+	  //padding: 0;
+	}
+
+	tr.first{
+	  width: 100%;
+	  height: 64px;
+	  background: #FFFFFF;
+	}
+
+	tr.odd {
+	  width: 100%;
+	  height: 64px;
+	  background: #F5F5F5;
+	}
+	tr.even{
+	  width: 100%;
+	  height: 64px;
+	  background: #FFFFFF;
+	}
+
+	span > h2 {
+	  width: 100%;
+	  height: auto;
+	  background-color: var(--bg_black);
+	  border-radius: 16px 4px 0 0;
+	  padding: 1rem;
+	  color: var(--color-white);
+	  position: relative;
+	  margin: 0 auto 0 auto;
+	  display: flex;
+	  flex-flow: row wrap;
+	  justify-content: flex-start;
+	  align-items: center;
+	  justify-items: flex-start;
+	}
+
+	h2 {
+	  font-family: var(--Montserrat);
+	  font-size: var(--font-20);
+	  font-weight: 600;
+	  line-height: 0.938em;
+	  letter-spacing: 0;
+	  text-align: left;
+	  color: var(--color-white);
+
+	  strong {
+		color: var(--color-pink);
+		padding: 0 0.4rem 0 0.4rem;
+	  }
+	}
+
+
+	a {
+	  display: flex;
+	  flex-flow: column wrap;
+	  width: max-content;
+	  height: min-content;
+	  background-color: var(--bg-pink);
+	  border-radius: 5em;
+	  color: var(--color-white);
+	  font-family: var(--Montserrat);
+	  font-size: var(--font-18);
+	  font-weight: 700;
+	  letter-spacing: 0;
+	  line-height: 0;
+	  padding: 1rem;
+	  position: relative;
+	  text-align: center;
+	}
+
+	tbody {
+	  td {
+		font-family: var(--Montserrat);
+		font-size: var(--font-14);
+		font-weight: 600;
+		line-height: 17px;
+		letter-spacing: 0;
+		text-align: left;
+		padding: 1.2rem 0 0 1rem;
+		width: max-content;
+	  }
+	}
+
+	@media (max-width: 768px) {
+	  table {
+		width: 100%;
+
+		tbody {
+		  tr {
+			&.subtitle {
+			  border: none;
+			  clip: rect(0 0 0 0);
+			  height: 1px;
+			  margin: -1px;
+			  overflow: hidden;
+			  padding: 0;
+			  position: absolute;
+			  width: 1px;
+			}
+
+			td {
+			  display: block;
+			  text-align: right;
+			  padding: 0 8px;
+
+			  span {
+				line-height: 30px;
+				margin: 0 !important;
+
+				a {
+				  display: flex;
+				  flex-direction: row;
+				  position: relative;
+				  margin: 1rem auto 1rem auto;
+				  width: max-content;
+				}
+
+				&.text-long {
+				  text-align: left;
+				  margin-bottom: 10px !important;
+				}
+			  }
+
+			  &:before {
+				content: attr(data-label);
+				float: left;
+				font-weight: 500 !important;
+				display: block;
+				line-height: 30px;
+				text-space: 2px;
+			  }
+
+			  &:first-child {
+				padding-top: 10px;
+			  }
+
+			  &:last-child {
+				padding-bottom: 10px;
+			  }
+			}
+		  }
+		}
+
+	  }
+	}
+  }
+}

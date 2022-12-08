@@ -1,0 +1,177 @@
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/blocks/simulators/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+:root {
+  /*fonts*/
+  --Montserrat: "Montserrat", sans-serif;
+  /*color*/
+  --color-black: #000000;
+  --color-pink: #D22688;
+  --color-white: #FFFFFF;
+  --color-black-50: #00000026;
+  --color-silver-50: #F5F5F5;
+  /*background-color*/
+  --bg_black: #000000;
+  --bg-silver: #F5F5F5;
+  --bg-white: #FFFFFF;
+  --bg-pink: #D22688;
+  /*Sizes*/
+  --font-12: 0.750em;
+  --font-14: 0.875em;
+  --font-15: 0.938em;
+  --font-18: 1.125em;
+  --font-20: 1.250em;
+  --font-22: 1.375em;
+  --font-24: 1.500em;
+  --font-40: 2.500em;
+  --font-55: 3.438em;
+  --font-64: 4.000em;
+}
+
+section.wp-block-create-block-simulators-meutudo {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 0;
+  /* Tables */
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador tr.first {
+  width: 100%;
+  height: 64px;
+  background: #FFFFFF;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador tr.odd {
+  width: 100%;
+  height: 64px;
+  background: #F5F5F5;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador tr.even {
+  width: 100%;
+  height: 64px;
+  background: #FFFFFF;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador span > h2 {
+  width: 100%;
+  height: auto;
+  background-color: var(--bg_black);
+  border-radius: 16px 4px 0 0;
+  padding: 1rem;
+  color: var(--color-white);
+  position: relative;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  justify-items: flex-start;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador h2 {
+  font-family: var(--Montserrat);
+  font-size: var(--font-20);
+  font-weight: 600;
+  line-height: 0.938em;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--color-white);
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador h2 strong {
+  color: var(--color-pink);
+  padding: 0 0.4rem 0 0.4rem;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador a {
+  display: flex;
+  flex-flow: column wrap;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
+  background-color: var(--bg-pink);
+  border-radius: 5em;
+  color: var(--color-white);
+  font-family: var(--Montserrat);
+  font-size: var(--font-18);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 0;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+}
+section.wp-block-create-block-simulators-meutudo .mt-table-simulador tbody td {
+  font-family: var(--Montserrat);
+  font-size: var(--font-14);
+  font-weight: 600;
+  line-height: 17px;
+  letter-spacing: 0;
+  text-align: left;
+  padding: 1.2rem 0 0 1rem;
+  width: -moz-max-content;
+  width: max-content;
+}
+@media (max-width: 768px) {
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table {
+    width: 100%;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr.subtitle {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td {
+    display: block;
+    text-align: right;
+    padding: 0 8px;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td span {
+    line-height: 30px;
+    margin: 0 !important;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td span a {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 1rem auto 1rem auto;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td span.text-long {
+    text-align: left;
+    margin-bottom: 10px !important;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 500 !important;
+    display: block;
+    line-height: 30px;
+    text-space: 2px;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td:first-child {
+    padding-top: 10px;
+  }
+  section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/
