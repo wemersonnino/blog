@@ -37,3 +37,7 @@ foreach ($allFiles as $nomeArquivos){
 
 //Hooks
 add_action('init', 'meutudo_register_blocks');
+add_action('admin_menu', 'meutudo_admin_menu');
+add_shortcode( 'simuladores', 'up_simulador_meutudo_render_cb' );
+add_filter( 'manage_simuladores_posts_columns', 'set_custom_edit_simuladores_columns' );
+add_action( 'manage_simuladores_posts_custom_columns' , 'custom_simuladores_column', 10, 2 );

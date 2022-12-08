@@ -7,23 +7,23 @@
  */
 function meutudo_admin_menu(){
 	add_menu_page(
-		'ferramentas-calc',
+		'ferramentas_meutudo',
 		'Ferramentas Calculadoras',
 		'manage_options',
-		'ferramentas-calculadoras',
+		'ferramentas_meutudo',
 		'',
 		'dashicons-media-spreadsheet',
 		'6'
 	);
 	add_submenu_page(
-		'ferramentas-calculadoras',
+		'ferramentas_meutudo',
 		'calculadoras',
 		'calculadoras',
 		'manage_options',
 		'edit.php?post_type=calculadora'
 	);
 	add_submenu_page(
-		'ferramentas-calculadoras',
+		'ferramentas_meutudo',
 		'simuladores',
 		'Simuladores',
 		'manage_options',
