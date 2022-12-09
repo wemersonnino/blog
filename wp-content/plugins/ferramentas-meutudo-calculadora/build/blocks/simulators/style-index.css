@@ -150,12 +150,19 @@ section.wp-block-create-block-simulators-meutudo .mt-table-simulador tbody td {
     margin: 0 !important;
   }
   section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td span a {
+    left: 100%;
+    right: 0;
+    top: 24.59%;
+    bottom: 74.7%;
+    font-family: var(--Montserrat);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
     display: flex;
-    flex-direction: row;
-    position: relative;
-    margin: 1rem auto 1rem auto;
-    width: -moz-max-content;
-    width: max-content;
+    align-items: center;
+    text-align: center;
+    margin: 1rem auto;
   }
   section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td span.text-long {
     text-align: left;
@@ -163,6 +170,7 @@ section.wp-block-create-block-simulators-meutudo .mt-table-simulador tbody td {
   }
   section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td:before {
     content: attr(data-label);
+    margin-right: 0.5rem;
     float: left;
     font-weight: 500 !important;
     display: block;

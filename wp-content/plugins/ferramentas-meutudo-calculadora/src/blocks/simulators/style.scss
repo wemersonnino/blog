@@ -162,16 +162,26 @@ section.wp-block-create-block-simulators-meutudo {
 			  text-align: right;
 			  padding: 0 8px;
 
+
+
 			  span {
 				line-height: 30px;
 				margin: 0 !important;
 
 				a {
+				  left: 100%;
+				  right: 0;
+				  top: 24.59%;
+				  bottom: 74.7%;
+				  font-family: var(--Montserrat);
+				  font-style: normal;
+				  font-weight: 700;
+				  font-size: 18px;
+				  line-height: 22px;
 				  display: flex;
-				  flex-direction: row;
-				  position: relative;
-				  margin: 1rem auto 1rem auto;
-				  width: max-content;
+				  align-items: center;
+				  text-align: center;
+				  margin: 1rem auto;
 				}
 
 				&.text-long {
@@ -182,6 +192,7 @@ section.wp-block-create-block-simulators-meutudo {
 
 			  &:before {
 				content: attr(data-label);
+				margin-right: 0.5rem;
 				float: left;
 				font-weight: 500 !important;
 				display: block;
