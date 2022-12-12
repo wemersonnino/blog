@@ -652,11 +652,6 @@ function diletec_calculadora_shortcode($atts)
                         /** aqui se o usuario não tiver nenhuma parcela o valor sera igual ao margem permitida */
                         resultMargem.innerHTML = resultBeneficioSalario.textContent;
                     }
-                    else if(parcelasEmprest.value > resultBeneficioSalario.textContent){
-                        console.log('parcelas maior que resultado beneficio');
-                        parcelas.value = resultBeneficioSalario.textContent;
-                        helpClass.classList.remove('d-none');
-                    }
                 }, false);
 
 
@@ -693,6 +688,17 @@ function diletec_calculadora_shortcode($atts)
                 /**Function que realizam tratamentos das entradas, saidas e matematica do input de parcelas */
                 const tratarSub = (e, x) => {
                     x = parcelasEmprest.value;
+                    console.log(`parcelas: ${x} : ${e}`);
+                    if (x.length > e.length){
+                        console.log('(1) parcelas acima do valor permitido');
+                        parcelasEmprest.value = e;
+                        parcelas.setAttribute('disabled', '');
+                        helpClass.classList.remove('d-none');
+                    } else {
+                        //console.log(`Não Utrapassou o valor`);
+                        parcelas.removeAttribute('disabled');
+                        helpClass.classList.add('d-none');
+                    }
                     if (e.indexOf('.')) {
                         e = e.replace(".", "");
                         e = e.replace(",", "");
@@ -702,8 +708,10 @@ function diletec_calculadora_shortcode($atts)
                         x = x.replace(",", "");
                     }
                     let montante = (e - x);
-                    //console.log(`result parcel: ${e}`);
-                    //console.log(`montante parcel: ${x}`);
+
+                    console.log(`result parcel e: ${e}`);
+                    console.log(`valor parcelas x: ${x}`);
+                    console.log(`result parcelas sub: ${montante}`);
                     tratamentoResultadoSub(montante);
                     //console.log(`montante1 parcel: ${tratamentoResultadoSub(montante)}`);
                 };
