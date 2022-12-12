@@ -652,6 +652,11 @@ function diletec_calculadora_shortcode($atts)
                         /** aqui se o usuario não tiver nenhuma parcela o valor sera igual ao margem permitida */
                         resultMargem.innerHTML = resultBeneficioSalario.textContent;
                     }
+                    else if(parcelasEmprest.value > resultBeneficioSalario.textContent){
+                        console.log('parcelas maior que resultado beneficio');
+                        parcelas.value = resultBeneficioSalario.textContent;
+                        helpClass.classList.remove('d-none');
+                    }
                 }, false);
 
 
