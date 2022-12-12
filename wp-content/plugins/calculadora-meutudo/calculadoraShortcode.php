@@ -709,9 +709,9 @@ function diletec_calculadora_shortcode($atts)
                     }
                     let montante = (e - x);
 
-                    console.log(`result parcel e: ${e}`);
-                    console.log(`valor parcelas x: ${x}`);
-                    console.log(`result parcelas sub: ${montante}`);
+                    // console.log(`result parcel e: ${e}`);
+                    // console.log(`valor parcelas x: ${x}`);
+                    // console.log(`result parcelas sub: ${montante}`);
                     tratamentoResultadoSub(montante);
                     //console.log(`montante1 parcel: ${tratamentoResultadoSub(montante)}`);
                 };
@@ -726,13 +726,21 @@ function diletec_calculadora_shortcode($atts)
                     return e;
                 };
                 const tratamentoResultadoSub = (e) => {
-                    let valorTarget = (e.valueOf() / 100).toFixed(2) + "";
-                    valorTarget = valorTarget.replace(".", ",");
-                    valorTarget = valorTarget.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-                    e = valorTarget;
-                    //console.log(`show value tratado: ${e}`);
-                    resultMargem.innerHTML = e;
-                    return e;
+                    console.log(`(2)show value tratado sub: ${e}`);
+                    if (e < 0){
+                        console.log('valor deu negativo');
+                        resultMargem.innerHTML = "0,00"
+                    }
+                    else{
+                        let valorTarget = (e.valueOf() / 100).toFixed(2) + "";
+                        valorTarget = valorTarget.replace(".", ",");
+                        valorTarget = valorTarget.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                        e = valorTarget;
+                        console.log(`show value tratado sub: ${e}`);
+                        resultMargem.innerHTML = e;
+                        return e;
+                    }
+
                 };
 
                 /**Function enable popovers */
