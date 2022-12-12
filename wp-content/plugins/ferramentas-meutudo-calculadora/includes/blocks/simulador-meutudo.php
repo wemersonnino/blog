@@ -60,7 +60,7 @@ function up_simulador_meutudo_render_cb($atts)
 							<td data-label="Produto" colspan="1"><span>Empréstimo consignado</span></td>
 							<td data-label="Taxa a partir de" colspan="1"><span><?php _e($args['taxaConsignado']); ?></span></td>
 							<td data-label="Pagamento de" colspan="1"><span><?php _e($args['pagamentoConsignado']); ?></span></td>
-							<td colspan="1">
+							<td colspan="1" style="color: transparent;">
 								<span>
 									<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
 								</span>
@@ -74,7 +74,7 @@ function up_simulador_meutudo_render_cb($atts)
 							<td data-label="Pagamento de" colspan="1">
 								<span><?php _e($args['pagamentoPortabilidade']); ?></span>
 							</td>
-							<td colspan="1">
+							<td colspan="1" style="color: transparent;">
 								<span>
 									<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
 								</span>
@@ -88,7 +88,7 @@ function up_simulador_meutudo_render_cb($atts)
 							<td data-label="Pagamento de" colspan="1">
 								<span><?php _e($args['pagamentoSaqueAniversario']); ?></span>
 							</td>
-							<td colspan="1">
+							<td colspan="1" style="color: transparent;">
 								<span>
 									<a href="https://web.meutudo.app/register/pre-register" class="btnSimulador" type="button">Simular</a>
 								</span>

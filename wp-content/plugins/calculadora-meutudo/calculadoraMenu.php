@@ -37,7 +37,7 @@ function cptui_register_my_cpts_calculadora() {
         "rest_controller_class" => "WP_REST_Posts_Controller",
         "rest_namespace" => "wp/v2",
         "has_archive" => false,
-        "show_in_menu" => true,
+        "show_in_menu" => false,
         "show_in_nav_menus" => true,
         "delete_with_user" => false,
         "exclude_from_search" => false,

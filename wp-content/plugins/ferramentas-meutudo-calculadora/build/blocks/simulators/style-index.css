@@ -169,7 +169,7 @@ section.wp-block-create-block-simulators-meutudo .mt-table-simulador tbody td {
     margin-bottom: 10px !important;
   }
   section.wp-block-create-block-simulators-meutudo .mt-table-simulador table tbody tr td:before {
-    content: attr(data-label);
+    content: attr(data-label) ":";
     margin-right: 0.5rem;
     float: left;
     font-weight: 500 !important;

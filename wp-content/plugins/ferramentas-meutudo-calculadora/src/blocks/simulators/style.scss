@@ -191,7 +191,7 @@ section.wp-block-create-block-simulators-meutudo {
 			  }
 
 			  &:before {
-				content: attr(data-label);
+				content: attr(data-label)':';
 				margin-right: 0.5rem;
 				float: left;
 				font-weight: 500 !important;
