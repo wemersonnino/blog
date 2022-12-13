@@ -612,22 +612,13 @@ function diletec_calculadora_shortcode($atts)
                 /**evento do campo 2 onde sera input com o valor das parcelas */
                 parcelasEmprest.addEventListener('input', (evt) => {
                     let event = evt.target.value;
-                    // console.log(`Valor sem tratar parcelas: ${event}`);
+                     console.log(`Valor sem tratar parcelas: ${event}`);
                     //formata os valores de input em formato moeda
                     let tratamento = event.replace(/\D/g, "");
-
-                    if (tratamento >= resultBeneficioSalario.textContent || parcelasEmprest.value > resultBeneficioSalario.value) {
-                        //console.log('parcelas maior que o permitido');
-                        parcelas.value = resultBeneficioSalario.textContent;
-                        helpClass.classList.remove('d-none');
-                    }
-                    else {
-                        tratamento = (tratamento / 100).toFixed(2) + "";
-                        tratamento = tratamento.replace(".", ",");
-                        tratamento = tratamento.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-                        evt.target.value = tratamento;
-                        helpClass.classList.add('d-none');
-                    }
+                    tratamento = (tratamento / 100).toFixed(2) + "";
+                    tratamento = tratamento.replace(".", ",");
+                    tratamento = tratamento.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+                    evt.target.value = tratamento;
                     //console.log(`montante1 parcel: ${tratamento}`);
                 }, false);
                 parcelasEmprest.addEventListener('input', (e) => {
@@ -689,15 +680,15 @@ function diletec_calculadora_shortcode($atts)
                 const tratarSub = (e, x) => {
                     x = parcelasEmprest.value;
                     console.log(`parcelas: ${x} : ${e}`);
-                    if (x.length > e.length){
+                    if (x.length > e){
                         console.log('(1) parcelas acima do valor permitido');
-                        parcelasEmprest.value = e;
-                        parcelas.setAttribute('disabled', '');
-                        helpClass.classList.remove('d-none');
+                        // parcelasEmprest.value = e;
+                        // parcelas.setAttribute('disabled', '');
+                        // helpClass.classList.remove('d-none');
                     } else {
-                        //console.log(`Não Utrapassou o valor`);
-                        parcelas.removeAttribute('disabled');
-                        helpClass.classList.add('d-none');
+                        console.log(`Não Utrapassou o valor`);
+                        // parcelas.removeAttribute('disabled');
+                        // helpClass.classList.add('d-none');
                     }
                     if (e.indexOf('.')) {
                         e = e.replace(".", "");
@@ -730,6 +721,8 @@ function diletec_calculadora_shortcode($atts)
                     if (e < 0){
                         console.log('valor deu negativo');
                         resultMargem.innerHTML = "0,00"
+                        helpClass.classList.remove('d-none');
+                        parcelas.value = resultBeneficioSalario.textContent;
                     }
                     else{
                         let valorTarget = (e.valueOf() / 100).toFixed(2) + "";
@@ -738,6 +731,7 @@ function diletec_calculadora_shortcode($atts)
                         e = valorTarget;
                         console.log(`show value tratado sub: ${e}`);
                         resultMargem.innerHTML = e;
+                        helpClass.classList.add('d-none');
                         return e;
                     }
 
