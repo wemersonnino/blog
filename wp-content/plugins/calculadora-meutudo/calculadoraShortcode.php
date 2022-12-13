@@ -650,15 +650,15 @@ function diletec_calculadora_shortcode($atts)
 
                 /**Function que faz o tratamento e calculo das entradas no campo 1 (ou input 1) */
                 const tratarSoma = (e) => {
-                    let montante = 0;
+                    let montante;
                     if (e.indexOf('.')) {
                         e = e.replace(".", "");
                         e = e.replace(",", "");
                     }
-                    if (e >= 1000000) {
+                    if (e > 1000000) {
                         //console.log(`Ultrapassou o valor`);
                         beneficioSalario.value = "10.000,00";
-                        parcelasEmprest.value = "0,00"
+                        parcelasEmprest.value = "3.500,00"
                         e = 1000000;
                         helpClass.classList.remove('d-none');
                     } else {
@@ -670,8 +670,8 @@ function diletec_calculadora_shortcode($atts)
                     //console.log(`result: ${e}`);
                     //console.log(`montante: ${montante}`);
 
-                    (tratamentoResultado(montante) === "3.500,00") ?
-                        parcelas.setAttribute('disabled', '') : parcelas.removeAttribute('disabled');
+                    // (tratamentoResultado(montante) === "3.500,00") ?
+                    //     parcelas.setAttribute('disabled', '') : parcelas.removeAttribute('disabled');
 
                     tratamentoResultado(montante);
                     //console.log(`montante1: ${tratamentoResultado(montante)}`);
