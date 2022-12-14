@@ -137,7 +137,7 @@ function diletec_calculadora_shortcode($atts)
                         </div><!--/input 2 -->
                     </div>
                     <div id="help" class="form-text d-none">
-                        Valor limite alcançado de ou até R$ 10.000,00 ou de parcelas, por favor inserir outro valor.
+                        Valor limite do benefício ou de parcelas alcançado, por favor inserir outro valor.
                     </div>
                 </main>
                 <footer id="footer-input-calc" class="calculadora_footer_<?php _e($args['id']); ?>">
@@ -658,7 +658,7 @@ function diletec_calculadora_shortcode($atts)
                     if (e > 1000000) {
                         //console.log(`Ultrapassou o valor`);
                         beneficioSalario.value = "10.000,00";
-                        parcelasEmprest.value = "3.500,00"
+                        //parcelasEmprest.value = "3.500,00"
                         e = 1000000;
                         helpClass.classList.remove('d-none');
                     } else {
@@ -723,6 +723,9 @@ function diletec_calculadora_shortcode($atts)
                         resultMargem.innerHTML = "0,00"
                         helpClass.classList.remove('d-none');
                         parcelas.value = resultBeneficioSalario.textContent;
+                    }
+                    else if(parcelasEmprest.value === "0,00"){
+                        resultMargem.textContent = "0,00"
                     }
                     else{
                         let valorTarget = (e.valueOf() / 100).toFixed(2) + "";
