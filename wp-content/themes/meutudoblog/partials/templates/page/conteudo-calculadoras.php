@@ -51,7 +51,7 @@ $faq = get_field('postagens-perguntas-frequentes', $wp_query->post->ID);
 </section>
 </main>
 <div class="w-100"></div>
-<footer class="row">
+<footer>
 
     <?php get_template_part('partials/templates/post/comentarios'); ?>
 
