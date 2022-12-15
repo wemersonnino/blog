@@ -612,7 +612,7 @@ function diletec_calculadora_shortcode($atts)
                 /**evento do campo 2 onde sera input com o valor das parcelas */
                 parcelasEmprest.addEventListener('input', (evt) => {
                     let event = evt.target.value;
-                     console.log(`Valor sem tratar parcelas: ${event}`);
+                     //console.log(`Valor sem tratar parcelas: ${event}`);
                     //formata os valores de input em formato moeda
                     let tratamento = event.replace(/\D/g, "");
                     tratamento = (tratamento / 100).toFixed(2) + "";
@@ -679,17 +679,7 @@ function diletec_calculadora_shortcode($atts)
                 /**Function que realizam tratamentos das entradas, saidas e matematica do input de parcelas */
                 const tratarSub = (e, x) => {
                     x = parcelasEmprest.value;
-                    console.log(`parcelas: ${x} : ${e}`);
-                    if (x.length > e){
-                        console.log('(1) parcelas acima do valor permitido');
-                        // parcelasEmprest.value = e;
-                        // parcelas.setAttribute('disabled', '');
-                        // helpClass.classList.remove('d-none');
-                    } else {
-                        console.log(`Não Utrapassou o valor`);
-                        // parcelas.removeAttribute('disabled');
-                        // helpClass.classList.add('d-none');
-                    }
+                    //console.log(`parcelas: ${x} : ${e}`);
                     if (e.indexOf('.')) {
                         e = e.replace(".", "");
                         e = e.replace(",", "");
@@ -717,9 +707,9 @@ function diletec_calculadora_shortcode($atts)
                     return e;
                 };
                 const tratamentoResultadoSub = (e) => {
-                    console.log(`(2)show value tratado sub: ${e}`);
+                    //console.log(`(2)show value tratado sub: ${e}`);
                     if (e < 0){
-                        console.log('valor deu negativo');
+                        //console.log('valor deu negativo');
                         resultMargem.innerHTML = "0,00"
                         helpClass.classList.remove('d-none');
                         parcelas.value = resultBeneficioSalario.textContent;
@@ -732,7 +722,7 @@ function diletec_calculadora_shortcode($atts)
                         valorTarget = valorTarget.replace(".", ",");
                         valorTarget = valorTarget.replace(/\B(?=(\d{3})+(?!\d))/g, ".");
                         e = valorTarget;
-                        console.log(`show value tratado sub: ${e}`);
+                        //console.log(`show value tratado sub: ${e}`);
                         resultMargem.innerHTML = e;
                         helpClass.classList.add('d-none');
                         return e;
@@ -742,7 +732,7 @@ function diletec_calculadora_shortcode($atts)
 
                 /**Function enable popovers */
                 jQuery(function () {
-                    $('[data-bs-toggle="popover"]').popover()
+                    $('[data-bs-toggle="popover"]').popover();
                 });
                 jQuery(function () {
                     $('.parcelas-infor').popover({
