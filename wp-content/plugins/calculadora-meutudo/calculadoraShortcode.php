@@ -19,13 +19,6 @@ function diletec_calculadora_shortcode($atts)
 
             /** get post meta */
             $mrt_calculadora_meta = get_post_meta($filter['id']);
-            // _e( $mrt_calculadora_meta['titulo_do_resultado'][0] );
-            // _e( $mrt_calculadora_meta['titulo_da_margem_permitida'][0] );
-            // _e( $mrt_calculadora_meta['descricao_da_margem_permitida'][0] );
-            // _e( $mrt_calculadora_meta['titulo_da_margem_disponivel'][0] );
-            // _e( $mrt_calculadora_meta['descricao_da_margem_disponivel'][0] );
-            // _e( $mrt_calculadora_meta['valor_do_beneficio'][0] );
-            // _e( $mrt_calculadora_meta['parcela_de_emprestimo'][0] );
 
             /** Html do projeto */
             $args = array(

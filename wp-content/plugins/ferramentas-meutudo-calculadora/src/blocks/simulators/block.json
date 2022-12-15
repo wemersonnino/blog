@@ -44,5 +44,5 @@
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
-  "render": "file:../../../includes/blocks/simulador-meutudo.php"
+  "render": "file:./simulador-meutudo.php"
 }
